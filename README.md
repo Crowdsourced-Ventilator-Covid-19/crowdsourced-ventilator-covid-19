@@ -15,6 +15,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - [JHU Time Series Dataset](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)
 - [Mechanical Ventilation video series](https://www.youtube.com/watch?v=i6hmGVBbIJk)
 - [MIT design](https://www.fastcompany.com/1661942/mit-students-invent-100-ventilator-for-disaster-zones)
+- [Hackaday effort](https://hackaday.com/2020/03/12/ultimate-medical-hackathon-how-fast-can-we-design-and-deploy-an-open-source-ventilator/)
 
 ## Questions for Dr. Kagle
 - Which modes are necessary, and in what priority?
