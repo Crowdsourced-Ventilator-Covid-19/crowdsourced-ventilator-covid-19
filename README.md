@@ -15,7 +15,14 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - [JHU Time Series Dataset](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)
 - [Mechanical Ventilation video series](https://www.youtube.com/watch?v=i6hmGVBbIJk)
 
-## Scope
+## Questions for Dr. Kagle
+- Which modes are necessary, and in what priority?
+- Can the hospital provide a pre-mixed FIO2 external air supply?
+- What controls are necessary, and in what priority?
+- What instrumentation is necessary, and in what priority?
+- Which alarms are necessary?
+
+## Scope (Tentative pending clarification)
 - Required Scope
   - AC Mode
     - Patient trigger capability
@@ -26,5 +33,5 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - PC Mode?
   - Air pressure source?
   - FIO2 control?
-  - Humidifier
+  - Humidifier?
 - Not POR
