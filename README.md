@@ -1,1 +1,30 @@
 # crowdsourced-ventilator-covid-19
+## Problem Statement
+How to create a safe ventilator that can be used as a last resort where a physician has no choice but to use it or lose a life.  Obviously it will not be FDA approved.  In fact, a wonderful outcome would be if somehow US industry could step up to solve the problem of the ventilator shortage.  However, based on the data we are seeing from Johns Hopkins site above it is likely by the time industry succeeds thousand of people may be in respiratory distress,  particularly in New York City and other big hot spots.  So far no deaths in MA but statistically speaking this will not last for long.
+
+Can we make a difference?
+> Honestly I am not sure we can,  but we can try to help, even if we save one life long enough to get on a commercially available ventilator.  In my religion, it is said that saving one life saves an entire world.
+-- Joe Siegel
+
+So can we design a ventilator good enough to help and do no harm to the patient?   Can this design be simple enough to put together from components readily available on Amazon or hobby shops or any place that can source the components.  Can we crowd source the production of this design and the cost to build it.  If it can be simple, crowd sourced and done quickly we might be able to help.  The other option is to take the design to someone who will put them into production until the Medical Industrial Complex takes over.
+
+## References
+- [Johns Hopkins dashboard](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+- [Live Interactive dashboard](https://datastudio.google.com/embed/reporting/f56febd8-5c42-4191-bcea-87a3396f4508/page/k1XIB)
+- [Epidemic Calculator](http://gabgoh.github.io/COVID/index.html)
+- [JHU Time Series Dataset](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)
+- [Mechanical Ventilation video series](https://www.youtube.com/watch?v=i6hmGVBbIJk)
+
+## Scope
+- Required Scope
+  - AC Mode
+    - Patient trigger capability
+    - Backup rate control
+    - TV control
+    - PEEP control
+- Stretch goals
+  - PC Mode?
+  - Air pressure source?
+  - FIO2 control?
+  - Humidifier
+- Not POR
