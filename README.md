@@ -11,6 +11,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Resources
 - [OpenSourceCoronavirusProjects](https://github.com/cyborg527/OpenSourceCoronavirusProjects)
 - [OpenSourceVentilator](https://opensourceventilator.ie/)
+- [Specs for all projects](https://docs.google.com/document/d/15kqUPPI7bYL6dnCetOeDSyE8IG5pHVmtg8Ju4yzGlF8/edit?fbclid=IwAR31p6i7iZhFuL7ejLUs5mz9gmRXWi1kWoOG2wR_Lyqr3UgzaOcz6t2VNlk#heading=h.1pr0nkc86xgg)
 - [Ventilator spec](https://drive.google.com/open?id=1mXAS4-lcwsU2nRVF3crRuBIVWJfbnB5P)
 - [Johns Hopkins dashboard](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 - [Live Interactive dashboard](https://datastudio.google.com/embed/reporting/f56febd8-5c42-4191-bcea-87a3396f4508/page/k1XIB)
