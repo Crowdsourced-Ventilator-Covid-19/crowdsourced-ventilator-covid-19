@@ -45,6 +45,8 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - Flow control? (Inhalation/Exhalation duty cycle)
 - Not POR
 
-## Proof of Concept Phase
+## Prototype Phase
 - Demonstrate functionality of necessary modes, controls, alarms and instrumentation
+- Test reliability
+- Refine design
 
