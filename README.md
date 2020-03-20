@@ -31,9 +31,10 @@ So can we design a ventilator good enough to help and do no harm to the patient?
     - Backup rate control
     - TV control
     - PEEP control
+    - Humidifier
 - Stretch goals
   - PC Mode?
   - Air pressure source?
   - FIO2 control?
-  - Humidifier?
+  - Temperature control?
 - Not POR
