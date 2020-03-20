@@ -51,6 +51,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Not POR
 
 ## Prototype Phase
+![v0.01](https://i.imgur.com/4nglUH8.png)
 - Demonstrate functionality of necessary modes, controls, alarms and instrumentation
 - Test reliability
 - Refine design
