@@ -26,7 +26,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ## Scope (Tentative pending clarification)
 - Required Scope
-  - End user constructable with readily available parts
+  - User assembly with readily available parts
   - AC Mode
     - Patient trigger capability
     - Backup rate control
