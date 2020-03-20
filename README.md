@@ -19,6 +19,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ## Questions for Dr. Kagle
 - Which modes are necessary, and in what priority?
+- Compact portable like MIT design? or Nasal cannula-based NIV?
 - Can the hospital provide a pre-mixed FIO2 external air supply?
 - What controls are necessary, and in what priority?
 - What instrumentation is necessary, and in what priority?
@@ -33,6 +34,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
     - TV control
     - PEEP control
     - Humidifier
+  - Exhaust capture
 - Stretch goals
   - PC Mode?
   - Air pressure source?
