@@ -34,10 +34,17 @@ So can we design a ventilator good enough to help and do no harm to the patient?
     - TV control
     - PEEP control
     - Humidifier
-  - Exhaust capture
+  - Exhaust capture?
+  - Peak and plateau pressure alarms
+  - Pressure timeseries logs
 - Stretch goals
   - PC Mode?
   - Air pressure source?
   - FIO2 control?
   - Temperature control?
+  - Flow control? (Inhalation/Exhalation duty cycle)
 - Not POR
+
+## Proof of Concept Phase
+- Demonstrate functionality of necessary modes, controls, alarms and instrumentation
+
