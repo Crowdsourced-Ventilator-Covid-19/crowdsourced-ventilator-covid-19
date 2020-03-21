@@ -53,6 +53,9 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ## Prototype Phase
 ![v0.01](https://i.imgur.com/4nglUH8.png)
+- Concerns:
+  - Using positive pressure to inflate the air bladder will overshoot the desired tidal volume at atmospheric pressure?
+  - Need to equalize the air pressure in the bladder to atmospheric, or reduce the volume (PV=nRT)?
 - Demonstrate functionality of necessary modes, controls, alarms and instrumentation
 - Test reliability
 - Refine design
