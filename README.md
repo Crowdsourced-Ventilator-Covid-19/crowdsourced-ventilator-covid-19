@@ -8,6 +8,14 @@ Can we make a difference?
 
 So can we design a ventilator good enough to help and do no harm to the patient?   Can this design be simple enough to put together from components readily available on Amazon or hobby shops or any place that can source the components.  Can we crowd source the production of this design and the cost to build it.  If it can be simple, crowd sourced and done quickly we might be able to help.  The other option is to take the design to someone who will put them into production until the Medical Industrial Complex takes over.
 
+## Team
+1. Joe Siegel - Electrical/Physics Engineer  Advanced Micro Devices
+1. Steve Bunes - Engineer/Physics and CEO Rise Time Inc. Chicago
+1. Chuck Tung - Electrical Engineer / Mechanical Engineer Advanced Micro Devices
+1. Dr. David Kagle - Anesthesiologist Emerson Hospital
+1. Kenny House - Biomedical Engineer and currently works for AMD 
+
+
 ## Resources
 - [OpenSourceCoronavirusProjects](https://github.com/cyborg527/OpenSourceCoronavirusProjects)
 - [OpenSourceVentilator](https://opensourceventilator.ie/)
