@@ -60,7 +60,8 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Not POR
 
 ## Prototype Phase
-![v0.02](https://i.imgur.com/N16drQ6.png)
+![v0.02](https://i.imgur.com/jlqAZF6.png)
+![cross-section](https://i.imgur.com/cLwFBT1.png)
 - Concerns:
   - ???
 - Test reliability
