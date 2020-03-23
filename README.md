@@ -32,9 +32,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - [A low oxygen consumption pneumatic ventilator for emergency construction during a respiratory failure pandemic - Williams](https://l.facebook.com/l.php?u=https%3A%2F%2Flookaside.fbsbx.com%2Ffile%2FWilliams_et_al-2010-Anaesthesia.pdf%3Ftoken%3DAWx69kPx0nI5HEpVeaNy24bn4q1GDzC0sXTHRSZhE5KIxPyQ67eEu4S7N0iHn_JngGeEK6sNljjXqsA0bA2tAop5FZhIAJotbVWZG8MHPUSA61l7TgDelxZyH2fv6vmKNmL1gULxPK_-b8P3h3ojDA-C_5E6aT0WHfSQDe-etnz0yQ&h=AT3qvgoCUalOjiZATD5rFSJ50BaXUBusOQzW24deVutMAoYmEEW2gb7SYGIeyHJHv5q-TYAeBxpWslhvpChvipB0kV3w04YnqNlw6mtW9Ulel8722b-9MIDKZM1h07lpOwy1N8V3uD4&__tn__=H-R&c[0]=AT2hPfdfSJtkRwnPiZanBKqyTAIH8YzXrv1SWUdh0CvUafrDPVMH3qYw4MAtS64r40eAcNFiGvjK22xvQ87VvWOnltyAbapza0FJKsrX69uNKpJWSq5YWYZUeS-ccZNzSWObEsIWBGhfaV-nHj7KMA)
 
 ## Questions for Dr. Kagle
-- Which modes are necessary, and in what priority?
-- Compact portable like MIT design? or Nasal cannula-based NIV?
-- Can the hospital provide a pre-mixed FIO2 external air supply? or BVM based design?
+- AC mode or PC mode?
 - What controls are necessary, and in what priority?
 - What instrumentation is necessary, and in what priority?
 - Which alarms are necessary?
@@ -42,21 +40,19 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Scope (Tentative pending clarification)
 - Required Scope
   - Simple assembly with readily available parts
-  - AC Mode
-    - Patient trigger capability
-    - Backup rate control
-    - TV control
-    - PEEP control
-    - Humidifier
-  - Exhaust capture?
-  - Peak and plateau pressure alarms
-  - Pressure timeseries logs
+  - TV Control
+  - Rate Control
+  - I:E Ratio
+  - Fio2
+  - disconnect alarm
+  - inspatory and expiratory pressure alarm
+  - negative pressure alarm
+  - Exhaust HEPA filter
+  - Patient trigger capability?
 - Stretch goals
-  - PC Mode?
-  - Air pressure source?
-  - FIO2 control?
+  - Humidifier?
+  - Pressure data logging?
   - Temperature control?
-  - Flow control? (Inhalation/Exhalation duty cycle)
 - Not POR
 
 ## Prototype Phase
