@@ -32,10 +32,11 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - [A low oxygen consumption pneumatic ventilator for emergency construction during a respiratory failure pandemic - Williams](https://l.facebook.com/l.php?u=https%3A%2F%2Flookaside.fbsbx.com%2Ffile%2FWilliams_et_al-2010-Anaesthesia.pdf%3Ftoken%3DAWx69kPx0nI5HEpVeaNy24bn4q1GDzC0sXTHRSZhE5KIxPyQ67eEu4S7N0iHn_JngGeEK6sNljjXqsA0bA2tAop5FZhIAJotbVWZG8MHPUSA61l7TgDelxZyH2fv6vmKNmL1gULxPK_-b8P3h3ojDA-C_5E6aT0WHfSQDe-etnz0yQ&h=AT3qvgoCUalOjiZATD5rFSJ50BaXUBusOQzW24deVutMAoYmEEW2gb7SYGIeyHJHv5q-TYAeBxpWslhvpChvipB0kV3w04YnqNlw6mtW9Ulel8722b-9MIDKZM1h07lpOwy1N8V3uD4&__tn__=H-R&c[0]=AT2hPfdfSJtkRwnPiZanBKqyTAIH8YzXrv1SWUdh0CvUafrDPVMH3qYw4MAtS64r40eAcNFiGvjK22xvQ87VvWOnltyAbapza0FJKsrX69uNKpJWSq5YWYZUeS-ccZNzSWObEsIWBGhfaV-nHj7KMA)
 
 ## Questions for Dr. Kagle
-- AC mode or PC mode?
-- What controls are necessary, and in what priority?
-- What instrumentation is necessary, and in what priority?
-- Which alarms are necessary?
+- Should we be focusing on AC mode or PC mode?  BVM-like would be volume control? 
+- Should we detect negative inspiratory pressure to trigger patient assist? 
+- Do we need PEEP pressure control? - Do we need temperature and/or humidity control? 
+- Other than alarms, what visualizations/readouts do you need?    
+  - indication of actual rate?, peak & plateau pressures values? graphical charts? 
 
 ## Scope (Tentative pending clarification)
 - Required Scope
