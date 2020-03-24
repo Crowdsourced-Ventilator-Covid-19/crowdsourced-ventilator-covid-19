@@ -46,7 +46,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - I:E Ratio
   - Fio2
   - disconnect alarm
-  - inspatory and expiratory pressure alarm
+  - inspiratory and expiratory pressure alarm
   - negative pressure alarm
   - Exhaust HEPA filter
   - Patient trigger capability?
