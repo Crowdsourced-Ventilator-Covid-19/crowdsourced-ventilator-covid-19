@@ -59,8 +59,5 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Prototype Phase
 ![v0.02](https://i.imgur.com/jlqAZF6.png)
 ![cross-section](https://i.imgur.com/cLwFBT1.png)
-- Concerns:
-  - ???
-- Test reliability
-- Refine design
+- Compressor bag proof of concept
 [![compressor bag demo](https://i.imgur.com/YD3NPn2.png)](https://www.youtube.com/watch?v=NJReh7SHe-M)
