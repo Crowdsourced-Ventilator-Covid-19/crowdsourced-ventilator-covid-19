@@ -63,4 +63,4 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - ???
 - Test reliability
 - Refine design
-
+[![compressor bag demo](https://i.imgur.com/YD3NPn2.png)](https://www.youtube.com/watch?v=NJReh7SHe-M)
