@@ -57,6 +57,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Not POR
 
 ## Prototype Phase
+- Ventilator-in-a-bucket design
 ![v0.02](https://i.imgur.com/jlqAZF6.png)
 ![cross-section](https://i.imgur.com/cLwFBT1.png)
 - Compressor bag proof of concept
