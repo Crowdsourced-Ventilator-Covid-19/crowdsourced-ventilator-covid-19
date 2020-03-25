@@ -68,4 +68,6 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Pneumatic automation demo
 [![pneumatic demo](https://i.imgur.com/RRQlzC3.png)](https://youtu.be/0M1C6Yl44HY)
 - Bucket compartment mockup
-[compartment mockup](https://media.discordapp.net/attachments/690652109129121875/692419562058285095/image0.jpg?width=581&height=775)
+![compartment mockup](https://media.discordapp.net/attachments/690652109129121875/692419562058285095/image0.jpg?width=581&height=775)
+- Component layout
+![component layout](https://media.discordapp.net/attachments/690652109129121875/692446017810858024/image0.jpg?width=581&height=775)
