@@ -41,20 +41,22 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Scope (Tentative pending clarification)
 - Required Scope
   - Simple assembly with readily available parts
+  - AC Mode
   - TV Control
   - Rate Control
   - I:E Ratio
+  - PEEP Control
   - Fio2
   - disconnect alarm
   - inspiratory and expiratory pressure alarm
   - negative pressure alarm
-  - Exhaust HEPA filter
-  - Patient trigger capability?
+  - Patient trigger capability
+  - humidity and temperature from HME
+  - exhaust filter through HME
 - Stretch goals
-  - Humidifier?
   - Pressure data logging?
-  - Temperature control?
 - Not POR
+  - PC mode
 
 ## Prototype Phase
 - Ventilator-in-a-bucket design
