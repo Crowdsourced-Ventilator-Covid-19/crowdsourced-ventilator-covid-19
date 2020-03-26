@@ -58,8 +58,9 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ## Prototype Phase
 - Ventilator-in-a-bucket design
-![v0.02](https://i.imgur.com/jlqAZF6.png)
-![cross-section](https://i.imgur.com/RldrWBc.png)
+![v0.02](https://i.imgur.com/NlpBNWJ.png)
+![cross-section](https://i.imgur.com/c7z6VOY.png)
+![UI](https://i.imgur.com/6L7qp5x.png)
 - Compressor bag proof of concept
 [![compressor bag demo](https://i.imgur.com/YD3NPn2.png)](https://www.youtube.com/watch?v=NJReh7SHe-M)
 - Pressure sensor test
