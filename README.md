@@ -58,6 +58,12 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Not POR
   - PC mode
 
+## Proposed usage model
+- Tidal volume will be set using pre-sized "C" clamps that wrap around BVM bag to limit self-inflation to desired volume
+- PEEP setting will be adjusted using a standard adjustable PEEP valve, using graphical UI pressure chart for feedback
+- Peak pressure will be adjusted using the pneumatic flow rate adjusting knob and graphical UI pressure chart for feedback
+- I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
+
 ## Prototype Phase
 - Ventilator-in-a-bucket design
 ![v0.02](https://i.imgur.com/abTtjd9.png)
