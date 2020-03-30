@@ -20,7 +20,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ### Specs
 - [UK Rapidly Manufactured Ventilator Spec](https://www.gov.uk/government/publications/coronavirus-covid-19-ventilator-supply-specification/rapidly-manufactured-ventilator-system-specification)
 - [Pandemic Ventilator User Requirements](https://docs.google.com/spreadsheets/u/2/d/1XAo2LKQBSAnemD73kKWN7G7QsSLVRSNY9SQNuliBCzY/edit#gid=0)
-- [OSCMS Requirements](https://docs.google.com/document/d/15kqUPPI7bYL6dnCetOeDSyE8IG5pHVmtg8Ju4yzGlF8/edit?fbclid=IwAR31p6i7iZhFuL7ejLUs5mz9gmRXWi1kWoOG2wR_Lyqr3UgzaOcz6t2VNlk#heading=h.1pr0nkc86xgg) - most complete ventilator spec
+- [OSCMS Requirements](https://docs.google.com/document/d/15kqUPPI7bYL6dnCetOeDSyE8IG5pHVmtg8Ju4yzGlF8/edit?fbclid=IwAR31p6i7iZhFuL7ejLUs5mz9gmRXWi1kWoOG2wR_Lyqr3UgzaOcz6t2VNlk#heading=h.1pr0nkc86xgg)
 - [Ventilator spec](https://drive.google.com/open?id=1mXAS4-lcwsU2nRVF3crRuBIVWJfbnB5P)
 ### Other Projects
 - [OpenSourceCoronavirusProjects](https://github.com/cyborg527/OpenSourceCoronavirusProjects)
