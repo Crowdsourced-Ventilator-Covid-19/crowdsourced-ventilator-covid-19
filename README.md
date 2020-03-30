@@ -63,6 +63,12 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - PEEP setting will be adjusted using a standard adjustable PEEP valve, using graphical UI pressure chart for feedback
 - Peak pressure will be adjusted using the pneumatic flow rate adjusting knob and graphical UI pressure chart for feedback
 - I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
+- Expiratory solenoid will enable a post-inspiratory pause for Pplat measurement
+- Detect pressure drop below PEEP to trigger patient assisted, and reset breath countdown timer
+- Graphical UI will report:
+  - Ppeak (peak measured pressure during inspiratory phase)
+  - Pplat (final pressure at end of post-inspiratory pause)
+  - PEEP (expiratory pressure when DP/DT drops below threshold)
 
 ## Prototype Phase
 - Ventilator-in-a-bucket design
