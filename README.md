@@ -17,17 +17,23 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 
 ## Resources
-- [OpenSourceCoronavirusProjects](https://github.com/cyborg527/OpenSourceCoronavirusProjects)
-- [OpenSourceVentilator](https://opensourceventilator.ie/)
+### Specs
+- [UK Rapidly Manufactured Ventilator Spec](https://www.gov.uk/government/publications/coronavirus-covid-19-ventilator-supply-specification/rapidly-manufactured-ventilator-system-specification)
+- [Pandemic Ventilator User Requirements](https://docs.google.com/spreadsheets/u/2/d/1XAo2LKQBSAnemD73kKWN7G7QsSLVRSNY9SQNuliBCzY/edit#gid=0)
 - [OSCMS Requirements](https://docs.google.com/document/d/15kqUPPI7bYL6dnCetOeDSyE8IG5pHVmtg8Ju4yzGlF8/edit?fbclid=IwAR31p6i7iZhFuL7ejLUs5mz9gmRXWi1kWoOG2wR_Lyqr3UgzaOcz6t2VNlk#heading=h.1pr0nkc86xgg) - most complete ventilator spec
 - [Ventilator spec](https://drive.google.com/open?id=1mXAS4-lcwsU2nRVF3crRuBIVWJfbnB5P)
+### Other Projects
+- [OpenSourceCoronavirusProjects](https://github.com/cyborg527/OpenSourceCoronavirusProjects)
+- [OpenSourceVentilator](https://opensourceventilator.ie/)
+- [MIT design](https://www.fastcompany.com/1661942/mit-students-invent-100-ventilator-for-disaster-zones)
+- [Hackaday effort](https://hackaday.com/2020/03/12/ultimate-medical-hackathon-how-fast-can-we-design-and-deploy-an-open-source-ventilator/)
+### Dashboards
 - [Johns Hopkins dashboard](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 - [Live Interactive dashboard](https://datastudio.google.com/embed/reporting/f56febd8-5c42-4191-bcea-87a3396f4508/page/k1XIB)
 - [Epidemic Calculator](http://gabgoh.github.io/COVID/index.html)
 - [JHU Time Series Dataset](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)
+### Other
 - [Mechanical Ventilation video series](https://www.youtube.com/watch?v=i6hmGVBbIJk)
-- [MIT design](https://www.fastcompany.com/1661942/mit-students-invent-100-ventilator-for-disaster-zones)
-- [Hackaday effort](https://hackaday.com/2020/03/12/ultimate-medical-hackathon-how-fast-can-we-design-and-deploy-an-open-source-ventilator/)
 - [Open Source Medical Supplies Facebook Group](https://www.facebook.com/groups/670932227050506/post_tags/?post_tag_id=674736673336728)
 - [A low oxygen consumption pneumatic ventilator for emergency construction during a respiratory failure pandemic - Williams](https://l.facebook.com/l.php?u=https%3A%2F%2Flookaside.fbsbx.com%2Ffile%2FWilliams_et_al-2010-Anaesthesia.pdf%3Ftoken%3DAWx69kPx0nI5HEpVeaNy24bn4q1GDzC0sXTHRSZhE5KIxPyQ67eEu4S7N0iHn_JngGeEK6sNljjXqsA0bA2tAop5FZhIAJotbVWZG8MHPUSA61l7TgDelxZyH2fv6vmKNmL1gULxPK_-b8P3h3ojDA-C_5E6aT0WHfSQDe-etnz0yQ&h=AT3qvgoCUalOjiZATD5rFSJ50BaXUBusOQzW24deVutMAoYmEEW2gb7SYGIeyHJHv5q-TYAeBxpWslhvpChvipB0kV3w04YnqNlw6mtW9Ulel8722b-9MIDKZM1h07lpOwy1N8V3uD4&__tn__=H-R&c[0]=AT2hPfdfSJtkRwnPiZanBKqyTAIH8YzXrv1SWUdh0CvUafrDPVMH3qYw4MAtS64r40eAcNFiGvjK22xvQ87VvWOnltyAbapza0FJKsrX69uNKpJWSq5YWYZUeS-ccZNzSWObEsIWBGhfaV-nHj7KMA)
 
