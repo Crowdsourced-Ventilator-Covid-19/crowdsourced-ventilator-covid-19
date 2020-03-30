@@ -61,7 +61,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Prototype Phase
 - Ventilator-in-a-bucket design
 ![v0.02](https://i.imgur.com/abTtjd9.png)
-![pneumatic diagram](https://i.imgur.com/RYCfnam.png)
+![pneumatic diagram](https://i.imgur.com/aHmrQsf.png)
 ![UI](https://i.imgur.com/6L7qp5x.png)
 - Pressure sensor test
 ![MPRLS sensor with arduino](https://media.discordapp.net/attachments/690652109129121875/691836106118922280/image0.jpg?width=854&height=641)
