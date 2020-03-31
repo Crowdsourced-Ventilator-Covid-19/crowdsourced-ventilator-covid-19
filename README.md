@@ -75,6 +75,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ![pneumatic diagram](https://i.imgur.com/aHmrQsf.png)
 - UI Mockup
 [![UI mockup](https://i.imgur.com/UrTEmbm.jpg)](https://youtu.be/7QR5tj20Ex0)
+[![UI with MPRLS](https://i.imgur.com/TI1kJdj.png)](https://youtu.be/upI3a_cE9aY)
 - Pressure sensor test
 ![MPRLS sensor with arduino](https://media.discordapp.net/attachments/690652109129121875/691836106118922280/image0.jpg?width=854&height=641)
 ![sensor readings](https://media.discordapp.net/attachments/690652109129121875/691836174578352138/unknown.png)
