@@ -319,10 +319,45 @@ double readPressure(int rr, double ie, int peep, double cmpt) {
   return 0;
 }
 
+// ------- 10 entry FIFO for sample averaging -------
+// Define the number of samples to keep track of. The higher the number, the
+// more the readings will be smoothed, but the slower the output will respond to
+// the input. Using a constant rather than a normal variable lets us use this
+// value to determine the size of the readings array.
+const int numReadings = 10;
+double readings[numReadings];      // the readings from the analog input
+int readIndex = 0;              // the index of the current reading
+double total = 0;                  // the running total
+double average = 0;                // the average
 
+// -------- main variables -------
+double peep = 0;            // PEEP measurement
+double peak = 0;            // Ppeak
+double plat = 0;            // Pplat
+double tmpPeak = 0;         // tmp variable for peak measurements
+double tmpPlat = 0;         // tmp variable for plat measurements
+double peepError = 0.1;     // thresold for measuring steady state PEEP
+boolean inspPhase = false;  // phase variable
+
+// -------- detect phase --------
+// This is a hacky solution looking for large discontinuities
+// to detect a phase change.   Once the arduino actuates the bag
+// this code should not be necessary, because the arduino will know
+// phase without needed to take measurements
+
+double phaseThresh = 1.0;              // delta pressure threshold for phase change
+void phaseCheck(double pnew) {
+  double dp = pnew - average;
+  if (dp > phaseThresh) {              // starting inspiratory phase
+    inspPhase = true ;
+  } else if (dp < -1 * phaseThresh) {  // starting expiratory phase
+    inspPhase = false;
+  }
+}
 
 void setup() {
-  double x, y, lastx;
+  double x, y;
+  double lastx;  // variable to track xaxis wraparound
   boolean redraw = false;
   
   mpr.begin();
@@ -330,26 +365,85 @@ void setup() {
   tft.fillScreen(BLACK);
   tft.setRotation(1);
 
-  tft.setCursor(0,0,4);
-  tft.setTextColor(TFT_WHITE, TFT_BLACK);
-  tft.println("RR: 15bpm  I/E: 1.0");
-  tft.println("PpeakAlarm: >40  PplatAlarm: >30");  
-  tft.println("Ppeak: 38  Pplat: 36  PEEP: 12");
+  // initialize all the FIFO readings to 0:
+  for (int thisReading = 0; thisReading < numReadings; thisReading++) {
+    readings[thisReading] = 0;
+  }
 
+  // draw the initial graph axes
   Graph(tft, x, y, 1, 60, 290, 390, 180, 0, 10, 1, 0, 45, 5, "", "", "", display1, YELLOW);
 
 }
 
 
 void loop(void) {
-  double pressure_hPa = mpr.readPressure();
-  double pressure_cmh2o = pressure_hPa * 1.01974428892 - 1030.22;
-  //double pressure_cmh2o = 10;
-  double x = (millis() % 10000) / 1000.0;
-  //double y = readPressure(15, 1, 12, 1);
-  double y = pressure_cmh2o;
-  boolean redraw = true;
+  // read pressure sensor in hectoPa
+  double p_hPa = mpr.readPressure();
+  // convert to relative pressure in cmh2o
+  double atmos = 1026.0;  // hack to workaround lack of differential pressure sensor
+  double p_cmh2o = p_hPa * 1.01974428892 - atmos;
+
+  // look for phase change
+  phaseCheck(p_cmh2o);
+
+  if (inspPhase) {
+    // track the max pressure during inspiratory phase
+    if (p_cmh2o > tmpPeak) {
+      tmpPeak = p_cmh2o;
+    }
+  } else {
+    // capture values when detecting a phase change to expiratory
+    if (tmpPeak > 0) {
+      peak = tmpPeak;
+      plat = average;
+    }
+    tmpPeak = 0;
+
+    // if the pressure is stable, then capture as PEEP
+    if (abs(p_cmh2o - average) < peepError) {
+      peep = p_cmh2o;
+    }
+  } 
+
+  // ------- FIFO running average code ---------
+  // subtract the last reading:
+  total = total - readings[readIndex];
+  // read from the sensor:
+  readings[readIndex] = p_cmh2o;
+  // add the reading to the total:
+  total = total + readings[readIndex];
+  // advance to the next position in the array:
+  readIndex = readIndex + 1;
   
+  // if we're at the end of the array...
+  if (readIndex >= numReadings) {
+    // ...wrap around to the beginning:
+    readIndex = 0;
+  }
+  
+  // calculate the average:
+  average = total / numReadings;
+
+
+  // ------- Text display --------
+  tft.setCursor(0,0,4);
+  tft.setTextColor(TFT_WHITE, TFT_BLACK);
+  tft.print("Ppeak: "); tft.print(peak); tft.print("    ");
+  tft.print("Pplat: "); tft.print(plat); tft.print("    ");
+  tft.print("PEEP: "); tft.print(peep); tft.println("    ");
+  tft.print("Pavg: "); tft.print(average); tft.print("    ");
+  if (inspPhase) {
+    tft.println("Inspiratory     ");
+  } else {
+    tft.println("Expiratory      ");
+  }
+
+  // -------- Draw Chart ---------
+  double x = (millis() % 10000) / 1000.0;
+  double y = p_cmh2o;
+  boolean redraw = true;
+
+  // detect screen wrap, clear the old waves
   if (lastx > x) {
     ox = x + 60;
     tft.fillRect(1, 100, 480, 200, BLACK);
