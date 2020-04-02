@@ -78,3 +78,5 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ![sensor readings](https://media.discordapp.net/attachments/690652109129121875/691836174578352138/unknown.png)
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
 [![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
+- Bag Actuator Test
+[![Bag actuator test](https://i.imgur.com/TyA9ViN.png)](https://youtu.be/CuaFcwReyhs)
