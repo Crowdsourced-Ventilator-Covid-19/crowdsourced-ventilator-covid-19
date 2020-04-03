@@ -81,4 +81,4 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Bag Actuator Test
 [![Bag actuator test](https://i.imgur.com/TyA9ViN.png)](https://youtu.be/CuaFcwReyhs)
 - Software control flowchart
-[flowchart](https://i.imgur.com/mgNiw1e.png)
+![flowchart](https://i.imgur.com/mgNiw1e.png)
