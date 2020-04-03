@@ -58,9 +58,10 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - PC mode
 
 ## Proposed usage model
-- Tidal volume will be set using pre-sized "C" clamps that wrap around BVM bag to limit self-inflation to desired volume
+- Tidal volume will be set using pre-sized shims placed next to the BVM bag to limit compression to desired volume
 - PEEP setting will be adjusted using a standard adjustable PEEP valve, using graphical UI pressure chart for feedback
 - Peak pressure will be adjusted using the pneumatic flow rate adjusting knob and graphical UI pressure chart for feedback
+- FIO2 control is done by matching the O2 flow rate to the specified TV and RR, or a venturi valve premixed supply
 - I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
 - Expiratory solenoid will enable a post-inspiratory pause for Pplat measurement
 - Detect pressure drop below PEEP to trigger patient assisted, and reset breath countdown timer
