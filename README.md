@@ -74,12 +74,9 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Ventilator-in-a-bucket design
 ![v0.02](https://i.imgur.com/BRfGdHy.png)
 ![pneumatic diagram](https://i.imgur.com/aHmrQsf.png)
-- Pressure sensor test
-![MPRLS sensor with arduino](https://media.discordapp.net/attachments/690652109129121875/691836106118922280/image0.jpg?width=854&height=641)
-![sensor readings](https://media.discordapp.net/attachments/690652109129121875/691836174578352138/unknown.png)
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
 [![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
-- All component test
-[![All component test](https://i.imgur.com/TyA9ViN.png)](https://youtu.be/U_IwPaCmFoU)
+- Demonstration of pressure control ventilation
+[![PC demo](https://i.imgur.com/05wxSNS.png)](https://www.youtube.com/watch?v=D5YNfeIVXSU)
 - Software control flowchart
 ![flowchart](https://i.imgur.com/mgNiw1e.png)
