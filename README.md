@@ -63,7 +63,6 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Peak pressure will be adjusted using the pneumatic flow rate adjusting knob and graphical UI pressure chart for feedback
 - FIO2 control is done by matching the O2 flow rate to the specified TV and RR, or a venturi valve premixed supply
 - I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
-- Expiratory solenoid will enable a post-inspiratory pause for Pplat measurement
 - Detect pressure drop below PEEP to trigger patient assisted, and reset breath countdown timer
 - Graphical UI will report:
   - Ppeak (peak measured pressure during inspiratory phase)
@@ -71,7 +70,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - PEEP (expiratory pressure when DP/DT drops below threshold)
 
 ## Prototype Phase
-- Ventilator-in-a-bucket design
+- Design
 ![v0.02](https://i.imgur.com/BRfGdHy.png)
 ![pneumatic diagram](https://i.imgur.com/aHmrQsf.png)
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
