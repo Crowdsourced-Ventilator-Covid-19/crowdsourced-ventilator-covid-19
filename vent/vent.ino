@@ -120,6 +120,7 @@ void setup() {
 
 
 void loop(void) {
+  boolean redraw = true;
   // read guage pressure
   double p_cmh2o = readPressure();
 
@@ -189,7 +190,7 @@ void loop(void) {
   if (lastx > x) {
     ox = x + 60;
     tft.fillRect(1, 100, 480, 200, BLACK);
-    Graph(tft, x, y, 1, 60, 290, 390, 180, xmin, xmax, xgrid, ymin, ymax, ygrid, "Pressure", "Time(s)", "cmH2o", display1, YELLOW);
+    Graph(tft, x, y, 1, 60, 290, 390, 180, xmin, xmax, xgrid, ymin, ymax, ygrid, "Pressure", "Time(s)", "cmH2o", redraw, YELLOW);
   }
   Trace(tft, x, y, 1, 60, 290, 390, 180, xmin, xmax, xgrid, ymin, ymax, ygrid, "Pressure", "Time(s)", "cmH2o", update1, YELLOW);
   lastx = x;
