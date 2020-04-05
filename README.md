@@ -70,6 +70,12 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - Pplat (final pressure at end of post-inspiratory pause)
   - PEEP (expiratory pressure when DP/DT drops below threshold)
 
+## BOM
+
+| Item | Price |
+| --- | --- |
+| Arduino Mega 2560 R3 | $17 |
+
 ## Prototype Phase
 - Design
 
