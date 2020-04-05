@@ -93,7 +93,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Prototype Phase
 - Design
 
-![v0.02](https://i.imgur.com/w6jH5BN.png)
+![v0.03](https://i.imgur.com/khjym6F.pngg)
 
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
 
