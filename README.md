@@ -75,6 +75,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | Item | Price |
 | --- | --- |
 | Arduino Mega 2560 R3 | $17 |
+| [2ch 5VDC Relay with Optocoupler](https://www.amazon.com/SunFounder-Channel-Optocoupler-Expansion-Raspberry/dp/B00E0NTPP4/ref=sr_1_10?dchild=1&keywords=arduino+relay&qid=1586061663&sr=8-10) | $7 |
 
 ## Prototype Phase
 - Design
