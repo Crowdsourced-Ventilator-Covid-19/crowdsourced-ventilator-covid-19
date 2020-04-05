@@ -85,6 +85,8 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [Pressure regulator](https://www.amazon.com/Primefit-CR1401G-Replacement-Regulator-steel-Protected/dp/B00IDCYIJ6/ref=sr_1_2?dchild=1&keywords=pressure+regulator&qid=1586062545&sr=8-2) | $6 |
 | [Adjustable silencers](https://www.amazon.com/uxcell-Adjustable-Pneumatic-Exhaust-Silencer/dp/B07K39R9Y3/ref=sr_1_2?dchild=1&keywords=pneumatic+adjustable+silencer+1%2F4+npt&qid=1586062735&sr=8-2) | $8 |
 | [6mm tubing](https://www.amazon.com/Uxcell-a13080200ux0301-Blue-29-5Ft-Polyurethane/dp/B00G9JQ2JY/ref=sr_1_5?crid=366JZUYPHKWGG&dchild=1&keywords=6mm+pneumatic+tubing&qid=1586062852&sprefix=6mm+pnu%2Caps%2C154&sr=8-5)  | $8 |
+| [Project Box](https://www.amazon.com/Hammond-1591USBK-Plastic-Project-Inches/dp/B007POB8PK/ref=sr_1_15?dchild=1&keywords=electronic+project+box&qid=1586062900&sr=8-15) | $9 |
+
 
 
 ## Prototype Phase
