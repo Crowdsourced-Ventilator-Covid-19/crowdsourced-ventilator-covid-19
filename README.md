@@ -48,11 +48,11 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - Fio2
   - disconnect alarm
   - inspiratory and expiratory pressure alarm
-  - negative pressure alarm
   - Patient trigger capability
   - humidity and temperature from HME
   - exhaust filter through HME
 - Stretch goals
+  - Flow and volume sensing
   - Pressure data logging?
 - Not POR
   - PC mode
