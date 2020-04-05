@@ -83,6 +83,9 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [20mm Bore 100mm stroke pneumatic cylinder](https://www.amazon.com/Sydien-Pneumatic-Cylinder-Connector-MAL20X100/dp/B07J9V84VH/ref=sr_1_2?dchild=1&keywords=pneumatic+cylinder+100mm&qid=1586062300&sr=8-2) | $14 |
 | [6mm to 1/4" NPT push connects](https://www.amazon.com/TOUHIA-Pneumatic-Straight-Connect-Fittings/dp/B07RXVQPH6/ref=sr_1_4?crid=2NKU48K7C26S9&dchild=1&keywords=1%2F4+npt+push+to+connect+fittings&qid=1586062414&sprefix=1%2F4+npt+pu%2Caps%2C154&sr=8-4) | $8 |
 | [Pressure regulator](https://www.amazon.com/Primefit-CR1401G-Replacement-Regulator-steel-Protected/dp/B00IDCYIJ6/ref=sr_1_2?dchild=1&keywords=pressure+regulator&qid=1586062545&sr=8-2) | $6 |
+| [Adjustable silencers](https://www.amazon.com/uxcell-Adjustable-Pneumatic-Exhaust-Silencer/dp/B07K39R9Y3/ref=sr_1_2?dchild=1&keywords=pneumatic+adjustable+silencer+1%2F4+npt&qid=1586062735&sr=8-2) | $8 |
+| [6mm tubing](https://www.amazon.com/Uxcell-a13080200ux0301-Blue-29-5Ft-Polyurethane/dp/B00G9JQ2JY/ref=sr_1_5?crid=366JZUYPHKWGG&dchild=1&keywords=6mm+pneumatic+tubing&qid=1586062852&sprefix=6mm+pnu%2Caps%2C154&sr=8-5)  | $8 |
+
 
 ## Prototype Phase
 - Design
