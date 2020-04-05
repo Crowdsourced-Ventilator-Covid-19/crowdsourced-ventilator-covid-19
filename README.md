@@ -76,6 +76,13 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | --- | --- |
 | Arduino Mega 2560 R3 | $17 |
 | [2ch 5VDC Relay with Optocoupler](https://www.amazon.com/SunFounder-Channel-Optocoupler-Expansion-Raspberry/dp/B00E0NTPP4/ref=sr_1_10?dchild=1&keywords=arduino+relay&qid=1586061663&sr=8-10) | $7 |
+| 2x [I2C differential breakout](https://www.sparkfun.com/products/14589) | 2x $11 |
+| 2x [MPRLS](https://www.adafruit.com/product/3965) | 2x $15 |
+| [TFT Touchscreen](https://www.adafruit.com/product/2050) | $40 |
+| [5way 2pos solenoid](https://www.amazon.com/Baomain-Pneumatic-Solenoid-Internally-Electrical/dp/B01J3CE3EE/ref=sr_1_4?crid=1K7DOXGGJAF8T&dchild=1&keywords=5+way+2+position+pneumatic+valve&qid=1586062215&sprefix=5-way+2+pos%2Caps%2C159&sr=8-4) | $12 |
+| [20mm Bore 100mm stroke pneumatic cylinder](https://www.amazon.com/Sydien-Pneumatic-Cylinder-Connector-MAL20X100/dp/B07J9V84VH/ref=sr_1_2?dchild=1&keywords=pneumatic+cylinder+100mm&qid=1586062300&sr=8-2) | $14 |
+| [6mm to 1/4" NPT push connects](https://www.amazon.com/TOUHIA-Pneumatic-Straight-Connect-Fittings/dp/B07RXVQPH6/ref=sr_1_4?crid=2NKU48K7C26S9&dchild=1&keywords=1%2F4+npt+push+to+connect+fittings&qid=1586062414&sprefix=1%2F4+npt+pu%2Caps%2C154&sr=8-4) | $8 |
+| [Pressure regulator](https://www.amazon.com/Primefit-CR1401G-Replacement-Regulator-steel-Protected/dp/B00IDCYIJ6/ref=sr_1_2?dchild=1&keywords=pressure+regulator&qid=1586062545&sr=8-2) | $6 |
 
 ## Prototype Phase
 - Design
