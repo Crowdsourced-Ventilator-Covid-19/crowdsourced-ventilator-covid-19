@@ -74,7 +74,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | Item | Price |
 | --- | --- |
 | Arduino Mega 2560 R3 | $17 |
-| [2ch 5VDC Relay with Optocoupler](https://www.amazon.com/SunFounder-Channel-Optocoupler-Expansion-Raspberry/dp/B00E0NTPP4/ref=sr_1_10?dchild=1&keywords=arduino+relay&qid=1586061663&sr=8-10) | $7 |
+| [4ch 5VDC Relay with Optocoupler](https://www.amazon.com/SainSmart-101-70-101-4-Channel-Relay-Module/dp/B0057OC5O8/ref=sr_1_2?dchild=1&keywords=4ch+5v+dc+relay&qid=1586456845&s=industrial&sr=1-2) | $7 |
 | 2x [I2C differential breakout](https://www.sparkfun.com/products/14589) | 2x $11 |
 | 2x [MPRLS](https://www.adafruit.com/product/3965) | 2x $15 |
 | [TFT Touchscreen](https://www.adafruit.com/product/2050) | $40 |
