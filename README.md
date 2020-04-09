@@ -91,7 +91,8 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
 | [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
 | [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
-| Total | $270 |
+| [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
+| Total | $295 |
 
 ## Prototype Phase
 - Design
