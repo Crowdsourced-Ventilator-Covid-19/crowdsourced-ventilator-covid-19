@@ -102,7 +102,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 - Demonstration of pressure control mode:
 
-[![PC demo](https://i.imgur.com/05wxSNS.png)](https://youtu.be/iZb-0LVqY_8)
+[![PC demo](https://i.imgur.com/6vZsosO.png)](https://youtu.be/iZb-0LVqY_8)
 
 - Volume control mode:  Once the flow sensor is added, we'll be able to set TV using the touch screen UI
 
