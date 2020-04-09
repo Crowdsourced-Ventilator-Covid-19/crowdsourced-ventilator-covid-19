@@ -86,7 +86,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [6mm tubing](https://www.amazon.com/Uxcell-a13080200ux0301-Blue-29-5Ft-Polyurethane/dp/B00G9JQ2JY/ref=sr_1_5?crid=366JZUYPHKWGG&dchild=1&keywords=6mm+pneumatic+tubing&qid=1586062852&sprefix=6mm+pnu%2Caps%2C154&sr=8-5)  | $8 |
 | [Project Box](https://www.amazon.com/Hammond-1591USBK-Plastic-Project-Inches/dp/B007POB8PK/ref=sr_1_15?dchild=1&keywords=electronic+project+box&qid=1586062900&sr=8-15) | $9 |
 | [Teflon tape](https://www.amazon.com/Dixon-Valve-TTB75-Industrial-Temperature/dp/B003D7K8E0/ref=sr_1_8?dchild=1&keywords=teflon+tape&qid=1586097443&sr=8-8) | $2 |
-| [Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) (optional for flow/volume measurement) | $60 |
+| [Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) | $60 |
 | [Check Valve](https://www.wnlproducts.com/product/replacement-valves-for-cpr-mask/) | $3 |
 | [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
 | [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
