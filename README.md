@@ -109,4 +109,4 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 - Software control flowchart
 
-![flowchart](https://i.imgur.com/mgNiw1e.png)
+![flowchart](https://i.imgur.com/Xz6PEpd.png)
