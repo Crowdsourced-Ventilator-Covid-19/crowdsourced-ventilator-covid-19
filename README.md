@@ -40,7 +40,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Scope (Tentative pending clarification)
 - Required Scope
   - Simple assembly with readily available parts
-  - AC Mode
+  - AC Mode in both VCV and PCV
   - TV Control
   - Rate Control
   - I:E Ratio
@@ -51,19 +51,18 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - Patient trigger capability
   - humidity and temperature from HME
   - exhaust filter through HME
-- Stretch goals
   - Flow and volume sensing
+- Stretch goals
   - Pressure data logging?
 - Not POR
   - PC mode
 
 ## Proposed usage model
-- Tidal volume will be set using pre-sized shims placed next to the BVM bag to limit compression to desired volume
+- TV, I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
 - PEEP setting will be adjusted using a standard adjustable PEEP valve, using graphical UI pressure chart for feedback
 - Peak pressure will be adjusted using the compressed air regulator and graphical UI pressure chart for feedback
 - Max flow rate and Tp is adusted with the adjustable speed exhaust filter
 - FIO2 control is done by matching the O2 flow rate to the specified TV and RR, or a venturi valve premixed supply
-- I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
 - Detect pressure drop below PEEP to trigger patient assisted, and reset breath countdown timer
 - Graphical UI will report:
   - Ppeak (peak measured pressure during inspiratory phase)
@@ -94,7 +93,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Prototype Phase
 - Design
 
-![v0.03](https://i.imgur.com/HPXli3g.png)
+![v0.03](https://i.imgur.com/NC8aWRx.png)
 
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
 
