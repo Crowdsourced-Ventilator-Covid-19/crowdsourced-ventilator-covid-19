@@ -74,7 +74,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | Item | Price |
 | --- | --- |
 | Arduino Mega 2560 R3 | $17 |
-| [4ch 5VDC Relay with Optocoupler](https://www.amazon.com/SainSmart-101-70-101-4-Channel-Relay-Module/dp/B0057OC5O8/ref=sr_1_2?dchild=1&keywords=4ch+5v+dc+relay&qid=1586456845&s=industrial&sr=1-2) | $7 |
+| [4ch 5VDC Relay with Optocoupler](https://www.amazon.com/SainSmart-101-70-101-4-Channel-Relay-Module/dp/B0057OC5O8/ref=sr_1_2?dchild=1&keywords=4ch+5v+dc+relay&qid=1586456845&s=industrial&sr=1-2) | $10 |
 | 2x [I2C differential breakout](https://www.sparkfun.com/products/14589) | 2x $11 |
 | 2x [MPRLS](https://www.adafruit.com/product/3965) | 2x $15 |
 | [TFT Touchscreen](https://www.adafruit.com/product/2050) | $40 |
@@ -91,7 +91,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
 | [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
 | [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
-| Total | $267 |
+| Total | $270 |
 
 ## Prototype Phase
 - Design
