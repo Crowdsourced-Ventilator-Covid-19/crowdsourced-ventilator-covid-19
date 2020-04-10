@@ -103,6 +103,9 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 [![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
 
+- UI Touch demo
+[![UI demo](https://i.imgur.com/GECC4e0.png)](https://youtu.be/8wwCWCgnhII)
+
 - Demonstration of pressure control mode:
 
 [![PC demo](https://i.imgur.com/6vZsosO.png)](https://youtu.be/iZb-0LVqY_8)
