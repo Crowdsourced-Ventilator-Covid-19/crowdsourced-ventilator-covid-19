@@ -31,6 +31,7 @@ SoftWire sWire = SoftWire();
 #define RESET_PIN  -1  // set to any GPIO pin # to hard-reset on begin()
 #define EOC_PIN    -1  // set to any GPIO pin to read end-of-conversion by pin
 #define RELAY       8
+#define EXP_RELAY   9  // expiratory solenoid
 Adafruit_MPRLS mpr = Adafruit_MPRLS(RESET_PIN, EOC_PIN);
 Adafruit_MPRLS smpr = Adafruit_MPRLS(RESET_PIN, EOC_PIN);
 
@@ -42,11 +43,12 @@ TFT_HX8357 tft = TFT_HX8357();       // Invoke custom library
 // -------- input variables -------
 // these will eventually be set by the touch UI
 int    rr = 15;             // respiratory rate
-double ier = 1;             // I/E ratio  (actually E/I)
-int    peakAlrm = 40;
+double ier = 2;             // I/E ratio  (actually E/I)
+int    peakAlrm = 35;
 int    platAlrm = 30;
 int    peepAlrm = 10;
-
+int    peakLmt = 40;
+int    trigger = -3;
 
 // -------- main variables -------
 double peep = 0;            // PEEP measurement
@@ -60,7 +62,7 @@ uint32_t breathTimer;       // next timestamp to start breath
 uint32_t ierTimer;          // inspiratory phase duration 
 uint32_t pAtmosTimer = 0;   // timer to take a new atmos pressure read
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
-uint32_t pAtmosDelay = 1000 * 60;  // take new atmos reading every minute
+uint32_t pAtmosDelay = 1000 * 60 ;  // take new atmos reading every minute
 
 
 // these are the only external variables used by the graph function
@@ -85,8 +87,8 @@ double total = 0;                  // the running total
 double average = 0;                // the average
 
 // --------- graph dimensions ---------
-int ymax = 60;
-int ymin = 0;
+int ymax = 45;
+int ymin = -5;
 int ygrid = 5;
 int xmax = 10;
 int xmin = 0;
@@ -116,6 +118,9 @@ void setup() {
   // configure the RELAY control pin
   pinMode(RELAY, OUTPUT);
   digitalWrite(RELAY, HIGH);
+
+  pinMode (EXP_RELAY, OUTPUT);
+  digitalWrite(EXP_RELAY, HIGH);
 }
 
 
@@ -125,6 +130,10 @@ void loop(void) {
   double p_cmh2o = readPressure();
 
   // TODO overpressure alarm check here
+  if (p_cmh2o > peakLmt) {
+    digitalWrite(RELAY, HIGH); // hardlimit, release bag
+    // inspPhase = false
+  }
 
   // ------------ inspiratory phase --------------
   if (inspPhase) {
@@ -136,6 +145,7 @@ void loop(void) {
     // check if inspiratory phase is over
     if (millis() > ierTimer) {
       digitalWrite(RELAY, HIGH); // release BVM bag
+      digitalWrite(EXP_RELAY, LOW);
       inspPhase = false;
     }
     
@@ -155,11 +165,20 @@ void loop(void) {
       peep = p_cmh2o; 
     }
     // TODO PEEP alarm here
+
+    // look for patient assist
+    //if (p_cmh2o + trigger < peep) {
+    //  inspPhase = true;
+    //  digitalWrite(RELAY, LOW); // patient assist
+    //  digitalWrite(EXP_RELAY, HIGH);
+    //  resetTimers();
+    //}
     
     // Check if time to start a new breath
     if (millis() > breathTimer) { 
       inspPhase = true;
       digitalWrite(RELAY, LOW); // compress BVM bag
+      digitalWrite(EXP_RELAY, HIGH);
       resetTimers();
 
     }
@@ -209,6 +228,7 @@ double readPressure() {
   if (millis() > pAtmosTimer || p_atmos_hPa == 0) {
     p_atmos_hPa = smpr.readPressure();
     pAtmosTimer = millis() + pAtmosDelay;
+    delay(50);
   }
   // read pressure sensor in hectoPa
   double p_hPa = mpr.readPressure();
