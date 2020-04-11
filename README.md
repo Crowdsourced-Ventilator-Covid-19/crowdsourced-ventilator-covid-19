@@ -40,7 +40,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Scope (Tentative pending clarification)
 - Required Scope
   - Simple assembly with readily available parts
-  - AC Mode
+  - AC Mode in both VCV and PCV
   - TV Control
   - Rate Control
   - I:E Ratio
@@ -51,19 +51,18 @@ So can we design a ventilator good enough to help and do no harm to the patient?
   - Patient trigger capability
   - humidity and temperature from HME
   - exhaust filter through HME
-- Stretch goals
   - Flow and volume sensing
+- Stretch goals
   - Pressure data logging?
 - Not POR
   - PC mode
 
 ## Proposed usage model
-- Tidal volume will be set using pre-sized shims placed next to the BVM bag to limit compression to desired volume
+- TV, I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
 - PEEP setting will be adjusted using a standard adjustable PEEP valve, using graphical UI pressure chart for feedback
 - Peak pressure will be adjusted using the compressed air regulator and graphical UI pressure chart for feedback
 - Max flow rate and Tp is adusted with the adjustable speed exhaust filter
 - FIO2 control is done by matching the O2 flow rate to the specified TV and RR, or a venturi valve premixed supply
-- I/E ratio, RR, Ppeak alarm and Pplat alarm will be set using TFT touch screen
 - Detect pressure drop below PEEP to trigger patient assisted, and reset breath countdown timer
 - Graphical UI will report:
   - Ppeak (peak measured pressure during inspiratory phase)
@@ -75,7 +74,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | Item | Price |
 | --- | --- |
 | Arduino Mega 2560 R3 | $17 |
-| [2ch 5VDC Relay with Optocoupler](https://www.amazon.com/SunFounder-Channel-Optocoupler-Expansion-Raspberry/dp/B00E0NTPP4/ref=sr_1_10?dchild=1&keywords=arduino+relay&qid=1586061663&sr=8-10) | $7 |
+| [4ch 5VDC Relay with Optocoupler](https://www.amazon.com/SainSmart-101-70-101-4-Channel-Relay-Module/dp/B0057OC5O8/ref=sr_1_2?dchild=1&keywords=4ch+5v+dc+relay&qid=1586456845&s=industrial&sr=1-2) | $10 |
 | 2x [I2C differential breakout](https://www.sparkfun.com/products/14589) | 2x $11 |
 | 2x [MPRLS](https://www.adafruit.com/product/3965) | 2x $15 |
 | [TFT Touchscreen](https://www.adafruit.com/product/2050) | $40 |
@@ -87,23 +86,34 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [6mm tubing](https://www.amazon.com/Uxcell-a13080200ux0301-Blue-29-5Ft-Polyurethane/dp/B00G9JQ2JY/ref=sr_1_5?crid=366JZUYPHKWGG&dchild=1&keywords=6mm+pneumatic+tubing&qid=1586062852&sprefix=6mm+pnu%2Caps%2C154&sr=8-5)  | $8 |
 | [Project Box](https://www.amazon.com/Hammond-1591USBK-Plastic-Project-Inches/dp/B007POB8PK/ref=sr_1_15?dchild=1&keywords=electronic+project+box&qid=1586062900&sr=8-15) | $9 |
 | [Teflon tape](https://www.amazon.com/Dixon-Valve-TTB75-Industrial-Temperature/dp/B003D7K8E0/ref=sr_1_8?dchild=1&keywords=teflon+tape&qid=1586097443&sr=8-8) | $2 |
-| Total | $183 |
-| [Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) (optional for flow/volume measurement) | $60 |
-
+| [Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) | $60 |
+| [Check Valve](https://www.wnlproducts.com/product/replacement-valves-for-cpr-mask/) | $3 |
+| [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
+| [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
+| [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
+| [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
+| Total | $295 |
 
 ## Prototype Phase
 - Design
 
-![v0.03](https://i.imgur.com/HPXli3g.png)
+![v0.03](https://i.imgur.com/NC8aWRx.png)
 
 - UI Pressure graph, with Ppeak, Pplat and PEEP detection
 
 [![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
 
-- Demonstration of pressure control ventilation
+- UI Touch demo
+[![UI demo](https://i.imgur.com/GECC4e0.png)](https://youtu.be/8wwCWCgnhII)
 
-[![PC demo](https://i.imgur.com/05wxSNS.png)](https://www.youtube.com/watch?v=D5YNfeIVXSU)
+- Demonstration of pressure control mode:
+
+[![PC demo](https://i.imgur.com/6vZsosO.png)](https://youtu.be/iZb-0LVqY_8)
+
+- Volume control mode:  Once the flow sensor is added, we'll be able to set TV using the touch screen UI
+
+[![VC demo](https://i.imgur.com/FQ3KezY.png)](https://youtu.be/L8kJsOJ2qPA)
 
 - Software control flowchart
 
-![flowchart](https://i.imgur.com/mgNiw1e.png)
+![flowchart](https://i.imgur.com/Xz6PEpd.png)
