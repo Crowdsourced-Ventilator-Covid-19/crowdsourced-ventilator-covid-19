@@ -115,7 +115,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 - Volume control mode:  
 
-[![VC demo](https://i.imgur.com/j0sDrZf.png)](https://youtu.be/FzHzDZtPzxIA)
+[![VC demo](https://i.imgur.com/3ACTQo4.png)](https://youtu.be/FzHzDZtPzxIA)
 
 - Software control flowchart
 
