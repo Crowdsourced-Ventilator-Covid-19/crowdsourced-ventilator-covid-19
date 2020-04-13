@@ -99,10 +99,6 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ![v0.03](https://i.imgur.com/NC8aWRx.png)
 
-- UI Pressure graph, with Ppeak, Pplat and PEEP detection
-
-[![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
-
 - UI Touch demo
 [![UI demo](https://i.imgur.com/GECC4e0.png)](https://youtu.be/8wwCWCgnhII)
 
