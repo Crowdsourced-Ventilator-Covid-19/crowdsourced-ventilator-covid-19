@@ -95,6 +95,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
 | [2x 1N4004 diode](https://www.sparkfun.com/products/14884)| $1 |
 | [Venturi flow meter tube](https://a360.co/2JGjDKU) | $10 |
+| [2x PEEP valve](https://www.amazon.com/gp/product/B00Q0SBGR2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $24 |
 | Total | ~$300 |
 
 ## Prototype Phase
