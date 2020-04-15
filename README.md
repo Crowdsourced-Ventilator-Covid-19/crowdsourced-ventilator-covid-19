@@ -100,19 +100,8 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ![v0.03](https://i.imgur.com/NC8aWRx.png)
 
-- UI Touch demo
-[![UI demo](https://i.imgur.com/GECC4e0.png)](https://youtu.be/8wwCWCgnhII)
-
-- UI with flow and volume charts
-[![f_and_v](https://i.imgur.com/CxHHyQd.png)](https://www.youtube.com/watch?v=gHv_fhX8Dx8)
-
-- Demonstration of pressure control mode:
-
-[![PC demo](https://i.imgur.com/alibkrs.png)](https://youtu.be/stB9s-_o2PM)
-
-- Volume control mode:  
-
-[![VC demo](https://i.imgur.com/3ACTQo4.png)](https://youtu.be/FzHzDZtPzxIA)
+- Demonstration
+[![UI demo](https://i.imgur.com/CcICFsl.png)](https://www.youtube.com/watch?v=sNcdRJmJqwU)
 
 - Software control flowchart
 
