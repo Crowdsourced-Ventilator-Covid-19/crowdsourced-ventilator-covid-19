@@ -4,7 +4,8 @@ void drawMainScreen() {
   display1 = 2;
   display2 = 2;
   display3 = 2;
-  tft.fillScreen(BLACK);
+  //tft.fillScreen(BLACK);
+  clearScreen();
   tft.setFont();
   tft.setTextSize(1);
   
@@ -20,6 +21,7 @@ void drawMainScreen() {
 
 
 void updateGraphs() {
+  if (screen != "main") { return; }
   boolean xticks1 = false;
   boolean xticks2 = false;
   boolean xticks3 = true;
@@ -43,14 +45,14 @@ void updateGraphs() {
 
 // update numbers on main screen
 void updateMeasures() {
-  if (screen = "main") {
-    updateMeas(400, 10, peak, YELLOW);
-    updateMeas(400, 70, plat, YELLOW);
-    // measLoop();
-    updateMeas(400, 130, peep, YELLOW);
-    updateMeas(390, 250, tvMeas, GREEN);
-    // measLoop();
-  }
+  boolean xticks1 = false;
+  boolean xticks2 = false;
+  boolean xticks3 = true;
+  if (screen != "main") { return; }
+  updateMeas(400, 10, peak, YELLOW);
+  updateMeas(400, 70, plat, YELLOW);
+  updateMeas(400, 130, peep, YELLOW);
+  updateMeas(390, 250, tvMeas, GREEN);
 }
 
 // draw measurement info
@@ -62,7 +64,15 @@ void drawMeas(String label, int labelx, int valuex, int y, int value, unsigned i
   tft.println(label);
   updateMeas(valuex, y, value, vcolor);
 }
-
+// update the measurement number
+void updateMeas(int x, int y, int value, unsigned int vcolor) {
+  tft.setTextSize(5);
+  tft.setFont();
+  tft.setTextColor(vcolor, BLACK);
+  tft.setCursor(x, y + 15);
+  tft.println(value);
+}
+/*
 // update the measurement number
 void updateMeas(int x, int y, int value, unsigned int vcolor) {
   tft.fillRect(x, y + 15, 100, 40, BLACK);
@@ -72,3 +82,4 @@ void updateMeas(int x, int y, int value, unsigned int vcolor) {
   tft.setCursor(x, y + 50);
   tft.println(value);
 }
+/*

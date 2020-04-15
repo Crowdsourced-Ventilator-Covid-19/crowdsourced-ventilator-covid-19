@@ -23,7 +23,10 @@ void checkTouch() {
     
     else if (screen == "settings") {
       if (xpos > 330 && ypos < 66) { // back button
-        drawMainScreen(); 
+      display1 = 2;
+      display2 = 2;
+      display3 = 2;
+      drawMainScreen(); 
       } else if (xpos < 120 && ypos > 194) {
         modVar = "peakAlrm";
         modVal = peakAlrm;
@@ -69,6 +72,7 @@ void checkTouch() {
         else if (modVar == "tv") {tvSet = modVal;}
         else if (modVar == "ier") {ier = modVal;}
         else if (modVar == "pmax") {pmax = modVal;}
+        omodVal = -999;
         drawSetScreen(); 
       } else {
         if (xpos < 40) { xpos = 40; }

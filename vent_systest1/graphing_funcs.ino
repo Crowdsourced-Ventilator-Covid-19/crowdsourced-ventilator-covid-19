@@ -31,9 +31,6 @@
 void Graph(MCUFRIEND_kbv &d, double x, double y, double gx, double gy, double w, double h, double xlo, double xhi,
 double xinc, double ylo, double yhi, double yinc, String title, String xlabel, String ylabel, unsigned int gcolor,
 unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor, int &redraw, double *ox, double *oy, boolean xticks) {
-  d.setFont();
-  d.setTextSize(1);
-  
   double ydiv, xdiv;
   // initialize old x and old y in order to draw the first point of the graph
   // but save the transformed value
@@ -52,6 +49,7 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
     // draw y scale
     d.setTextSize(1);
     d.setTextColor(tcolor, bcolor);
+    d.setFont();
     for ( i = ylo; i <= yhi; i += yinc) {
       // compute the transform
       temp =  (i - ylo) * (gy - h - gy) / (yhi - ylo) + gy;
@@ -69,8 +67,9 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
     }
     measLoop();
     // draw x scale
-    //d.setTextSize(1);
-    //d.setTextColor(tcolor, bcolor);
+    d.setTextSize(1);
+    d.setTextColor(tcolor, bcolor);
+    d.setFont();
     for (i = xlo; i <= xhi; i += xinc) {
 
       // compute the transform
@@ -91,6 +90,7 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
     measLoop();
 
     //now draw the labels
+    d.setTextSize(1);
     d.setFont(&FreeSans12pt7b);
     d.setTextColor(tcolor, bcolor);
     d.setCursor(gx , gy - h + 20);
@@ -104,7 +104,7 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
       d.setCursor(gx , gy + 20);
       d.println(xlabel);
       measLoop();
-  
+      d.setFont();
       d.setTextSize(1);
       d.setTextColor(acolor, bcolor);
       d.setCursor(gx - 10, gy - h - 10);
@@ -121,7 +121,7 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
     x =  (x - xlo) * ( w) / (xhi - xlo) + gx;
     y =  (y - ylo) * (gy - h - gy) / (yhi - ylo) + gy;
   
-    if (x - *ox < 10 && x > *ox) {
+    if (x - *ox < 30 && x > *ox) {
       d.drawLine(*ox, *oy, x, y, pcolor);
       d.drawLine(*ox, *oy + 1, x, y + 1, pcolor);
       d.drawLine(*ox, *oy - 1, x, y - 1, pcolor);
@@ -130,4 +130,16 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
   *ox = x;
   *oy = y;
 
+}
+
+
+void clearScreen() {
+  tft.fillRect(0, 0, 480, 80, BLACK);
+  measLoop();
+  tft.fillRect(0, 80, 480, 80, BLACK);
+  measLoop();
+  tft.fillRect(0, 160, 480, 80, BLACK);
+  measLoop();
+  tft.fillRect(0, 240, 480, 80, BLACK);
+  measLoop();
 }

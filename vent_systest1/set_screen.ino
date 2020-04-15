@@ -4,8 +4,11 @@
 
 void drawSetScreen() {
   screen = "settings";
-  tft.fillScreen(BLACK);
+  //tft.fillScreen(BLACK);
+  clearScreen();
+  measLoop();
   drawBackButton();
+  measLoop();
   tft.setFont(&FreeSansBold24pt7b);
   tft.setTextColor(WHITE, BLACK);
   tft.setCursor(100, 50);
@@ -21,7 +24,8 @@ void drawSetScreen() {
 }
 
 void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, double x, double y) {
-  tft.drawRoundRect(x, y, 115, 120, 7, bcolor);
+  measLoop();
+  // tft.drawRoundRect(x, y, 115, 120, 7, bcolor);
   // tft.fillRoundRect(x, y, 115, 120, 7, bcolor);
   tft.setTextSize(1);
   tft.setFont(&FreeSans12pt7b);

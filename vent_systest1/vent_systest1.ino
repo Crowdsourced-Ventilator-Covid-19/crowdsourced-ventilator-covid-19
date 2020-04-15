@@ -77,15 +77,16 @@ String screen;
 boolean inspPhase = false;  // phase variable
 
 // measured and processed variables
-double peep = 6;            // PEEP measurement
-double peak = 20;           // Ppeak measurement
-double plat = 18;           // Pplat measurement
-double tvMeas = 273;        // measured TV
+double peep = 0;            // PEEP measurement
+double peak = 0;           // Ppeak measurement
+double plat = 0;           // Pplat measurement
+double tvMeas = 0;        // measured TV
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
 // calibration vars
 double poff = 0;
 double foff = 0;
+double tvoff = 0;
 
 
 // temp variables
@@ -158,7 +159,8 @@ double total = 0;                  // the running total
 double average = 0;                // the average
 
 void setup() {
-  Serial.begin(115000);
+  delay(10000);
+  Serial.begin(115200);
   Wire.begin();
   tcascan();      // scan i2c mux for sensors and print to serial port
 
@@ -179,11 +181,12 @@ void setup() {
   tft.begin(ID);
   tft.setRotation(1);
 
+  delay(1000);
+
   // tare differential pressure sensors
   calibratePressure();
   calibrateFlow();
 
-  delay(500);
 
   // interrupt driven pressure and flow sample rate to workaround slow screen refresh
   cli();//stop interrupts
@@ -270,7 +273,7 @@ void measLoop() {
     }
 
     // check if we've hit desired TV
-    if (tmpTv >= tvSet) {
+    if (tmpTv >= tvSet + tvoff) {
       digitalWrite(PISTON, HIGH); // release BVM bag
     }
   
@@ -286,18 +289,18 @@ void measLoop() {
         digitalWrite(PISTON, HIGH);   // release BVM bag
         digitalWrite(SOLENOID, LOW);  // open expiratory path
         inspPhase = false;
+        peak = tmpPeak;
+        plat = average;
+        tvMeas = tmpTv;
+        tvoff += tvSet - tmpTv; // simple proportional control
+        Serial.println(tvoff);
+        updateMeasures();
       }
       
     // ------------ expiratory phase --------------
     } else {
       
       // capture values when detecting a phase change to expiratory
-      if (tmpPeak > 0) {
-        peak = tmpPeak;
-        plat = average;
-        tvMeas = tmpTv;
-        updateMeasures();
-      }
       tmpPeak = 0;
       tmpTv = 0;      // dont have expiratory flow sensor, so assume TV empties during expiratory phase BEWARE BREATH STACKING
       // TODO plat alarm here
@@ -360,5 +363,5 @@ void fifoInit() {
 void resetTimers() {
   // start the breath timer
   breathTimer = round(60.0 / rr * 1000.0) + millis();
-  ierTimer = round((60.0 / rr * 1000.0) * (1 - (ier / (ier+1)))) + millis();
+  ierTimer = round((60.0 / rr * 1000.0) * (1.0 - (float(ier) / (float(ier)+1.0)))) + millis();
 }
