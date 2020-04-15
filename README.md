@@ -99,10 +99,6 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 ![v0.03](https://i.imgur.com/NC8aWRx.png)
 
-- UI Pressure graph, with Ppeak, Pplat and PEEP detection
-
-[![UI mockup](https://i.imgur.com/8U2wyyO.png)](https://youtu.be/rTBNxbjgaRo)
-
 - UI Touch demo
 [![UI demo](https://i.imgur.com/GECC4e0.png)](https://youtu.be/8wwCWCgnhII)
 
@@ -111,11 +107,11 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 - Demonstration of pressure control mode:
 
-[![PC demo](https://i.imgur.com/6vZsosO.png)](https://youtu.be/iZb-0LVqY_8)
+[![PC demo](https://i.imgur.com/alibkrs.png)](https://youtu.be/stB9s-_o2PM)
 
-- Volume control mode:  Once the flow sensor is added, we'll be able to set TV using the touch screen UI
+- Volume control mode:  
 
-[![VC demo](https://i.imgur.com/FQ3KezY.png)](https://youtu.be/L8kJsOJ2qPA)
+[![VC demo](https://i.imgur.com/3ACTQo4.png)](https://youtu.be/FzHzDZtPzxIA)
 
 - Software control flowchart
 
