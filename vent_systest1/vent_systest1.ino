@@ -103,7 +103,7 @@ int    omodVal;             // old mod val
 boolean measPend = 0;       // flag to indicate a measurement is needed
 
 // thresholds
-double peepError = 0.5;     // thresold for measuring steady state PEEP
+double peepError = 2.0;     // thresold for measuring steady state PEEP
 double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
 
 // timers
