@@ -21,6 +21,7 @@ extern "C" {
 #include "utility/twi.h"  // from Wire library, so we can do bus scanning
 }
 
+
 #define LTBLUE    0xB6DF
 #define LTTEAL    0xBF5F
 #define LTGREEN   0xBFF7
@@ -101,6 +102,8 @@ String modVar;              // variable being modified
 int    modVal;              // placeholder for new variable
 int    omodVal;             // old mod val
 boolean measPend = 0;       // flag to indicate a measurement is needed
+// double peakFlow = 0;     // used for flow calibration using a PEF meter
+
 
 // thresholds
 double peepError = 2.0;     // thresold for measuring steady state PEEP
@@ -159,34 +162,17 @@ double total = 0;                  // the running total
 double average = 0;                // the average
 
 void setup() {
-  delay(10000);
   Serial.begin(115200);
-  Wire.begin();
-  tcascan();      // scan i2c mux for sensors and print to serial port
 
-  //initialize the MPRLS pressure sensors
-  tcaselect(1);
-  mpr.begin();
-  tcaselect(0);
-  mpr.begin();
-
-  // initialize the AMS5915 diff pressure sensor
-  // The address can be changed making the option of connecting multiple devices
-  ams.getAddr_AMS5915(AMS5915_DEFAULT_ADDRESS);   // 0x28
-  ams.begin();
-  
   // initialize the TFT
   tft.reset();
   ID = tft.readID();
   tft.begin(ID);
   tft.setRotation(1);
-
-  delay(1000);
-
-  // tare differential pressure sensors
-  calibratePressure();
-  calibrateFlow();
-
+  
+  Wire.begin();
+  // initialize sensors and check health
+  diag();
 
   // interrupt driven pressure and flow sample rate to workaround slow screen refresh
   cli();//stop interrupts
@@ -255,6 +241,8 @@ void measLoop() {
     float f;
     f = readFlow();
     if (isnan(f) == false) {
+
+      // if (f > peakFlow) { peakFlow = f; }
       
       // save old flow values
       double ot = tmpF_t;
@@ -290,19 +278,20 @@ void measLoop() {
         digitalWrite(SOLENOID, LOW);  // open expiratory path
         inspPhase = false;
         peak = tmpPeak;
+        tmpPeak = 0;
         plat = average;
         tvMeas = tmpTv;
+        tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
         tvoff += tvSet - tmpTv; // simple proportional control
-        Serial.println(tvoff);
+        //Serial.println(tvoff);
+        // Serial.println(peakFlow);
+        // peakFlow = 0;
         updateMeasures();
       }
       
     // ------------ expiratory phase --------------
     } else {
       
-      // capture values when detecting a phase change to expiratory
-      tmpPeak = 0;
-      tmpTv = 0;      // dont have expiratory flow sensor, so assume TV empties during expiratory phase BEWARE BREATH STACKING
       // TODO plat alarm here
   
       // if the pressure is stable, then capture as PEEP
