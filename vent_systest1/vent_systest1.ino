@@ -71,7 +71,7 @@ int    peakAlrm = 30;       // indicate pressure alarm
 int    platAlrm = 20;       // indicate plateau alarm
 int    peepAlrm = 10;       // indicate PEEP alarm
 int    tvSet = 300;         // TV set value
-int    negTrig = -3;         // negative trigger assist threshold
+int    negTrig = -3;        // negative trigger assist threshold
 
 // -------- main variables -------
 String screen;
@@ -79,16 +79,15 @@ boolean inspPhase = false;  // phase variable
 
 // measured and processed variables
 double peep = 0;            // PEEP measurement
-double peak = 0;           // Ppeak measurement
-double plat = 0;           // Pplat measurement
-double tvMeas = 0;        // measured TV
+double peak = 0;            // Ppeak measurement
+double plat = 0;            // Pplat measurement
+double tvMeas = 0;          // measured TV
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
 // calibration vars
 double poff = 0;
 double foff = 0;
 double tvoff = 0;
-
 
 // temp variables
 double tmpP = 0;            // tmp var for pressure
@@ -142,10 +141,12 @@ double last_t = -999;           // track wraparound
 // You dont *need* a reset and EOC pin for most uses, so we set to -1 and don't connect
 #define RESET_PIN  -1  // set to any GPIO pin # to hard-reset on begin()
 #define EOC_PIN    -1  // set to any GPIO pin to read end-of-conversion by pin
+Adafruit_MPRLS mpr = Adafruit_MPRLS(RESET_PIN, EOC_PIN);
+
+// outputs
 #define PISTON     23  // 5-way, 2pos pneumatic solenoid controller
 #define SOLENOID   25  // expiratory path solenoid
 #define ALARM      27  // alarm
-Adafruit_MPRLS mpr = Adafruit_MPRLS(RESET_PIN, EOC_PIN);
 
 // setup the AMS5915 differential pressure sensor
 AMS5915 ams;
