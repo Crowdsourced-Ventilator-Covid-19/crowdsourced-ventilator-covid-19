@@ -17,10 +17,10 @@ void checkTouch() {
     xpos = map(tp.y, TS_TOP, TS_BOT, 0, tft.width());
     ypos = map(tp.x, TS_RT, TS_LEFT, 0, tft.height());
 
+
     if (screen == "main") {
       drawSetScreen();
     } 
-    
     else if (screen == "settings") {
       if (xpos > 330 && ypos < 66) { // back button
       display1 = 2;
@@ -93,4 +93,17 @@ void checkTouch() {
 int getModVal(int minv, int maxv, int xpos) {
   modVal = round((double) (xpos - 40) / (double) 400 * (double) (maxv - minv)) + minv;
   return modVal;
+}
+
+void waitForTouch() {
+  tft.setFont();
+  tft.setTextSize(1);
+  tft.setTextColor(WHITE, BLACK);
+  tft.println("");
+  tft.println("Tap screen to continue");
+  tp = ts.getPoint(); //tp.x, tp.y are ADC values
+  while (tp.z < MINPRESSURE || tp.z > MAXPRESSURE){
+    delay(50);
+    tp = ts.getPoint();
+  }
 }

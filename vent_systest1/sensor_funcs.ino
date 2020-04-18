@@ -20,8 +20,17 @@ double readPressure() {
 
 // read quiescent pressure value and store it as zero offset
 void calibratePressure() {
+  double tmp;
+  tft.println("Calibrating pressure zero...");
   poff = 0;
-  poff = readPressure();
+  tmp = readPressure();
+  while(isnan(tmp)) {
+    tft.println("Failed to read, retrying");
+    delay(500);
+    tmp = readPressure();
+  }
+  poff = tmp;
+  tft.println("Success");
 }
 
 const float AMS5915_0100_D_MIN = 0.0;       // minimum pressure, millibar
@@ -51,6 +60,15 @@ double readFlow() {
 
 // read quiescent flow value, and store it as zero offset
 void calibrateFlow() {
+  double tmp;
+  tft.println("Calibrating AMS zero...");
   foff = 0;
-  foff = readFlow();
+  tmp = readFlow();
+  while(isnan(tmp)) {
+    tft.println("Failed to read, retrying");
+    delay(500);
+    tmp = readFlow();
+  }
+  foff = tmp;
+  tft.println("Success");
 }
