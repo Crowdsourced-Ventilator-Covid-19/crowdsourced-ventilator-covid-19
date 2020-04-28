@@ -51,7 +51,7 @@ double readFlow() {
 
   // Flow calculation from https://www.engineeringtoolbox.com/orifice-nozzle-venturi-d_590.html
   deltaP = ams.getPressure() * 100.0; // mbar to N/m2
-  flow = A2 * sqrt(2 * deltaP / rho * (1 - sq(A2/A1))) * 1000 * 60 - foff;
+  flow = A2 * sqrt(2 * deltaP / rho / (1 - sq(A2/A1))) * 1000 * 60 - foff;
   
   // If flow is below flowDeadZone in magnitude, ignore it to avoid integration error
   if (abs(flow) < flowDeadZone) { flow = 0; }
