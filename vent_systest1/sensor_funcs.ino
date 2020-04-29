@@ -1,45 +1,38 @@
+const float AMS5915_0100_D_MIN = 0.0;       // minimum pressure, millibar
+const float AMS5915_0100_D_MAX = 100.0;     // maximum pressure, millibar
+
 /*
  * This is a dummy placeholder for taking a pressure or flow measurement
  */
 // read patient and reference pressure sensors to calculate guage pressure in cmh2o
-double readPressure() {
-  if (millis() > pAtmosTimer || p_atmos_hPa == 0) {
-    // read atmospheric reference
-    tcaselect(1);
-    p_atmos_hPa = mpr.readPressure(); 
-    pAtmosTimer = millis() + pAtmosDelay;
-  }
-  
-  // read pressure sensor in hectoPa
-  tcaselect(0);
-  double p_hPa = mpr.readPressure();
-  
-  // convert to relative pressure in cmh2o
-  return (p_hPa - p_atmos_hPa) * 1.01974428892 - poff;
+double readPressure(AMS5915 &ams, int tca) {
+  float p_cmh2o;
+  tcaselect(tca);
+  ams.Measure_PressureAndTemperature(AMS5915_0100_D_MIN, AMS5915_0100_D_MAX);
+  p_cmh2o = ams.getPressure() * 1.01972;
+  return p_cmh2o; 
 }
 
 // read quiescent pressure value and store it as zero offset
-void calibratePressure() {
+void calibratePressure(AMS5915 &ams, int tca) {
   double tmp;
-  tft.println("Calibrating pressure zero...");
+  tft.println("Calibrating AMS pressure on tca " + String(tca) + "...");
   poff = 0;
-  tmp = readPressure();
+  tmp = readPressure(ams, tca);
   while(isnan(tmp)) {
     tft.println("Failed to read, retrying");
     delay(500);
-    tmp = readPressure();
+    tmp = readPressure(ams, tca);
   }
   poff = tmp;
-  tft.println("Success");
+  tft.println("Success Poff = " + String(poff));
 }
 
-const float AMS5915_0100_D_MIN = 0.0;       // minimum pressure, millibar
-const float AMS5915_0100_D_MAX = 100.0;     // maximum pressure, millibar
 
 // read the venturi flow meter and return value in lpm
-double readFlow() {
+double readFlow(AMS5915 &ams, int tca) {
   float r1, r2, A1, A2, rho, deltaP, flow;
-  tcaselect(0);       // flow meter on channel 0
+  tcaselect(tca);     // select channel
   ams.Measure_PressureAndTemperature(AMS5915_0100_D_MIN, AMS5915_0100_D_MAX);
 
   // venturi flow meter constants
@@ -51,24 +44,27 @@ double readFlow() {
 
   // Flow calculation from https://www.engineeringtoolbox.com/orifice-nozzle-venturi-d_590.html
   deltaP = ams.getPressure() * 100.0; // mbar to N/m2
-  flow = A2 * sqrt(2 * deltaP / rho * (1 - sq(A2/A1))) * 1000 * 60 - foff;
+  if (deltaP < 0) { deltaP = 0; } // dont measure negative flow
   
+  flow = A2 * sqrt(2 * deltaP / rho / (1 - sq(A2/A1))) * 1000 * 60 - foff;
+
   // If flow is below flowDeadZone in magnitude, ignore it to avoid integration error
   if (abs(flow) < flowDeadZone) { flow = 0; }
   return flow;
 }
 
 // read quiescent flow value, and store it as zero offset
-void calibrateFlow() {
+void calibrateFlow(AMS5915 &ams, int tca) {
+  tcaselect(tca);
   double tmp;
-  tft.println("Calibrating AMS zero...");
+  tft.println("Calibrating AMS Flow on tca " + String(tca) + "...");
   foff = 0;
-  tmp = readFlow();
+  tmp = readFlow(ams, tca);
   while(isnan(tmp)) {
     tft.println("Failed to read, retrying");
     delay(500);
-    tmp = readFlow();
+    tmp = readFlow(ams, tca);
   }
   foff = tmp;
-  tft.println("Success");
+  tft.println("Success foff = " + String(foff));
 }

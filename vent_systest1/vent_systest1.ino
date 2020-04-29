@@ -112,8 +112,6 @@ double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration erro
 // timers
 uint32_t breathTimer;       // next timestamp to start breath
 uint32_t ierTimer;          // inspiratory phase duration
-uint32_t pAtmosTimer = 0;   // timer to take a new atmos pressure read
-uint32_t pAtmosDelay = 1000 * 60UL;  // take new atmos reading every minute
 
 // touchscreen calibration
 const int XP=8,XM=A2,YP=A3,YM=9; //ID=0x9341
@@ -137,18 +135,16 @@ double ox2 = -999, oy2 = -999;
 double ox3 = -999, oy3 = -999; 
 double last_t = -999;           // track wraparound
 
-// Adafruit pressure sensor library
-#include "Adafruit_MPRLS.h"
 // You dont *need* a reset and EOC pin for most uses, so we set to -1 and don't connect
 #define RESET_PIN  -1  // set to any GPIO pin # to hard-reset on begin()
 #define EOC_PIN    -1  // set to any GPIO pin to read end-of-conversion by pin
-#define PISTON     23  // 5-way, 2pos pneumatic solenoid controller
-#define SOLENOID   25  // expiratory path solenoid
-#define ALARM      27  // alarm
-Adafruit_MPRLS mpr = Adafruit_MPRLS(RESET_PIN, EOC_PIN);
+#define PISTON     24  // 5-way, 2pos pneumatic solenoid controller
+#define SOLENOID   26  // expiratory path solenoid
+#define ALARM      28  // alarm
 
 // setup the AMS5915 differential pressure sensor
-AMS5915 ams;
+AMS5915 ams0;
+AMS5915 ams1;
 
 // ------- 10 entry FIFO for sample averaging -------
 // Define the number of samples to keep track of. The higher the number, the
@@ -226,20 +222,22 @@ ISR(TIMER1_COMPA_vect){//timer1 interrupt 100Hz
 void measLoop() {
   if (measPend) {
     // read patient pressure & timestamp
-    tmpP = readPressure();
+    tmpP = readPressure(ams1, 1);
     tmpP_t = (millis() % 15000) / 1000.0;
 
     // check if we've hit the hard pressure limit
     if (tmpP >= pmax) {
-      digitalWrite(PISTON, HIGH); // release BVM bag
+      //Serial.println("P = " + String(tmpP));
+      digitalWrite(PISTON, LOW); // release BVM bag
     }
 
+    //Serial.println("Phase: " + String(inspPhase) + " P: " + String(tmpP) + " Peak: " + String(tmpPeak));
     // TODO overpressure alarm check here
   
     
     // read new flow measure, and ignore nan return values
     float f;
-    f = readFlow();
+    f = readFlow(ams0, 0);
     if (isnan(f) == false) {
 
       // if (f > peakFlow) { peakFlow = f; }
@@ -261,8 +259,10 @@ void measLoop() {
     }
 
     // check if we've hit desired TV
+    // Serial.println("TV = " + String(tmpTv) + "/" + String(tvSet) + " tvoff = " + String(tvoff));
     if (tmpTv >= tvSet + tvoff) {
-      digitalWrite(PISTON, HIGH); // release BVM bag
+      // Serial.println(tmpTv);
+      digitalWrite(PISTON, LOW); // release BVM bag
     }
   
     // ------------ inspiratory phase --------------
@@ -274,15 +274,15 @@ void measLoop() {
   
       // check if inspiratory phase is over
       if (millis() > ierTimer) {
-        digitalWrite(PISTON, HIGH);   // release BVM bag
-        digitalWrite(SOLENOID, LOW);  // open expiratory path
+        digitalWrite(PISTON, LOW);   // release BVM bag
+        digitalWrite(SOLENOID, HIGH);  // open expiratory path
         inspPhase = false;
         peak = tmpPeak;
         tmpPeak = 0;
         plat = average;
         tvMeas = tmpTv;
+        // tvoff += tvSet - tmpTv; // simple proportional control
         tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
-        tvoff += tvSet - tmpTv; // simple proportional control
         //Serial.println(tvoff);
         // Serial.println(peakFlow);
         // peakFlow = 0;
@@ -303,8 +303,8 @@ void measLoop() {
       // Check if time to start a new breath
       if (millis() > breathTimer) { 
         inspPhase = true;
-        digitalWrite(PISTON, LOW); // compress BVM bag
-        digitalWrite(SOLENOID, HIGH); // close expiratory path
+        digitalWrite(PISTON, HIGH); // compress BVM bag
+        digitalWrite(SOLENOID, LOW); // close expiratory path
         resetTimers();
   
       }

@@ -10,40 +10,24 @@ void diag() {
   tcascan();
 
   tft.println("Initializing Sensors...");
-  initAMS(0);
-  initMPRLS(1);
-  initMPRLS(0);
-  
+  initAMS(ams0, 0);
+  initAMS(ams1, 1);
+    
   // tare differential pressure sensors
-  calibratePressure();
-  calibrateFlow();
+  calibratePressure(ams1,1);
+  calibrateFlow(ams0, 0);
   
   delay(5000);
   
 }
 
-void initAMS(int tca) {
+void initAMS(AMS5915 &ams, int tca) {
   double t;
   tft.println("Initialize AMS5915 on tca " + String(tca) + "...");
-  tcaselect(tca);
   ams.getAddr_AMS5915(AMS5915_DEFAULT_ADDRESS);   // 0x28
   ams.begin();
-  t = readFlow();
-  while(isnan(readFlow())) {
-    tft.println("Failed to read, retrying");
-    delay(100);
-  }
-  tft.println("Success");
-}
-void initMPRLS(int tca) {
-  double t;
-  tft.println("Initialize MPRLS on tca " + String(tca) + "...");
-  tcaselect(tca);
-  while (!mpr.begin()) {
-    tft.println("Failed to init, retrying");
-    delay(100);
-  }
-  while(isnan(readPressure())) {
+  t = readFlow(ams, tca);
+  while(isnan(readFlow(ams, tca))) {
     tft.println("Failed to read, retrying");
     delay(100);
   }
