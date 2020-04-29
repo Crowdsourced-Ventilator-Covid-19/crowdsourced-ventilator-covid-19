@@ -196,7 +196,6 @@ void measLoop() {
     // check if we've hit desired TV
     // Serial.println("TV = " + String(tmpTv) + "/" + String(tvSet) + " tvoff = " + String(tvoff));
     if (tmpTv >= tvSet + tvoff) {
-      // Serial.println(tmpTv);
       digitalWrite(PISTON, LOW); // release BVM bag
     }
   
@@ -227,15 +226,17 @@ void measLoop() {
         peep = tmpP; 
       }
       // TODO PEEP alarm here
+
+      // Check if patient tried to start a breath
+      // if (millis() > breatTimer || fifoDp.converging == false) {
       
       // Check if time to start a new breath
       if (millis() > breathTimer) { 
         inspPhase = true;
-        fifoP.peak = 0;
-        digitalWrite(PISTON, HIGH); // compress BVM bag
+        fifoP.peak = 0;              // reset PIP tracking
+        digitalWrite(PISTON, HIGH);  // compress BVM bag
         digitalWrite(SOLENOID, LOW); // close expiratory path
         resetTimers();
-  
       }
     } 
     
