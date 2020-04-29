@@ -11,9 +11,9 @@
 class Fifo
 {
   public:
-    Fifo(int v, double n);
-    void fifoPush(double v);  // return average
-    void fifoPushDeriv(double v, uint32_t t);  // return true if asymptotic
+    Fifo(int d, double n);    // d = depth,  n = sensor noise to ignore when checking convergence
+    void fifoPush(double v);
+    void fifoPushDeriv(double v, uint32_t t);
     double avg;  
     boolean converging;
   private:

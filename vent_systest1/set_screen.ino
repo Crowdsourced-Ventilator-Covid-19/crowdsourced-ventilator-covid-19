@@ -4,7 +4,6 @@
 
 void drawSetScreen() {
   screen = "settings";
-  //tft.fillScreen(BLACK);
   clearScreen();
   measLoop();
   drawBackButton();

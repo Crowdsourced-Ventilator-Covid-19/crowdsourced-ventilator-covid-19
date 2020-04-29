@@ -1,4 +1,3 @@
-#define TCAADDR 0x70
 
 void diag() {
   screen = "diag";

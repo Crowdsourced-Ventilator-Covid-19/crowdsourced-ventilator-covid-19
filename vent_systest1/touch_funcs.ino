@@ -2,6 +2,9 @@
  * Touch handler
  */
 
+#define MINPRESSURE 200
+#define MAXPRESSURE 1000
+
 void checkTouch() {
   uint16_t xpos,ypos; // screen coords
   int minv,maxv; // slider vars

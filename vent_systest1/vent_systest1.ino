@@ -18,51 +18,10 @@ MCUFRIEND_kbv tft;
 #include <Fonts/FreeSans12pt7b.h>
 #include "Wire.h"
 #include "Fifo.h"
+#include "defines.h"
 extern "C" { 
 #include "utility/twi.h"  // from Wire library, so we can do bus scanning
 }
-
-
-#define LTBLUE    0xB6DF
-#define LTTEAL    0xBF5F
-#define LTGREEN   0xBFF7
-#define LTCYAN    0xC7FF
-#define LTRED     0xFD34
-#define LTMAGENTA 0xFD5F
-#define LTYELLOW  0xFFF8
-#define LTORANGE  0xFE73
-#define LTPINK    0xFDDF
-#define LTPURPLE  0xCCFF
-#define LTGREY    0xE71C
-
-#define BLUE      0x001F
-#define TEAL      0x0438
-#define GREEN     0x07E0
-#define CYAN      0x07FF
-#define RED       0xF800
-#define MAGENTA   0xF81F
-#define YELLOW    0xFFE0
-#define ORANGE    0xFC00
-#define PURPLE    0x8010
-#define GREY      0xC618
-#define WHITE     0xFFFF
-#define BLACK     0x0000
-
-#define DKBLUE    0x000D
-#define DKTEAL    0x020C
-#define DKGREEN   0x03E0
-#define DKCYAN    0x03EF
-#define DKRED     0x6000
-#define DKMAGENTA 0x8008
-#define DKYELLOW  0x8400
-#define DKORANGE  0x8200
-#define DKPINK    0x9009
-#define DKPURPLE  0x4010
-#define DKGREY    0x4A49
-
-#define Orientation 1
-
-
 
 // -------- input variables -------
 int    rr = 15;             // respiratory rate
@@ -102,8 +61,6 @@ String modVar;              // variable being modified
 int    modVal;              // placeholder for new variable
 int    omodVal;             // old mod val
 boolean measPend = 0;       // flag to indicate a measurement is needed
-// double peakFlow = 0;     // used for flow calibration using a PEF meter
-
 
 // thresholds
 double peepError = 2.0;     // thresold for measuring steady state PEEP
@@ -118,9 +75,7 @@ const int XP=8,XM=A2,YP=A3,YM=9; //ID=0x9341
 const int TS_LEFT=94,TS_RT=956,TS_TOP=912,TS_BOT=118;
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 TSPoint tp;
-#define MINPRESSURE 200
-#define MAXPRESSURE 1000
-uint16_t ID;
+uint16_t tftID;
 
 // these are the only external variables used by the graph function
 // it's a flag to draw the coordinate system only on the first call to the Graph() function
@@ -135,28 +90,21 @@ double ox2 = -999, oy2 = -999;
 double ox3 = -999, oy3 = -999; 
 double last_t = -999;           // track wraparound
 
-// You dont *need* a reset and EOC pin for most uses, so we set to -1 and don't connect
-#define RESET_PIN  -1  // set to any GPIO pin # to hard-reset on begin()
-#define EOC_PIN    -1  // set to any GPIO pin to read end-of-conversion by pin
-#define PISTON     24  // 5-way, 2pos pneumatic solenoid controller
-#define SOLENOID   26  // expiratory path solenoid
-#define ALARM      28  // alarm
-
 // setup the AMS5915 differential pressure sensor
 AMS5915 ams0;
 AMS5915 ams1;
 
+// setup Fifos
 Fifo fifoP(10,1);
 Fifo fifoDp(4,1);
-
 
 void setup() {
   Serial.begin(115200);
 
   // initialize the TFT
   tft.reset();
-  ID = tft.readID();
-  tft.begin(ID);
+  tftID = tft.readID();
+  tft.begin(tftID);
   tft.setRotation(1);
   
   Wire.begin();
@@ -183,7 +131,6 @@ void setup() {
   // Reset Breath and I/E timers
   resetTimers();
   
-
   // configure the piston control pin
   pinMode(PISTON, OUTPUT);
   digitalWrite(PISTON, HIGH);
@@ -216,6 +163,8 @@ void measLoop() {
     // read patient pressure & timestamp
     tmpP = readPressure(ams1, 1);
     tmpP_t = (millis() % 15000) / 1000.0;
+    fifoP.fifoPush(tmpP);
+    fifoDp.fifoPushDeriv(tmpP, tmpP_t);
 
     // check if we've hit the hard pressure limit
     if (tmpP >= pmax) {
@@ -306,9 +255,6 @@ void measLoop() {
     measPend = 0;
   }
 }
-
-
-
 
 // every time we trigger a new breath, reset breath and I/E timers
 void resetTimers() {
