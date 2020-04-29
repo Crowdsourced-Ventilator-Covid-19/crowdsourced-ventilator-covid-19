@@ -14,7 +14,8 @@ class Fifo
     Fifo(int d, double n);    // d = depth,  n = sensor noise to ignore when checking convergence
     void fifoPush(double v);
     void fifoPushDeriv(double v, uint32_t t);
-    double avg;  
+    double avg;
+    double peak;
     boolean converging;
   private:
     int depth;

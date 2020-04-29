@@ -5,6 +5,10 @@
 #define MINPRESSURE 200
 #define MAXPRESSURE 1000
 
+String modVar;              // variable being modified
+int    modVal;              // placeholder for new variable
+
+
 void checkTouch() {
   uint16_t xpos,ypos; // screen coords
   int minv,maxv; // slider vars

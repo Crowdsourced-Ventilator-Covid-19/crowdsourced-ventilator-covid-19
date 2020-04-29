@@ -36,6 +36,8 @@ int    negTrig = -3;        // negative trigger assist threshold
 // -------- main variables -------
 String screen;
 boolean inspPhase = false;  // phase variable
+boolean measPend = 0;       // flag to indicate a measurement is needed
+int    omodVal;             // old mod val
 
 // measured and processed variables
 double peep = 0;            // PEEP measurement
@@ -44,7 +46,11 @@ double plat = 0;            // Pplat measurement
 double tvMeas = 0;          // measured TV
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
-// calibration vars
+// thresholds
+const double peepError = 2.0;     // thresold for measuring steady state PEEP
+const double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
+
+// calibration offset vars
 double poff = 0;
 double foff = 0;
 double tvoff = 0;
@@ -55,16 +61,6 @@ double tmpP_t = 0;          // tmp var for pressure timestamp
 double tmpF = 0;            // tmp var for flow
 double tmpF_t = 0;          // tmp var for flow timestamp
 double tmpTv = 0;           // tmp variable for TV
-double tmpPeak = 0;         // tmp variable for peak measurements
-double tmpPlat = 0;         // tmp variable for plat measurements
-String modVar;              // variable being modified
-int    modVal;              // placeholder for new variable
-int    omodVal;             // old mod val
-boolean measPend = 0;       // flag to indicate a measurement is needed
-
-// thresholds
-double peepError = 2.0;     // thresold for measuring steady state PEEP
-double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
 
 // timers
 uint32_t breathTimer;       // next timestamp to start breath
@@ -180,8 +176,6 @@ void measLoop() {
     float f;
     f = readFlow(ams0, 0);
     if (isnan(f) == false) {
-
-      // if (f > peakFlow) { peakFlow = f; }
       
       // save old flow values
       double ot = tmpF_t;
@@ -209,24 +203,17 @@ void measLoop() {
     // ------------ inspiratory phase --------------
     if (inspPhase) {
       // TODO disconnect alarm here
-      
-      // track the max pressure during inspiratory phase
-      if (tmpP > tmpPeak) { tmpPeak = tmpP; }
   
       // check if inspiratory phase is over
       if (millis() > ierTimer) {
         digitalWrite(PISTON, LOW);   // release BVM bag
         digitalWrite(SOLENOID, HIGH);  // open expiratory path
         inspPhase = false;
-        peak = tmpPeak;
-        tmpPeak = 0;
+        peak = fifoP.peak;
         plat = fifoP.avg;
         tvMeas = tmpTv;
         // tvoff += tvSet - tmpTv; // simple proportional control
         tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
-        //Serial.println(tvoff);
-        // Serial.println(peakFlow);
-        // peakFlow = 0;
         updateMeasures();
       }
       
@@ -244,6 +231,7 @@ void measLoop() {
       // Check if time to start a new breath
       if (millis() > breathTimer) { 
         inspPhase = true;
+        fifoP.peak = 0;
         digitalWrite(PISTON, HIGH); // compress BVM bag
         digitalWrite(SOLENOID, LOW); // close expiratory path
         resetTimers();

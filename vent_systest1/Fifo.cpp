@@ -13,6 +13,7 @@ Fifo::Fifo(int d, double n) {
   last_t = millis();
   last_v = 0;
   noise = n;
+  peak = 0;
 }
 
 void Fifo::fifoPush(double v) {
@@ -22,6 +23,7 @@ void Fifo::fifoPush(double v) {
   idx = idx + 1;
   if (idx >= depth) { idx = 0; }
   avg = total / (double) depth;
+  if (v > peak) { peak = v; }
 }
 
 void Fifo::fifoPushDeriv(double v, uint32_t t) {
