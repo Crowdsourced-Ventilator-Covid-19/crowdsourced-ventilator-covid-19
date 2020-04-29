@@ -71,7 +71,7 @@ int    peakAlrm = 30;       // indicate pressure alarm
 int    platAlrm = 20;       // indicate plateau alarm
 int    peepAlrm = 10;       // indicate PEEP alarm
 int    tvSet = 300;         // TV set value
-int    negTrig = -3;         // negative trigger assist threshold
+int    negTrig = -3;        // negative trigger assist threshold
 
 // -------- main variables -------
 String screen;
@@ -79,16 +79,15 @@ boolean inspPhase = false;  // phase variable
 
 // measured and processed variables
 double peep = 0;            // PEEP measurement
-double peak = 0;           // Ppeak measurement
-double plat = 0;           // Pplat measurement
-double tvMeas = 0;        // measured TV
+double peak = 0;            // Ppeak measurement
+double plat = 0;            // Pplat measurement
+double tvMeas = 0;          // measured TV
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
 // calibration vars
 double poff = 0;
 double foff = 0;
 double tvoff = 0;
-
 
 // temp variables
 double tmpP = 0;            // tmp var for pressure
