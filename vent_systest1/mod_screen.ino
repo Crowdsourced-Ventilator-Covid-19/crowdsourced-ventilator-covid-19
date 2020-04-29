@@ -33,24 +33,7 @@ void updateModScreen(int minv, int maxv, int val) {
   measLoop();
 
 }
-/*
-void updateModScreen(int minv, int maxv, int val, boolean redraw) {
-  measLoop();
-  if (omodVal == val && ~redraw) { return; }
-  tft.setTextColor(WHITE, BLACK);
-  tft.setCursor(170, 170);
-  tft.setTextSize(2);
-  tft.fillRect(170, 90, 170, 90, BLACK);
-  measLoop();
-  tft.setFont(&FreeSansBold24pt7b);
-  tft.println(String(val));
-  measLoop();
-  drawSlider(minv, maxv, val);
-  omodVal = val;
-  measLoop();
 
-}
-*/
 void drawSlider(int minv, int maxv, int val) {
   tft.fillRect(20, 250, 460, 290, BLACK); 
   int xpos = round( (double) (val - minv) / (double) (maxv - minv) * 400 + 20);

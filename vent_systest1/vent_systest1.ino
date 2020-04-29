@@ -17,6 +17,7 @@ MCUFRIEND_kbv tft;
 #include <Fonts/FreeSansBold12pt7b.h>
 #include <Fonts/FreeSans12pt7b.h>
 #include "Wire.h"
+#include "Fifo.h"
 extern "C" { 
 #include "utility/twi.h"  // from Wire library, so we can do bus scanning
 }
@@ -145,16 +146,9 @@ double last_t = -999;           // track wraparound
 AMS5915 ams0;
 AMS5915 ams1;
 
-// ------- 10 entry FIFO for sample averaging -------
-// Define the number of samples to keep track of. The higher the number, the
-// more the readings will be smoothed, but the slower the output will respond to
-// the input. Using a constant rather than a normal variable lets us use this
-// value to determine the size of the readings array.
-const int numReadings = 10;
-double readings[numReadings];      // the readings from the analog input
-int readIndex = 0;              // the index of the current reading
-double total = 0;                  // the running total
-double average = 0;                // the average
+Fifo fifoP(10,1);
+Fifo fifoDp(4,1);
+
 
 void setup() {
   Serial.begin(115200);
@@ -188,8 +182,7 @@ void setup() {
 
   // Reset Breath and I/E timers
   resetTimers();
-  // initialize all the FIFO readings to 0:
-  fifoInit();
+  
 
   // configure the piston control pin
   pinMode(PISTON, OUTPUT);
@@ -278,7 +271,7 @@ void measLoop() {
         inspPhase = false;
         peak = tmpPeak;
         tmpPeak = 0;
-        plat = average;
+        plat = fifoP.avg;
         tvMeas = tmpTv;
         // tvoff += tvSet - tmpTv; // simple proportional control
         tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
@@ -294,7 +287,7 @@ void measLoop() {
       // TODO plat alarm here
   
       // if the pressure is stable, then capture as PEEP
-      if (abs(tmpP - average) < peepError) { 
+      if (abs(tmpP - fifoP.avg) < peepError) { 
         peep = tmpP; 
       }
       // TODO PEEP alarm here
@@ -308,10 +301,6 @@ void measLoop() {
   
       }
     } 
-
-    // ------- FIFO running average code ---------
-    average = fifoAvg(tmpP);  
-  
     
     // reset measure pending flag
     measPend = 0;
@@ -319,33 +308,7 @@ void measLoop() {
 }
 
 
-// average the last numReadings samples to dampen noise, and detect steady-state
-double fifoAvg(int p) {
-  total = total - readings[readIndex];
-  // read from the sensor:
-  readings[readIndex] = p;
-  // add the reading to the total:
-  total = total + readings[readIndex];
-  // advance to the next position in the array:
-  readIndex = readIndex + 1;
-  
-  // if we're at the end of the array...
-  if (readIndex >= numReadings) {
-    // ...wrap around to the beginning:
-    readIndex = 0;
-  }
-  
-  // calculate the average:
-  double avg = total / numReadings;
-  return avg;
-}
 
-// initialize the fifo values to zero
-void fifoInit() {
-  for (int thisReading = 0; thisReading < numReadings; thisReading++) {
-    readings[thisReading] = 0;
-  }
-}
 
 // every time we trigger a new breath, reset breath and I/E timers
 void resetTimers() {
