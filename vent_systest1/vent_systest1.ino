@@ -92,7 +92,7 @@ AMS5915 ams1;
 
 // setup Fifos
 Fifo fifoP(10,1);
-Fifo fifoDp(4,1);
+Fifo fifoDp(4,0.02);
 
 void setup() {
   Serial.begin(115200);
@@ -129,9 +129,9 @@ void setup() {
   
   // configure the piston control pin
   pinMode(PISTON, OUTPUT);
-  digitalWrite(PISTON, HIGH);
+  digitalWrite(PISTON, LOW);
   pinMode(SOLENOID, OUTPUT);
-  digitalWrite(SOLENOID, LOW);
+  digitalWrite(SOLENOID, HIGH);
   pinMode(ALARM, OUTPUT);
   digitalWrite(ALARM, LOW);
 
@@ -158,9 +158,10 @@ void measLoop() {
   if (measPend) {
     // read patient pressure & timestamp
     tmpP = readPressure(ams1, 1);
-    tmpP_t = (millis() % 15000) / 1000.0;
+    fifoDp.fifoPushDeriv(tmpP, millis());
     fifoP.fifoPush(tmpP);
-    fifoDp.fifoPushDeriv(tmpP, tmpP_t);
+    tmpP_t = (millis() % 15000) / 1000.0;
+    //Serial.println("phase: " + String(inspPhase) + " conv: " + String(fifoDp.converging));
 
     // check if we've hit the hard pressure limit
     if (tmpP >= pmax) {
@@ -205,9 +206,11 @@ void measLoop() {
   
       // check if inspiratory phase is over
       if (millis() > ierTimer) {
+        fifoDp.fifoInitDeriv();
         digitalWrite(PISTON, LOW);   // release BVM bag
         digitalWrite(SOLENOID, HIGH);  // open expiratory path
         inspPhase = false;
+        Serial.println("exp");
         peak = fifoP.peak;
         plat = fifoP.avg;
         tvMeas = tmpTv;
@@ -229,11 +232,15 @@ void measLoop() {
 
       // Check if patient tried to start a breath
       // if (millis() > breatTimer || fifoDp.converging == false) {
+      if (fifoDp.converging == false) { Serial.println("Detected trigger"); }
       
       // Check if time to start a new breath
-      if (millis() > breathTimer) { 
+      if (millis() > breathTimer || fifoDp.converging == false) {
+      // if (millis() > breathTimer) { 
         inspPhase = true;
+        Serial.println("insp");
         fifoP.peak = 0;              // reset PIP tracking
+        fifoP.fifoInit();
         digitalWrite(PISTON, HIGH);  // compress BVM bag
         digitalWrite(SOLENOID, LOW); // close expiratory path
         resetTimers();
