@@ -1,9 +1,7 @@
 const float AMS5915_0100_D_MIN = 0.0;       // minimum pressure, millibar
 const float AMS5915_0100_D_MAX = 100.0;     // maximum pressure, millibar
 
-/*
- * This is a dummy placeholder for taking a pressure or flow measurement
- */
+
 // read patient and reference pressure sensors to calculate guage pressure in cmh2o
 double readPressure(AMS5915 &ams, int tca) {
   float p_cmh2o;
