@@ -31,7 +31,6 @@ int    peakAlrm = 30;       // indicate pressure alarm
 int    platAlrm = 20;       // indicate plateau alarm
 int    peepAlrm = 10;       // indicate PEEP alarm
 int    tvSet = 300;         // TV set value
-int    negTrig = -3;        // negative trigger assist threshold
 int    trig = 50;           // TV patient trigger threshold
 
 // -------- main variables -------
