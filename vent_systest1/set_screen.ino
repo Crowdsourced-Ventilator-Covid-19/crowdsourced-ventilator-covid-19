@@ -19,7 +19,7 @@ void drawSetScreen() {
   drawSetButton("Ppeak", "Alarm", String(peakAlrm), BLACK, RED, 4, 194);
   drawSetButton("Pplat", "Alarm", String(platAlrm), BLACK, RED, 123, 194);
   drawSetButton("PEEP", "Alarm", String(peepAlrm), BLACK, RED, 242, 194);
-  drawSetButton("Neg", "Trig", String(negTrig), BLACK, YELLOW, 361, 194);
+  drawSetButton("AC", "Trig", String(trig), BLACK, YELLOW, 361, 194);
 }
 
 void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, double x, double y) {

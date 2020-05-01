@@ -47,9 +47,9 @@ void checkTouch() {
         modVal = peepAlrm;
         drawModScreen("PEEP Alarm", 0, 20, modVal);
       } else if (ypos > 194) {
-        modVar = "negTrig";
-        modVal = negTrig;
-        drawModScreen("Neg Trig", -10, -1, modVal);
+        modVar = "trig";
+        modVal = trig;
+        drawModScreen("AC Trig", 0, 100, modVal);
       } else if (xpos < 120 && ypos > 70) {
         modVar = "rr";
         modVal = rr;
@@ -74,7 +74,7 @@ void checkTouch() {
         if (modVar == "peakAlrm") { peakAlrm = modVal; }
         else if (modVar == "platAlrm") {platAlrm = modVal;}
         else if (modVar == "peepAlrm") {peepAlrm = modVal;}
-        else if (modVar == "negTrig") {negTrig = modVal;}
+        else if (modVar == "trig") {trig = modVal;}
         else if (modVar == "rr") {rr = modVal;}
         else if (modVar == "tv") {tvSet = modVal;}
         else if (modVar == "ier") {ier = modVal;}
@@ -87,7 +87,7 @@ void checkTouch() {
         if (modVar == "peakAlrm") { updateModScreen(10, 40, getModVal(10, 40, xpos));}
         else if (modVar == "platAlrm") { updateModScreen(10, 40, getModVal(10, 40, xpos));}
         else if (modVar == "peepAlrm") { updateModScreen(0, 20, getModVal(0, 20, xpos));}
-        else if (modVar == "negTrig") { updateModScreen(-10, -1, getModVal(-10, -1, xpos));}
+        else if (modVar == "trig") { updateModScreen(0, 100, getModVal(0, 100, xpos));}
         else if (modVar == "rr") { updateModScreen(10, 30, getModVal(10, 30, xpos));}
         else if (modVar == "tv") { updateModScreen(100, 600, getModVal(100, 600, xpos));}
         else if (modVar == "ier") { updateModScreen(1, 3, getModVal(1, 3, xpos));}

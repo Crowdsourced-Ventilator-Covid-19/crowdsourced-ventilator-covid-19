@@ -32,6 +32,7 @@ int    platAlrm = 20;       // indicate plateau alarm
 int    peepAlrm = 10;       // indicate PEEP alarm
 int    tvSet = 300;         // TV set value
 int    negTrig = -3;        // negative trigger assist threshold
+int    trig = 50;           // TV patient trigger threshold
 
 // -------- main variables -------
 String screen;
@@ -47,7 +48,7 @@ double tvMeas = 0;          // measured TV
 double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
 // thresholds
-const double peepError = 2.0;     // thresold for measuring steady state PEEP
+const double peepError = 5;       // TV thresold for measuring steady state PEEP
 const double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
 
 // calibration offset vars
@@ -90,9 +91,8 @@ double last_t = -999;           // track wraparound
 AMS5915 ams0;
 AMS5915 ams1;
 
-// setup Fifos
-Fifo fifoP(10,1);
-Fifo fifoDp(4,0.02);
+// setup Fifo
+Fifo fifoP(10);
 
 void setup() {
   Serial.begin(115200);
@@ -158,7 +158,6 @@ void measLoop() {
   if (measPend) {
     // read patient pressure & timestamp
     tmpP = readPressure(ams1, 1);
-    fifoDp.fifoPushDeriv(tmpP, millis());
     fifoP.fifoPush(tmpP);
     tmpP_t = (millis() % 15000) / 1000.0;
     //Serial.println("phase: " + String(inspPhase) + " conv: " + String(fifoDp.converging));
@@ -206,11 +205,10 @@ void measLoop() {
   
       // check if inspiratory phase is over
       if (millis() > ierTimer) {
-        fifoDp.fifoInitDeriv();
         digitalWrite(PISTON, LOW);   // release BVM bag
         digitalWrite(SOLENOID, HIGH);  // open expiratory path
         inspPhase = false;
-        Serial.println("exp");
+        // Serial.println("exp");
         peak = fifoP.peak;
         plat = fifoP.avg;
         tvMeas = tmpTv;
@@ -225,20 +223,15 @@ void measLoop() {
       // TODO plat alarm here
   
       // if the pressure is stable, then capture as PEEP
-      if (abs(tmpP - fifoP.avg) < peepError) { 
+      if (tmpTv < peepError) { 
         peep = tmpP; 
       }
       // TODO PEEP alarm here
-
-      // Check if patient tried to start a breath
-      // if (millis() > breatTimer || fifoDp.converging == false) {
-      if (fifoDp.converging == false) { Serial.println("Detected trigger"); }
       
       // Check if time to start a new breath
-      if (millis() > breathTimer || fifoDp.converging == false) {
-      // if (millis() > breathTimer) { 
+      if (millis() > breathTimer || (trig > 0 && tmpTv > trig)) {
         inspPhase = true;
-        Serial.println("insp");
+        // Serial.println("insp");
         fifoP.peak = 0;              // reset PIP tracking
         fifoP.fifoInit();
         digitalWrite(PISTON, HIGH);  // compress BVM bag
