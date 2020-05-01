@@ -44,10 +44,9 @@ double peep = 0;            // PEEP measurement
 double peak = 0;            // Ppeak measurement
 double plat = 0;            // Pplat measurement
 double tvMeas = 0;          // measured TV
-double p_atmos_hPa = 0;     // atmos pressure in hectoPascals
 
 // thresholds
-const double peepError = 5;       // TV thresold for measuring steady state PEEP
+const double peepError = 10;       // TV thresold for measuring steady state PEEP
 const double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
 
 // calibration offset vars
@@ -225,6 +224,8 @@ void measLoop() {
       if (tmpTv < peepError) { 
         peep = tmpP; 
       }
+
+      // Serial.println("peep: " + String(peep) + " tmpTv: " + String(tmpTv));
       // TODO PEEP alarm here
       
       // Check if time to start a new breath
