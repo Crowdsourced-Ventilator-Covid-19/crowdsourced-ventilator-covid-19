@@ -12,13 +12,14 @@
 #include <MCUFRIEND_kbv.h>  // use the appropriate driver for your touch TFT display
 MCUFRIEND_kbv tft;       
 #include <TouchScreen.h>
-#include <AMS5915.h>
 #include <Fonts/FreeSansBold24pt7b.h>
 #include <Fonts/FreeSansBold12pt7b.h>
 #include <Fonts/FreeSans12pt7b.h>
 #include "Wire.h"
 #include "Fifo.h"
 #include "defines.h"
+#include "Psens.h"
+#include "Fsens.h"
 extern "C" { 
 #include "utility/twi.h"  // from Wire library, so we can do bus scanning
 }
@@ -51,16 +52,8 @@ const double peepError = 5;       // TV thresold for measuring steady state PEEP
 const double flowDeadZone = 3;    // ignore flow below 3lpm to reduce integration error
 
 // calibration offset vars
-double poff = 0;
 double foff = 0;
 double tvoff = 0;
-
-// temp variables
-double tmpP = 0;            // tmp var for pressure
-double tmpP_t = 0;          // tmp var for pressure timestamp
-double tmpF = 0;            // tmp var for flow
-double tmpF_t = 0;          // tmp var for flow timestamp
-double tmpTv = 0;           // tmp variable for TV
 
 // timers
 uint32_t breathTimer;       // next timestamp to start breath
@@ -87,8 +80,8 @@ double ox3 = -999, oy3 = -999;
 double last_t = -999;           // track wraparound
 
 // setup the AMS5915 differential pressure sensor
-AMS5915 ams0;
-AMS5915 ams1;
+Fsens fsens(0,flowDeadZone);
+Psens psens(1);
 
 // setup Fifo
 Fifo fifoP(10);
@@ -156,45 +149,23 @@ ISR(TIMER1_COMPA_vect){//timer1 interrupt 100Hz
 void measLoop() {
   if (measPend) {
     // read patient pressure & timestamp
-    tmpP = readPressure(ams1, 1);
-    fifoP.fifoPush(tmpP);
-    tmpP_t = (millis() % 15000) / 1000.0;
-    //Serial.println("phase: " + String(inspPhase) + " conv: " + String(fifoDp.converging));
+    psens.read();
+    fifoP.fifoPush(psens.p);
 
     // check if we've hit the hard pressure limit
-    if (tmpP >= pmax) {
-      //Serial.println("P = " + String(tmpP));
+    if (psens.p >= pmax) {
       digitalWrite(PISTON, LOW); // release BVM bag
     }
 
-    //Serial.println("Phase: " + String(inspPhase) + " P: " + String(tmpP) + " Peak: " + String(tmpPeak));
     // TODO overpressure alarm check here
-  
+
     
     // read new flow measure, and ignore nan return values
-    float f;
-    f = readFlow(ams0, 0);
-    if (isnan(f) == false) {
-      
-      // save old flow values
-      double ot = tmpF_t;
-      double of = tmpF;
-      
-      // write new flow values
-      tmpF_t = (millis() % 15000) / 1000.0;
-      tmpF = f;
-
-      // handle time wraparound case
-      double nt = tmpF_t;
-      if (ot > nt) { nt += 15.0; }
-
-      // trapezoidal intgegration to track volume (lpm*s -> cc)
-      tmpTv += 1000/60 * (nt - ot) * (of + tmpF) /2;
-    }
-
+    fsens.read();
+     
     // check if we've hit desired TV
     // Serial.println("TV = " + String(tmpTv) + "/" + String(tvSet) + " tvoff = " + String(tvoff));
-    if (tmpTv >= tvSet + tvoff) {
+    if (fsens.tv >= tvSet + tvoff) {
       digitalWrite(PISTON, LOW); // release BVM bag
     }
   
@@ -207,12 +178,11 @@ void measLoop() {
         digitalWrite(PISTON, LOW);   // release BVM bag
         digitalWrite(SOLENOID, HIGH);  // open expiratory path
         inspPhase = false;
-        // Serial.println("exp");
         peak = fifoP.peak;
         plat = fifoP.avg;
-        tvMeas = tmpTv;
+        tvMeas = fsens.tv;
         // tvoff += tvSet - tmpTv; // simple proportional control
-        tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
+        fsens.tv = 0; // no expiratory flow meter, assume TV goes to zero
         updateMeasures();
       }
       
@@ -222,15 +192,14 @@ void measLoop() {
       // TODO plat alarm here
   
       // if the pressure is stable, then capture as PEEP
-      if (tmpTv < peepError) { 
-        peep = tmpP; 
+      if (fsens.tv < peepError) { 
+        peep = psens.p; 
       }
       // TODO PEEP alarm here
       
       // Check if time to start a new breath
-      if (millis() > breathTimer || (trig > 0 && tmpTv > trig)) {
+      if (millis() > breathTimer || (trig > 0 && fsens.tv > trig)) {
         inspPhase = true;
-        // Serial.println("insp");
         fifoP.peak = 0;              // reset PIP tracking
         fifoP.fifoInit();
         digitalWrite(PISTON, HIGH);  // compress BVM bag

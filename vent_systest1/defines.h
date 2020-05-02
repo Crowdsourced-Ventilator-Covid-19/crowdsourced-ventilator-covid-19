@@ -6,8 +6,7 @@
 #define SOLENOID   26  // expiratory path solenoid
 #define ALARM      28  // alarm
 
-// i2c mux addr
-#define TCAADDR 0x70
+
 
 #define LTBLUE    0xB6DF
 #define LTTEAL    0xBF5F

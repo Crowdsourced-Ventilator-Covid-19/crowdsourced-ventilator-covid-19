@@ -1,5 +1,6 @@
+// i2c mux addr
+#define TCAADDR 0x70
 
- 
 void tcaselect(uint8_t i) {
   if (i > 7) return;
   Wire.beginTransmission(TCAADDR);

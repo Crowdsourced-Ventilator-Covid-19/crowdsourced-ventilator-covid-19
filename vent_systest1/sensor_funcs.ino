@@ -1,7 +1,7 @@
 const float AMS5915_0100_D_MIN = 0.0;       // minimum pressure, millibar
 const float AMS5915_0100_D_MAX = 100.0;     // maximum pressure, millibar
 
-
+/*
 // read patient and reference pressure sensors to calculate guage pressure in cmh2o
 double readPressure(AMS5915 &ams, int tca) {
   float p_cmh2o;
@@ -25,8 +25,8 @@ void calibratePressure(AMS5915 &ams, int tca) {
   poff = tmp;
   tft.println("Success Poff = " + String(poff));
 }
-
-
+*/
+/*
 // read the venturi flow meter and return value in lpm
 double readFlow(AMS5915 &ams, int tca) {
   float r1, r2, A1, A2, rho, deltaP, flow;
@@ -52,7 +52,7 @@ double readFlow(AMS5915 &ams, int tca) {
 }
 
 // read quiescent flow value, and store it as zero offset
-void calibrateFlow(AMS5915 &ams, int tca) {
+void calibrateFlow(int tca) {
   tcaselect(tca);
   double tmp;
   tft.println("Calibrating AMS Flow on tca " + String(tca) + "...");
@@ -65,4 +65,4 @@ void calibrateFlow(AMS5915 &ams, int tca) {
   }
   foff = tmp;
   tft.println("Success foff = " + String(foff));
-}
+}*/

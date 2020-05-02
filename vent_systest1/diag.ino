@@ -8,18 +8,18 @@ void diag() {
   
   tcascan();
 
-  tft.println("Initializing Sensors...");
-  initAMS(ams0, 0);
-  initAMS(ams1, 1);
+  //tft.println("Initializing Sensors...");
+  // initAMS(ams0, 0);
+  //initAMS(ams1, 1);
     
   // tare differential pressure sensors
-  calibratePressure(ams1,1);
-  calibrateFlow(ams0, 0);
+  // calibratePressure(ams1,1);
+  // calibrateFlow(ams0, 0);
   
-  delay(5000);
+  delay(1000);
   
 }
-
+/*
 void initAMS(AMS5915 &ams, int tca) {
   double t;
   tft.println("Initialize AMS5915 on tca " + String(tca) + "...");
@@ -31,4 +31,4 @@ void initAMS(AMS5915 &ams, int tca) {
     delay(100);
   }
   tft.println("Success");
-}
+}*/
