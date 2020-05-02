@@ -8,7 +8,7 @@
  * 
  */
 
-
+#define ARDUINO 102
 #include <MCUFRIEND_kbv.h>  // use the appropriate driver for your touch TFT display
 MCUFRIEND_kbv tft;       
 #include <TouchScreen.h>
