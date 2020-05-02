@@ -2,8 +2,9 @@
  * This screen allows you to modify the value of one parameter
  */
 
-void drawModScreen(String label, int minv, int maxv, int val){
-  screen = "modify";
+
+void drawModScreen(String label, String scrn, int minv, int maxv, int val){
+  screen = scrn;
   clearScreen();
   measLoop();
   drawBackButton();
@@ -13,11 +14,13 @@ void drawModScreen(String label, int minv, int maxv, int val){
   tft.setFont(&FreeSansBold24pt7b);
   tft.setCursor(10, 50);
   tft.println(label);
-  updateModScreen(minv, maxv, val);
+  int xpos = round(float(val - minv) / float(maxv - minv) * 400.0 + 40.0);
+  updateModScreen(minv, maxv, xpos);
   omodVal = val;
 }
 
-void updateModScreen(int minv, int maxv, int val) {
+int updateModScreen(int minv, int maxv, int xpos) {
+  int val = round((double) (xpos - 40) / (double) 400 * (double) (maxv - minv)) + minv;
   measLoop();
   if (omodVal == val) { return; }
   tft.setTextColor(WHITE, BLACK);
@@ -31,7 +34,7 @@ void updateModScreen(int minv, int maxv, int val) {
   drawSlider(minv, maxv, val);
   omodVal = val;
   measLoop();
-
+  return val;
 }
 
 void drawSlider(int minv, int maxv, int val) {

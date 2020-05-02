@@ -28,8 +28,9 @@ int    rr = 15;             // respiratory rate
 int    ier = 1;             // I/E ratio  (actually E/I)
 int    pmax = 40;           // max pressure (retract piston)
 int    peakAlrm = 30;       // indicate pressure alarm
-int    platAlrm = 20;       // indicate plateau alarm
-int    peepAlrm = 10;       // indicate PEEP alarm
+int    mvhiAlrm = 20;    // minute vol hi alarm
+int    mvloAlrm = 10;    // minute vol lo alarm
+int    dcAlrm = 3;          // disconnect alarm
 int    tvSet = 300;         // TV set value
 int    trig = 50;           // TV patient trigger threshold
 
@@ -38,6 +39,7 @@ String screen;
 boolean inspPhase = false;  // phase variable
 boolean measPend = 0;       // flag to indicate a measurement is needed
 int    omodVal;             // old mod val
+boolean power = false;      // start with it turned off
 
 // measured and processed variables
 double peep = 0;            // PEEP measurement
@@ -129,11 +131,11 @@ void setup() {
   pinMode(PISTON, OUTPUT);
   digitalWrite(PISTON, LOW);
   pinMode(SOLENOID, OUTPUT);
-  digitalWrite(SOLENOID, HIGH);
+  digitalWrite(SOLENOID, LOW);
   pinMode(ALARM, OUTPUT);
   digitalWrite(ALARM, LOW);
 
-  drawMainScreen();
+  drawSetScreen();
 }
 
 void loop() {
@@ -204,7 +206,9 @@ void measLoop() {
       // check if inspiratory phase is over
       if (millis() > ierTimer) {
         digitalWrite(PISTON, LOW);   // release BVM bag
-        digitalWrite(SOLENOID, HIGH);  // open expiratory path
+        if (power) {
+          digitalWrite(SOLENOID, HIGH);  // open expiratory path
+        }
         inspPhase = false;
         // Serial.println("exp");
         peak = fifoP.peak;
@@ -234,7 +238,9 @@ void measLoop() {
         // Serial.println("insp");
         fifoP.peak = 0;              // reset PIP tracking
         fifoP.fifoInit();
-        digitalWrite(PISTON, HIGH);  // compress BVM bag
+        if (power) {
+          digitalWrite(PISTON, HIGH);  // compress BVM bag
+        }
         digitalWrite(SOLENOID, LOW); // close expiratory path
         resetTimers();
       }

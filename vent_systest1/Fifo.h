@@ -18,7 +18,7 @@ class Fifo
     double peak;
   private:
     int depth;
-    double entries[10];
+    double entries[40];
     uint32_t last_t;
     double last_v;
     int idx;
