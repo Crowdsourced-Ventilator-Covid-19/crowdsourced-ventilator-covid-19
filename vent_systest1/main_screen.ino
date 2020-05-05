@@ -4,16 +4,16 @@ void drawMainScreen() {
   display1 = 2;
   display2 = 2;
   display3 = 2;
-  //tft.fillScreen(BLACK);
   clearScreen();
   tft.setFont();
   tft.setTextSize(1);
   
-  drawMeas("Ppeak", 380, 400, 10, peak, YELLOW);
-  drawMeas("Pplat", 380, 400, 70, plat, YELLOW);
-  drawMeas("PEEP", 380, 400, 130, peep, YELLOW);
-  drawMeas("RR", 380, 400, 190, rr, WHITE);
-  drawMeas("TV", 380, 390, 250, tvMeas, GREEN);
+  drawMeas("Ppeak cmh2o", 380, 380, 10, String(round(peak)), YELLOW);
+  drawMeas("Pplat cmh2o", 380, 380, 60, String(round(plat)), YELLOW);
+  drawMeas("PEEP cmh2o", 380, 380, 110, String(round(peep)), YELLOW);
+  drawMeas("RR bpm", 380, 380, 160, String(fifoMv.rrMeas), WHITE);
+  drawMeas("TV ml", 380, 380, 210, String(round(tvMeas)), GREEN);
+  drawMeas("MV lpm", 380, 380, 260, String(fifoMv.minvol / 1000.0), GREEN);
 }
 /*
  * This screen shows the graphs, and measured values
@@ -28,10 +28,9 @@ void updateGraphs() {
   
   double t = (millis() % 15000) / 1000.0;
   if (t < last_t) {
-    display1 = 1;
-    display2 = 1;
-    display3 = 1;
-    // tft.fillRect(1, 0, 360, 320, BLACK);
+    display1 = 2;
+    display2 = 2;
+    display3 = 2;
   }
   measLoop();
   Graph(tft, tmpP_t, tmpP, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display1, &ox1, &oy1, xticks1 );
@@ -49,14 +48,16 @@ void updateMeasures() {
   boolean xticks2 = false;
   boolean xticks3 = true;
   if (screen != "main") { return; }
-  updateMeas(400, 10, peak, YELLOW);
-  updateMeas(400, 70, plat, YELLOW);
-  updateMeas(400, 130, peep, YELLOW);
-  updateMeas(390, 250, tvMeas, GREEN);
+  updateMeas(380, 10, String(round(peak)), YELLOW);
+  updateMeas(380, 60, String(round(plat)), YELLOW);
+  updateMeas(380, 110, String(round(peep)), YELLOW);
+  updateMeas(380, 160, String(fifoMv.rrMeas), WHITE);
+  updateMeas(380, 210, String(round(tvMeas)), GREEN);
+  updateMeas(380, 260, String(fifoMv.minvol / 1000.0), GREEN);
 }
 
 // draw measurement info
-void drawMeas(String label, int labelx, int valuex, int y, int value, unsigned int vcolor) {
+void drawMeas(String label, int labelx, int valuex, int y, String value, unsigned int vcolor) {
   tft.setFont();
   tft.setTextSize(1);
   tft.setTextColor(WHITE, BLACK);
@@ -65,10 +66,12 @@ void drawMeas(String label, int labelx, int valuex, int y, int value, unsigned i
   updateMeas(valuex, y, value, vcolor);
 }
 // update the measurement number
-void updateMeas(int x, int y, int value, unsigned int vcolor) {
-  tft.setTextSize(5);
+void updateMeas(int x, int y, String value, unsigned int vcolor) {
+  tft.setTextSize(3);
   tft.setFont();
   tft.setTextColor(vcolor, BLACK);
+  tft.setCursor(x, y + 15);
+  tft.println("   ");
   tft.setCursor(x, y + 15);
   tft.println(value);
 }

@@ -28,10 +28,11 @@
 */
 
 
-void Graph(MCUFRIEND_kbv &d, double x, double y, double gx, double gy, double w, double h, double xlo, double xhi,
+void Graph(MCUFRIEND_kbv &d, uint32_t x_ms, double y, double gx, double gy, double w, double h, double xlo, double xhi,
 double xinc, double ylo, double yhi, double yinc, String title, String xlabel, String ylabel, unsigned int gcolor,
 unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor, int &redraw, double *ox, double *oy, boolean xticks) {
   double ydiv, xdiv;
+  double x;
   // initialize old x and old y in order to draw the first point of the graph
   // but save the transformed value
   // note my transform funcition is the same as the map function, except the map uses long and we need doubles
@@ -40,6 +41,7 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
   double i;
   double temp;
   int rot, newrot;
+  x = float(x_ms % 15000) / 1000.0;  // convert millis time to seconds mod 15
 
   if (redraw > 0) {
     d.fillRect(gx, gy - h, w, h+5, BLACK);

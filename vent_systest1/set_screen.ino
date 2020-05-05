@@ -12,11 +12,13 @@ void drawSetScreen() {
   tft.setTextColor(WHITE, BLACK);
   tft.setCursor(100, 50);
   tft.println("Settings");
+  String powertxt = (power)? "ON" : "OFF";
   drawSetButton("RR", "", String(rr),  BLACK, WHITE, 4, 70);
   drawSetButton("TV", "", String(tvSet), BLACK, GREEN, 123, 70);
   drawSetButton("I/E", "", String("1:" + String(ier)), BLACK, WHITE, 242, 70);
   drawSetButton("Pmax", "", String(pmax), BLACK, YELLOW, 361, 70);
   drawSetButton("AC", "Trig", String(trig), BLACK, YELLOW, 4, 194);
+  drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
   drawSetButton("Alarms", "", String(""), BLACK, RED, 361, 194);
 
 }

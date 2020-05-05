@@ -20,15 +20,18 @@ void drawModScreen(String label, String scrn, int minv, int maxv, int val){
 }
 
 int updateModScreen(int minv, int maxv, int xpos) {
+  if (xpos < 40) { xpos = 40; }
+  if (xpos > 440) { xpos = 440; }
   int val = round((double) (xpos - 40) / (double) 400 * (double) (maxv - minv)) + minv;
   measLoop();
   if (omodVal == val) { return; }
   tft.setTextColor(WHITE, BLACK);
   tft.setFont();
   tft.setTextSize(5);
-  tft.setCursor(170, 170);
-  // tft.fillRect(170, 90, 170, 90, BLACK);
   measLoop();
+  tft.setCursor(170, 170);
+  tft.println("     ");
+  tft.setCursor(170, 170);
   tft.println(String(val));
   measLoop();
   drawSlider(minv, maxv, val);

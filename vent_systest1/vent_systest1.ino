@@ -28,8 +28,8 @@ int    rr = 15;             // respiratory rate
 int    ier = 1;             // I/E ratio  (actually E/I)
 int    pmax = 40;           // max pressure (retract piston)
 int    peakAlrm = 30;       // indicate pressure alarm
-int    mvhiAlrm = 20;    // minute vol hi alarm
-int    mvloAlrm = 10;    // minute vol lo alarm
+int    mvhiAlrm = 20;       // minute vol hi alarm
+int    mvloAlrm = 1;        // minute vol lo alarm
 int    dcAlrm = 3;          // disconnect alarm
 int    tvSet = 300;         // TV set value
 int    trig = 50;           // TV patient trigger threshold
@@ -38,7 +38,6 @@ int    trig = 50;           // TV patient trigger threshold
 String screen;
 boolean inspPhase = false;  // phase variable
 boolean measPend = 0;       // flag to indicate a measurement is needed
-int    omodVal;             // old mod val
 boolean power = false;      // start with it turned off
 
 // measured and processed variables
@@ -58,10 +57,11 @@ double tvoff = 0;
 
 // temp variables
 double tmpP = 0;            // tmp var for pressure
-double tmpP_t = 0;          // tmp var for pressure timestamp
+uint32_t tmpP_t = 0;          // tmp var for pressure timestamp
 double tmpF = 0;            // tmp var for flow
-double tmpF_t = 0;          // tmp var for flow timestamp
+uint32_t tmpF_t = 0;          // tmp var for flow timestamp
 double tmpTv = 0;           // tmp variable for TV
+int    omodVal;             // old mod val
 
 // timers
 uint32_t breathTimer;       // next timestamp to start breath
@@ -93,6 +93,7 @@ AMS5915 ams1;
 
 // setup Fifo
 Fifo fifoP(10);
+Fifo fifoMv(15);
 
 void setup() {
   Serial.begin(115200);
@@ -106,6 +107,8 @@ void setup() {
   Wire.begin();
   // initialize sensors and check health
   diag();
+
+  fifoMv.fifoInit(rr, tvSet);
 
   // interrupt driven pressure and flow sample rate to workaround slow screen refresh
   cli();//stop interrupts
@@ -159,7 +162,7 @@ void measLoop() {
     // read patient pressure & timestamp
     tmpP = readPressure(ams1, 1);
     fifoP.fifoPush(tmpP);
-    tmpP_t = (millis() % 15000) / 1000.0;
+    tmpP_t = millis();
     //Serial.println("phase: " + String(inspPhase) + " conv: " + String(fifoDp.converging));
 
     // check if we've hit the hard pressure limit
@@ -176,21 +179,26 @@ void measLoop() {
     float f;
     f = readFlow(ams0, 0);
     if (isnan(f) == false) {
-      
+  
       // save old flow values
       double ot = tmpF_t;
       double of = tmpF;
       
       // write new flow values
-      tmpF_t = (millis() % 15000) / 1000.0;
+      tmpF_t = millis();
       tmpF = f;
 
-      // handle time wraparound case
-      double nt = tmpF_t;
-      if (ot > nt) { nt += 15.0; }
 
+      // handle time wraparound case
+      uint32_t dt;
+      if (tmpF_t < ot) {
+        dt = UINT32_MAX - ot + tmpF_t;
+      } else {
+        dt = tmpF_t - ot;
+      }
       // trapezoidal intgegration to track volume (lpm*s -> cc)
-      tmpTv += 1000/60 * (nt - ot) * (of + tmpF) /2;
+      // Serial.println("dt: " + String(dt) + " of: " + String(of) + " tmpF: " + String(tmpF) + " tmpTv: " + String(tmpTv));
+      tmpTv += float(dt) * (of + tmpF) / 2.0 / 60.0;
     }
 
     // check if we've hit desired TV
@@ -212,9 +220,18 @@ void measLoop() {
         inspPhase = false;
         // Serial.println("exp");
         peak = fifoP.peak;
+        //Serial.println(peak);
         plat = fifoP.avg;
         tvMeas = tmpTv;
-        // tvoff += tvSet - tmpTv; // simple proportional control
+        fifoMv.fifoPush(tvMeas, millis());
+        // Serial.println(fifoMv.minvol);
+
+        if (tvMeas > 99) {
+          tvoff += tvSet - tmpTv; // simple proportional control
+          tvoff = min(tvoff, 0.1 * float(tvSet));
+          tvoff = max(tvoff, -0.1 * float(tvSet));
+        }
+        Serial.println(tvoff);
         tmpTv = 0; // no expiratory flow meter, assume TV goes to zero
         updateMeasures();
       }

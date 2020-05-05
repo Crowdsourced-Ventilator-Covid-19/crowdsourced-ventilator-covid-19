@@ -35,12 +35,16 @@ void checkTouch() {
       display3 = 2;
       drawMainScreen(); 
       power = true;
+      tvoff = 0;
       } else if (xpos < 120 && ypos > 194) {
         modVar = "trig";
         modVal = trig;
         drawModScreen("AC Trig", "modify", TRIG_MIN, TRIG_MAX, modVal);
       } else if (xpos < 240 && ypos > 194) {
-
+        power = !power;
+        String powertxt = (power)? "ON" : "OFF";
+        tft.fillRect(123,220,120,100,BLACK);
+        drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
       } else if (xpos < 360 && ypos > 194) {
 
       } else if (ypos > 194) {
@@ -69,11 +73,11 @@ void checkTouch() {
       display2 = 2;
       display3 = 2;
       drawMainScreen(); 
-      power = true;
       } else if (xpos < 120 && ypos > 194) {
 
       } else if (xpos < 240 && ypos > 194) {
 
+        
       } else if (xpos < 360 && ypos > 194) {
 
       } else if (ypos > 194) {
@@ -99,7 +103,10 @@ void checkTouch() {
     else if (screen == "modify") {
       if (xpos > 330 && ypos < 66) { // back button
         if (modVar == "trig") {trig = modVal;}
-        else if (modVar == "rr") {rr = modVal;}
+        else if (modVar == "rr") {
+          rr = modVal;
+          fifoMv.fifoInit(rr,tvSet);
+        }
         else if (modVar == "tv") {tvSet = modVal;}
         else if (modVar == "ier") {ier = modVal;}
         else if (modVar == "pmax") {pmax = modVal;}

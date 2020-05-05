@@ -12,18 +12,20 @@ class Fifo
 {
   public:
     Fifo(int d);    // d = depth
+    void fifoPush(double v, uint32_t t);
     void fifoPush(double v);
     void fifoInit();
+    void fifoInit(int rr, int tv);
     double avg;
     double peak;
+    double minvol;
+    int rrMeas;
   private:
     int depth;
     double entries[40];
-    uint32_t last_t;
-    double last_v;
+    uint32_t ts[40];
     int idx;
     double total;
-    double noise;
 };
 
 #endif
