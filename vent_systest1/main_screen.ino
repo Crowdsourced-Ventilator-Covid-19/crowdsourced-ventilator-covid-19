@@ -35,7 +35,7 @@ void updateGraphs() {
   measLoop();
   Graph(tft, tmpP_t, tmpP, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display1, &ox1, &oy1, xticks1 );
   measLoop();
-  Graph(tft, tmpF_t, tmpTv, 40, 190, 320, 80, 0, 15, 1, 0, 600, 100, "Volume", "", "cc", DKBLUE, RED, GREEN, WHITE, BLACK, display2, &ox2, &oy2, xticks2);
+  Graph(tft, tmpF_t, tmpTv, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "cc", DKBLUE, RED, GREEN, WHITE, BLACK, display2, &ox2, &oy2, xticks2);
   measLoop();
   Graph(tft, tmpF_t, tmpF, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, display3, &ox3, &oy3, xticks3);
   measLoop();

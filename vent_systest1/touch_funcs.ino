@@ -34,7 +34,6 @@ void checkTouch() {
       display2 = 2;
       display3 = 2;
       drawMainScreen(); 
-      power = true;
       tvoff = 0;
       } else if (xpos < 120 && ypos > 194) {
         modVar = "trig";
@@ -42,7 +41,7 @@ void checkTouch() {
         drawModScreen("AC Trig", "modify", TRIG_MIN, TRIG_MAX, modVal);
       } else if (xpos < 240 && ypos > 194) {
         power = !power;
-        String powertxt = (power)? "ON" : "OFF";
+        String powertxt = (power)? "STOP" : "RUN ";
         tft.fillRect(123,220,120,100,BLACK);
         drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
       } else if (xpos < 360 && ypos > 194) {

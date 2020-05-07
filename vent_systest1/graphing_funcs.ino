@@ -136,12 +136,9 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
 
 
 void clearScreen() {
-  tft.fillRect(0, 0, 480, 80, BLACK);
+  tft.fillScreen(BLACK);
+  //for (int i = 0; i < 10; i++) {
+  //  tft.fillRect(0, i*32, 480, i*32+31, BLACK);
   measLoop();
-  tft.fillRect(0, 80, 480, 80, BLACK);
-  measLoop();
-  tft.fillRect(0, 160, 480, 80, BLACK);
-  measLoop();
-  tft.fillRect(0, 240, 480, 80, BLACK);
-  measLoop();
+  //}
 }

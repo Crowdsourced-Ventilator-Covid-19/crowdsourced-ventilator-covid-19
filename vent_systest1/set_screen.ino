@@ -12,7 +12,7 @@ void drawSetScreen() {
   tft.setTextColor(WHITE, BLACK);
   tft.setCursor(100, 50);
   tft.println("Settings");
-  String powertxt = (power)? "ON" : "OFF";
+  String powertxt = (power)? "STOP" : "RUN ";
   drawSetButton("RR", "", String(rr),  BLACK, WHITE, 4, 70);
   drawSetButton("TV", "", String(tvSet), BLACK, GREEN, 123, 70);
   drawSetButton("I/E", "", String("1:" + String(ier)), BLACK, WHITE, 242, 70);
