@@ -74,29 +74,35 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 
 | Item | Price |
 | --- | --- |
-| Arduino Mega 2560 R3 | $17 |
-| [4ch 5VDC Relay with Optocoupler](https://www.amazon.com/SainSmart-101-70-101-4-Channel-Relay-Module/dp/B0057OC5O8/ref=sr_1_2?dchild=1&keywords=4ch+5v+dc+relay&qid=1586456845&s=industrial&sr=1-2) | $10 |
-| 2x [I2C differential breakout](https://www.sparkfun.com/products/14589) | 2x $11 |
-| 2x [MPRLS](https://www.adafruit.com/product/3965) | 2x $15 |
-| [TFT Touchscreen](https://www.amazon.com/gp/product/B07NWH47PV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $17 |
+| [HiLetGo ESP32 Dev Kit](https://www.amazon.com/gp/product/B0718T232Z/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $11 |
+| [AdaFruit 3.5" TFT w/Touch](https://www.adafruit.com/product/2050) | $40 |
+| [I2C level shifter](https://www.amazon.com/gp/product/B0148BLZGE/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $8 |
+| [I2c mux](https://www.amazon.com/gp/product/B06XXG5G3L/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $8 |
+| [EasyDriver Stepper controller](https://www.amazon.com/gp/product/B00WSNZEBM/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $7 |
+| [Stepper motor](https://www.amazon.com/gp/product/B07TY4BFF2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $9 |
+| [7805 voltage regulator](https://www.amazon.com/gp/product/B01M32I31S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $1 |
+| 10uf Cap | |
+| 100uf Cap | |
+| 0.1uf Cap | |
+| 3x 10k Ohm resistor | |
+| [3x N-channel power mosfet](https://www.amazon.com/gp/product/B07CTF1JVD/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | |
 | [5way 2pos solenoid](https://www.amazon.com/Baomain-Pneumatic-Solenoid-Internally-Electrical/dp/B01J3CE3EE/ref=sr_1_4?crid=1K7DOXGGJAF8T&dchild=1&keywords=5+way+2+position+pneumatic+valve&qid=1586062215&sprefix=5-way+2+pos%2Caps%2C159&sr=8-4) | $12 |
 | [20mm Bore 100mm stroke pneumatic cylinder](https://www.amazon.com/Sydien-Pneumatic-Cylinder-Connector-MAL20X100/dp/B07J9V84VH/ref=sr_1_2?dchild=1&keywords=pneumatic+cylinder+100mm&qid=1586062300&sr=8-2) | $14 |
 | [6mm to 1/4" NPT push connects](https://www.amazon.com/TOUHIA-Pneumatic-Straight-Connect-Fittings/dp/B07RXVQPH6/ref=sr_1_4?crid=2NKU48K7C26S9&dchild=1&keywords=1%2F4+npt+push+to+connect+fittings&qid=1586062414&sprefix=1%2F4+npt+pu%2Caps%2C154&sr=8-4) | $8 |
 | [Pressure regulator](https://www.amazon.com/Primefit-CR1401G-Replacement-Regulator-steel-Protected/dp/B00IDCYIJ6/ref=sr_1_2?dchild=1&keywords=pressure+regulator&qid=1586062545&sr=8-2) | $6 |
 | [Adjustable silencers](https://www.amazon.com/uxcell-Adjustable-Pneumatic-Exhaust-Silencer/dp/B07K39R9Y3/ref=sr_1_2?dchild=1&keywords=pneumatic+adjustable+silencer+1%2F4+npt&qid=1586062735&sr=8-2) | $8 |
 | [6mm tubing](https://www.amazon.com/Uxcell-a13080200ux0301-Blue-29-5Ft-Polyurethane/dp/B00G9JQ2JY/ref=sr_1_5?crid=366JZUYPHKWGG&dchild=1&keywords=6mm+pneumatic+tubing&qid=1586062852&sprefix=6mm+pnu%2Caps%2C154&sr=8-5)  | $8 |
-| [Project Box](https://www.amazon.com/Hammond-1591USBK-Plastic-Project-Inches/dp/B007POB8PK/ref=sr_1_15?dchild=1&keywords=electronic+project+box&qid=1586062900&sr=8-15) | $9 |
 | [Teflon tape](https://www.amazon.com/Dixon-Valve-TTB75-Industrial-Temperature/dp/B003D7K8E0/ref=sr_1_8?dchild=1&keywords=teflon+tape&qid=1586097443&sr=8-8) | $2 |
-| [Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) | $60 |
+| [3x Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) | 3x $60 |
 | [Check Valve](https://www.wnlproducts.com/product/replacement-valves-for-cpr-mask/) | $3 |
 | [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
 | [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
 | [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
 | [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
 | [2x 1N4004 diode](https://www.sparkfun.com/products/14884)| $1 |
-| [Venturi flow meter tube](https://a360.co/2JGjDKU) | $10 |
+| 2x Venturi flow meter tube |  |
 | [2x PEEP valve](https://www.amazon.com/gp/product/B00Q0SBGR2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $24 |
-| Total | ~$300 |
+| Total |  |
 
 ## Prototype Phase
 - Design
