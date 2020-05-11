@@ -108,11 +108,16 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Design
 
 ![v0.03](https://i.imgur.com/NC8aWRx.png)
+![PCB](https://i.imgur.com/mL1ztxj.png)
 
 - Demonstration
 [![UI demo](https://i.imgur.com/CcICFsl.png)](https://www.youtube.com/watch?v=sNcdRJmJqwU)
-  - Patient Assist
-  [![AC](https://i.imgur.com/bVyWEcU.png)](https://www.youtube.com/watch?v=ghMTBimfM2k)
+- Patient Assist
+[![AC](https://i.imgur.com/bVyWEcU.png)](https://www.youtube.com/watch?v=ghMTBimfM2k)
+- Adjustable pop-off safety
+[![PopOff](https://i.imgur.com/GcSfioq.png)](https://www.youtube.com/watch?v=k4BQMlsufNU)
+- 3d printed Expiratory Valve
+![ev](https://i.imgur.com/clEy51N.png)
 - Software control flowchart
 
 ![flowchart](https://i.imgur.com/Xz6PEpd.png)
