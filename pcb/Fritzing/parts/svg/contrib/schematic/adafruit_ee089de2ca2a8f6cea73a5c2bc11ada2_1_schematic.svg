@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"  id="svg5926" height="186.02362" width="212.59842" gorn="0">
+    <desc >
+        <referenceFile >USB_TTL_Serial_Cable__48f59aac877dd787a2__schematic__d575fc8d1d3ff801e02e8c0049b078ab.svg</referenceFile>
+    </desc>
+    <defs  id="defs5928"/>
+    <metadata  id="metadata5931">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <cc:Work xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" rdf:about="">
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+                <dc:type xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <rect  style="fill:none;stroke:none" id="rect10582" y="-132.87405" height="0" x="0" width="0" gorn="0.3"/>
+    <g  transform="translate(4.5036986e-6,26.574751)">
+        <g >
+            <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" xml:space="preserve" id="text10512" gorn="0.4.0.0"/>
+        </g>
+    </g>
+    <g  id="schematic" gorn="0.5">
+        <g  transform="matrix(0,-1,1,0,0,0)">
+            <g >
+                <rect  style="fill:none;stroke:#000000;stroke-width:2.00445914;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" id="rect10403" y="53.149605" height="132.87402" x="-159.44882" width="132.87401" gorn="0.5.0.0.0"/>
+            </g>
+        </g>
+        <path  style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 26.574807,106.2992 26.57481,0" id="path10449" gorn="0.5.1"/>
+        <path  style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 26.574807,79.724381 26.57481,0" id="path10453" gorn="0.5.2"/>
+        <path  style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 53.149617,53.149571 -26.574803,0" id="path10461" gorn="0.5.3"/>
+        <g  transform="translate(-1.7716474,2.1425781e-6)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" xml:space="preserve" id="text10504" gorn="0.5.4.0.0">
+                    <text  id="tspan10506" y="56.692921" x="58.464565" gorn="0.5.4.0.0.0">RX</text>
+                </g>
+            </g>
+        </g>
+        <g  transform="translate(-1.7716474,-0.03542786)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" xml:space="preserve" id="text10508" gorn="0.5.5.0.0">
+                    <text  id="tspan10510" y="83.303154" x="58.464565" gorn="0.5.5.0.0.0">TX</text>
+                </g>
+            </g>
+        </g>
+        <text  style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" id="tspan10514" y="109.84254" x="56.692913" gorn="0.5.6">5V</text>
+        <rect  style="fill:none;stroke:none" id="connector1pin" y="49.606243" height="7.0866141" x="23.031507" width="7.0866141" gorn="0.5.7"/>
+        <rect  style="fill:none;stroke:none" id="connector2pin" y="76.181091" height="7.0866141" x="23.031507" width="7.0866141" gorn="0.5.8"/>
+        <rect  style="fill:none;stroke:none" id="connector3pin" y="102.75594" height="7.0866141" x="23.031507" width="7.0866141" gorn="0.5.9"/>
+        <text  style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" id="tspan4621" y="90.354324" x="132.87401" gorn="0.5.10">USB-TTL</text>
+        <g  style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" id="text4046" gorn="0.5.11">
+            <text  style="font-size:14px" id="tspan12352" y="108.07086" x="132.87401" gorn="0.5.11.0">CABLE</text>
+        </g>
+        <path  style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 53.149617,132.87402 -26.574803,0" id="path12328" gorn="0.5.12"/>
+        <g  transform="translate(-1.7716467,79.724441)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" xml:space="preserve" id="g12330" gorn="0.5.13.0.0">
+                    <text  id="text12332" y="56.692921" x="58.464565" gorn="0.5.13.0.0.0">GND</text>
+                </g>
+            </g>
+        </g>
+        <rect  style="fill:none;stroke:none" id="connector4pin" y="129.33072" height="7.0866141" x="23.031507" width="7.0866141" gorn="0.5.14"/>
+    </g>
+</svg>

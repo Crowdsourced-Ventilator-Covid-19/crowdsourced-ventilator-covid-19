@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.90774in" height="1.00694in" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 1862 983"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="PCB">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="silkscreen">
+   <path id="boardoutline" fill="none" stroke="black" stroke-width="6.77667" d="M1858 640l0 298c0,21 -18,41 -39,41l-1777 0c-21,0 -38,-17 -38,-38l0 -899c0,-21 17,-38 38,-38l1777 0c21,0 38,17 38,38l1 301"/>
+   <line fill="none" stroke="black" stroke-width="6.77667" x1="296" y1="3" x2="296" y2= "979" />
+   <g transform="matrix(-8.01198E-014 -1 1 -8.01198E-014 -332.575 1683.93)">
+    <text x="954" y="525"  fill="black" font-weight="normal" font-size="108.419" font-family="Droid Sans">KEEP OUT</text>
+   </g>
+   <text x="750" y="344"  fill="black" font-weight="normal" font-size="108.419" font-family="Arial">ESP</text>
+   <text x="976" y="344"  fill="black" font-weight="normal" font-size="108.419" font-family="Arial">-32S</text>
+   <text x="790" y="525"  fill="black" font-weight="normal" font-size="108.419" font-family="Arial">HiLetgo</text>
+   <text x="680" y="714"  fill="black" font-weight="normal" font-size="108.419" font-family="Arial">WiFi Module</text>
+   <g transform="matrix(2.64845E-014 -1 1 2.64845E-014 -448.851 1823.17)">
+    <text x="954" y="525"  fill="black" font-weight="normal" font-size="67.7629" font-family="Arial">1</text>
+   </g>
+  </g>
+  <g id="copper1">
+   <g id="copper0">
+    <circle id="connector1pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="52" cy="930" r="27"/>
+    <circle id="connector2pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="150" cy="930" r="27"/>
+    <circle id="connector3pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="247" cy="930" r="27"/>
+    <circle id="connector4pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="345" cy="930" r="27"/>
+    <circle id="connector5pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="442" cy="930" r="27"/>
+    <circle id="connector6pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="540" cy="930" r="27"/>
+    <circle id="connector7pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="638" cy="930" r="27"/>
+    <circle id="connector8pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="735" cy="930" r="27"/>
+    <circle id="connector9pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="833" cy="930" r="27"/>
+    <circle id="connector10pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="930" cy="930" r="27"/>
+    <circle id="connector11pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1028" cy="930" r="27"/>
+    <circle id="connector12pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1126" cy="930" r="27"/>
+    <circle id="connector13pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1223" cy="930" r="27"/>
+    <circle id="connector14pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1321" cy="930" r="27"/>
+    <circle id="connector15pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1418" cy="930" r="27"/>
+    <circle id="connector16pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1516" cy="930" r="27"/>
+    <circle id="connector17pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1613" cy="930" r="27"/>
+    <circle id="connector18pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1711" cy="930" r="27"/>
+    <circle id="connector19pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1809" cy="930" r="27"/>
+    <circle id="connector20pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1809" cy="52" r="27"/>
+    <circle id="connector21pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1711" cy="52" r="27"/>
+    <circle id="connector22pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1613" cy="52" r="27"/>
+    <circle id="connector23pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1516" cy="52" r="27"/>
+    <circle id="connector24pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1418" cy="52" r="27"/>
+    <circle id="connector25pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1321" cy="52" r="27"/>
+    <circle id="connector26pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1223" cy="52" r="27"/>
+    <circle id="connector27pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1126" cy="52" r="27"/>
+    <circle id="connector28pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="1028" cy="52" r="27"/>
+    <circle id="connector29pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="930" cy="52" r="27"/>
+    <circle id="connector30pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="833" cy="52" r="27"/>
+    <circle id="connector31pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="735" cy="52" r="27"/>
+    <circle id="connector32pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="638" cy="52" r="27"/>
+    <circle id="connector33pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="540" cy="52" r="27"/>
+    <circle id="connector34pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="442" cy="52" r="27"/>
+    <circle id="connector35pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="345" cy="52" r="27"/>
+    <circle id="connector36pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="247" cy="52" r="27"/>
+    <circle id="connector37pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="150" cy="52" r="27"/>
+    <circle id="connector38pin" fill="none" stroke="#FFBF00" stroke-width="16.1349" cx="52" cy="52" r="27"/>
+   </g>
+  </g>
+ </g>
+</svg>

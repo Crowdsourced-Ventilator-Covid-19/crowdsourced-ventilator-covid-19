@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="90" version="1.1" height="90" id="svg7292">
+ <defs  id="defs7294">
+  <linearGradient  id="linearGradient213132">
+   <stop  offset="0" style="stop-color:#434343;stop-opacity:0" id="stop213140"/>
+   <stop  offset="0.375" style="stop-color:#c0b9b9;stop-opacity:0.24705882" id="stop213142"/>
+   <stop  offset="1" style="stop-color:#7b7777;stop-opacity:0" id="stop213136"/>
+  </linearGradient>
+  <linearGradient  id="linearGradient213114">
+   <stop  offset="0" style="stop-color:#5c5c5c;stop-opacity:1" id="stop213116"/>
+   <stop  offset="0.13194445" style="stop-color:#6f6f6f;stop-opacity:1" id="stop213126"/>
+   <stop  offset="0.34124228" style="stop-color:#d3d3d3;stop-opacity:1" id="stop213122"/>
+   <stop  offset="0.61805558" style="stop-color:#757171;stop-opacity:1" id="stop213124"/>
+   <stop  offset="1" style="stop-color:#696969;stop-opacity:1" id="stop213118"/>
+  </linearGradient>
+  <linearGradient  gradientTransform="translate(-27,80.999921)" xlink:href="#linearGradient213114" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient213120" y1="917.35974" x1="44.549999" y2="917.35974" x2="63.450001" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.0555558,-27,27.410293)" xlink:href="#linearGradient213132" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient213138" y1="944.35974" x1="47.25" y2="944.35974" x2="54" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,2.2222225,-25.65,-1127.2174)" xlink:href="#linearGradient213132" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient213148" y1="944.35974" x1="47.25" y2="944.35974" x2="54" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="translate(-27,80.999921)" xlink:href="#linearGradient213114" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient213831" y1="917.35974" x1="44.549999" y2="917.35974" x2="63.450001" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.0555558,-27,27.410293)" xlink:href="#linearGradient213132" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient213833" y1="944.35974" x1="47.25" y2="944.35974" x2="54" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <metadata  id="metadata7297">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work xmlns:cc="http://creativecommons.org/ns#" rdf:about="" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+    <dc:type xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g  id="layer1" transform="translate(0,-962.35973)">
+  <g  id="g213845">
+   <rect  width="90" x="0" y="0" rx="18" height="90" style="fill:#395774;fill-opacity:1;stroke:none" id="rect213835" transform="translate(0,962.35973)"/>
+   <g  id="g213826" transform="matrix(0,1,-1,0,1052.3597,980.35973)">
+    <rect  width="18" x="18" y="971.35974" rx="4.5" height="54" style="fill:url(#linearGradient213831);fill-opacity:1;stroke:#8e8e8e;stroke-width:0.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" id="rect213112"/>
+    <rect  width="18" x="18" y="1007.3597" height="36" style="fill:#323232;fill-opacity:1;fill-rule:evenodd;stroke:#323232;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" id="rect213128"/>
+    <rect  width="6.75" x="20.25" y="1002.8597" height="42.750008" style="fill:url(#linearGradient213833);fill-opacity:1;fill-rule:evenodd;stroke:none" id="rect213130"/>
+   </g>
+   <g style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" id="text213837" xml:space="preserve">
+    <text x="44.900078" y="989.16443" style="font-size:20px;fill:#ffffff;fill-opacity:1" id="tspan213839">DS18B20</text>
+   </g>
+   <g style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" id="text213841" xml:space="preserve" transform="translate(0,962.35973)">
+    <text x="44.901279" y="77.625633" style="font-size:20px;fill:#ffffff;fill-opacity:1" id="tspan213843">PROBE</text>
+   </g>
+  </g>
+ </g>
+</svg>

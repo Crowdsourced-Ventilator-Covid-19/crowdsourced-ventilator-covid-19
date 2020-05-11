@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="adafruit_2a2834137ed34dbde9dd3a3dabf07fbf_9" referenceFile="Breadboard NeoPixel.fzp" fritzingVersion="0.5.2b.02.18.4756">
+ <version>4</version>
+ <date>Tue Aug 2 2016</date>
+ <author>ladyada</author>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This is the easiest way possible to add small, bright RGB pixels to your project. We took the same technology from our Flora NeoPixels and made them breadboard friendly, with two rows of 3 x 0.1&amp;quot; spaced header on each side for easy soldering, chaining and breadboarding. These ultra-bright LEDs have a constant-current driver cooked right into the LED package! The pixels are chainable - so you only need 1 pin/wire to control as many LEDs as you like.&lt;/p>&lt;/body>&lt;/html></description>
+ <title>Adafruit Breadboard-Friendly NeoPixel</title>
+ <tags/>
+ <properties>
+  <property name="part number">Adafruit #1312</property>
+  <property name="layer"></property>
+  <property name="variant">variant 1</property>
+  <property name="family">NeoPixel</property>
+ </properties>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/adafruit_2a2834137ed34dbde9dd3a3dabf07fbf_9_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_2a2834137ed34dbde9dd3a3dabf07fbf_9_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_2a2834137ed34dbde9dd3a3dabf07fbf_9_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/adafruit_2a2834137ed34dbde9dd3a3dabf07fbf_9_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector name="IN" id="connector2" type="male">
+   <description>IN</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector2pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector2pin" terminalId="connector2terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector2pad"/>
+     <p layer="copper1" svgId="connector2pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector3" type="male">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector3pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector3pin" terminalId="connector3terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector3pad"/>
+     <p layer="copper1" svgId="connector3pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="VDD" id="connector4" type="male">
+   <description>VDD</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector4pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector4pin" terminalId="connector4terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector4pad"/>
+     <p layer="copper1" svgId="connector4pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="VDD" id="connector5" type="male">
+   <description>VDD</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector5pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector5pin" terminalId="connector5terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector5pad"/>
+     <p layer="copper1" svgId="connector5pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector6" type="male">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector6pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector6pin" terminalId="connector6terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector6pad"/>
+     <p layer="copper1" svgId="connector6pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="OUT" id="connector7" type="male">
+   <description>OUT</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector7pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector7pin" terminalId="connector7terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector7pad"/>
+     <p layer="copper1" svgId="connector7pad"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses>
+  <bus id="vdd">
+   <nodeMember connectorId="connector4"/>
+   <nodeMember connectorId="connector5"/>
+  </bus>
+  <bus id="gnd">
+   <nodeMember connectorId="connector3"/>
+   <nodeMember connectorId="connector6"/>
+  </bus>
+ </buses>
+ <url>https://www.adafruit.com/products/1312</url>
+</module>

@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" x="0px" height="2.21457in" viewBox="0 0 265.748 159.449" gorn="0" y="0px" width="3.69094in" id="svg5926" xml:space="preserve"  xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <desc >
+        <referenceFile >Neopixel_Strip____White__30_m___d10f8646__schematic__2ac8bc98d0e0c1dab4441037596b5845.svg</referenceFile>
+    </desc>
+    <g transform="translate(4.5036986e-6,-4.0189453e-5)" >
+        <g >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g gorn="0.1.0.0.0.0.0.0" id="text10512" />
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g gorn="0.2" id="schematic" >
+        <g transform="matrix(0,-1,1,0,0,0)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g transform="matrix(-2.535182e-06 -1 1 -2.535182e-06 -212.5986 53.1499)" >
+                                    <g >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <rect stroke-linejoin="round" stroke-linecap="round" stroke="#000000" x="-159.449" height="132.888" gorn="0.2.0.0.0.0.0.0.0.0.0.0.0.0" y="66.43" width="159.449" id="rect10403" stroke-width="1.964" fill="none" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path stroke="#000000" d="M26.575,119.594H53.15" gorn="0.2.1" id="path10449" stroke-width="3" fill="none" />
+        <path stroke="#000000" d="M26.575,93.019H53.15" gorn="0.2.2" id="path10453" stroke-width="3" fill="none" />
+        <path stroke="#000000" d="M53.15,39.855H26.575" gorn="0.2.3" id="path10461" stroke-width="3" fill="none" />
+        <g transform="translate(-1.7716528,-7.5993576e-6)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g gorn="0.2.4.0.0.0.0.0.0" id="text10504" >
+                                    <g transform="matrix(1 0 0 1 58.4646 43.3984)" >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <g >
+                                                        <text font-family="DroidSans" font-size="8" gorn="0.2.4.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan10506" >+5V</text>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 56.6929 96.5622)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" >D</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 63.4361 96.5622)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" >I</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 194.7924 96.5622)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" gorn="0.2.7.0.0.0.0.0" id="text11088" >DO</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 56.6929 123.137)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" gorn="0.2.8.0.0.0.0.0" id="tspan10514" >GND</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect x="23.032" height="7.087" gorn="0.2.9" y="36.312" width="7.087" id="connector1pin" fill="none" />
+        <rect x="23.032" height="7.087" gorn="0.2.10" y="62.887" width="7.087" id="connector7pin" fill="none" />
+        <rect x="23.032" height="7.087" gorn="0.2.11" y="89.461" width="7.087" id="connector2pin" fill="none" />
+        <g gorn="0.2.12" id="tspan4621" >
+            <g transform="matrix(1 0 0 1 88.8813 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >D</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 101.4849 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >O</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 114.5542 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >T</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 124.2573 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >S</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 133.688 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >T</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 142.4858 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >A</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 154.1841 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >R</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1 0 0 1 165.522 85.3343)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <text font-family="Droid Sans" font-size="14.4" >S</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path stroke="#000000" d="M239.173,39.855h-26.575" gorn="0.2.13" id="path12324" stroke-width="3" fill="none" />
+        <path stroke="#000000" d="M239.173,93.019h-26.575" gorn="0.2.14" id="path12326" stroke-width="3" fill="none" />
+        <path stroke="#000000" d="M26.575,66.43H53.15" gorn="0.2.15" id="path10453_1_" stroke-width="3" fill="none" />
+        <g transform="matrix(1 0 0 1 56.6929 69.9732)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" gorn="0.2.16.0.0.0.0.0" id="tspan10510_1_" >CI</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 194.7924 69.9732)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" >C</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 200.6225 69.9732)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" >O</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path stroke="#000000" d="M239.173,66.43h-26.575" gorn="0.2.19" id="path12326_1_" stroke-width="3" fill="none" />
+        <path stroke="#000000" d="M212.598,119.594h26.575" gorn="0.2.20" id="path12328" stroke-width="3" fill="none" />
+        <g transform="scale(-1,-1)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <rect x="-242.717" height="7.087" gorn="0.2.21.0.0.0.0.0.0" y="-96.548" width="7.087" id="connector5pin" fill="none" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect x="23.032" height="7.087" gorn="0.2.22" y="116.05" width="7.087" id="connector3pin" fill="none" />
+        <g transform="scale(-1,-1)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <rect x="-242.717" height="7.087" gorn="0.2.23.0.0.0.0.0.0" y="-123.137" width="7.087" id="connector4pin" fill="none" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="scale(-1,-1)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <rect x="-242.717" height="7.087" gorn="0.2.24.0.0.0.0.0.0" y="-69.973" width="7.087" id="connector8pin" fill="none" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="scale(-1,-1)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <rect x="-242.717" height="7.087" gorn="0.2.25.0.0.0.0.0.0" y="-43.398" width="7.087" id="connector6pin" fill="none" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1 0 0 1 188.0248 123.137)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <text font-family="DroidSans" font-size="8" gorn="0.2.26.0.0.0.0.0" id="text11086" >GND</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(132.87402,-3.0337356e-6)" >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g gorn="0.2.27.0.0.0.0.0.0" id="g11090" >
+                                    <g transform="matrix(1 0 0 1 59.4868 43.3984)" >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <g >
+                                                        <text font-family="DroidSans" font-size="8" gorn="0.2.27.0.0.0.0.0.0.0.0.0.0.0.0" id="text11092" >+5V</text>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

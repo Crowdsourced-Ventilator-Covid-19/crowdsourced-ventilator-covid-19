@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xml="http://www.w3.org/XML/1998/namespace" baseProfile="tiny" viewBox="0 0 45.354 14.173" width="0.629917in" height="0.196847in" gorn="0" xml:space="preserve"  version="1.2" x="0px" y="0px" id="svg4364">
+    <desc >
+        <referenceFile >NeoPixel PCB.svg</referenceFile>
+    </desc>
+    <g gorn="0.1"  id="pcb">
+        <g gorn="0.1.0"  id="copper0">
+            <circle stroke-width="1.8" cx="4.677" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.0" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector1pin"/>
+            <circle stroke-width="1.8" cx="11.877" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.1" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector2pin"/>
+            <circle stroke-width="1.8" cx="19.077" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.2" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector3pin"/>
+            <circle stroke-width="1.8" cx="26.277" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.3" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector4pin"/>
+            <circle stroke-width="1.8" cx="33.477" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.4" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector5pin"/>
+            <circle stroke-width="1.8" cx="40.677" stroke="#F6CA34" cy="4.936" r="2.239" gorn="0.1.0.5" stroke-linecap="round"  fill="none" stroke-linejoin="round" id="connector6pin"/>
+        </g>
+        <g gorn="0.1.1"  id="silkscreen">
+            <g  transform="translate(0,-11.8004)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.0.0.0.0"  id="text8757_1_">
+                            <g gorn="0.1.1.0.0.0.0.0"  id="tspan8759_1_">
+                                <g  transform="matrix(1 0 0 1 0.8818 23.3856)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.0.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan12480_1_">+5V</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g  transform="translate(0,-23.0004)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.1.0.0.0"  id="text8761_1_">
+                            <g gorn="0.1.1.1.0.0.0.0"  id="tspan8763_1_">
+                                <g  transform="matrix(1 0 0 1 8.9221 34.6356)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.1.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan12478_1_">DI</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g  transform="translate(0,-11.8002)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.2.0.0.0"  id="text8765">
+                            <g gorn="0.1.1.2.0.0.0.0"  id="tspan8767">
+                                <g  transform="matrix(1 0 0 1 14.5729 23.3856)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.2.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan12476">GND</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g  transform="translate(27,-11.8004)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.3.0.0.0"  id="g6732">
+                            <g gorn="0.1.1.3.0.0.0.0"  id="text6734">
+                                <g  transform="matrix(1 0 0 1 -3.8098 23.3856)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.3.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan12474">GND</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g  transform="translate(27.015635,-23.0004)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.4.0.0.0"  id="g4611_1_">
+                            <g gorn="0.1.1.4.0.0.0.0"  id="text4613_1_">
+                                <g  transform="matrix(1 0 0 1 4.2155 34.6356)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.4.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan4615_1_">DO</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g  transform="translate(27.015635,-11.8002)">
+                <g >
+                    <g >
+                        <g gorn="0.1.1.5.0.0.0"  id="g4617_1_">
+                            <g gorn="0.1.1.5.0.0.0.0"  id="text4619_1_">
+                                <g  transform="matrix(1 0 0 1 9.8657 23.3856)">
+                                    <g >
+                                        <text font-family="OCRA" gorn="0.1.1.5.0.0.0.0.0.0.0" font-size="2.8"  fill="#FFFFFF" id="tspan4621_1_">+5V</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

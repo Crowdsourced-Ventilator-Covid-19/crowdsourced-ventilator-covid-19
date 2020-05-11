@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.6.3b.08.16.5401" moduleId="32fdbe406bce255cc83a50cf6c7d510c">
+    <author>Branden Hall</author>
+    <title>LPD8806 RGB LED Strip</title>
+    <label>LPD8806 RGB LED Strip</label>
+    <date>2011-12-05</date>
+    <tags>
+        <tag>RGB LED</tag>
+    </tags>
+    <properties>
+        <property name="family">LED</property>
+        <property name="part number"></property>
+    </properties>
+    <description>Digitally addressable RGB LED strip</description>
+    <views>
+        <iconView>
+            <layers image="icon/LPD8806_RGB_LED_Strip__7b29141e9419bc110__icon__f8197632f6af506423efa70986ef3c61.svg">
+                <layer layerId="icon"/>
+            </layers>
+        </iconView>
+        <schematicView>
+            <layers image="schematic/LPD8806_RGB_LED_Strip__7b29141e9419bc110__schematic__01a5aa333cc8700ff5a8c2a90898a63d.svg">
+                <layer layerId="schematic"/>
+            </layers>
+        </schematicView>
+        <pcbView>
+            <layers image="pcb/LPD8806_RGB_LED_Strip__7b29141e9419bc110__pcb__ab3b38fa484c985603b90b277ae27207.svg">
+                <layer layerId="copper0"/>
+                <layer layerId="silkscreen"/>
+                <layer layerId="copper1"/>
+            </layers>
+        </pcbView>
+        <breadboardView>
+            <layers image="breadboard/LPD8806_RGB_LED_Strip__7b29141e9419bc110__breadboard__c253675fcbe4389b1e3d16f3fdc6807d.svg">
+                <layer layerId="breadboard"/>
+            </layers>
+        </breadboardView>
+    </views>
+    <connectors>
+        <connector id="connector3" type="pad" name="+5V">
+            <description>+5V</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector3"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector3"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector3"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector4" type="pad" name="GND">
+            <description>Ground</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector4"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector4"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector4"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector5" type="pad" name="DO">
+            <description>Data Output</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector5"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector5"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector5"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector6" type="pad" name="CO">
+            <description>Clock Output</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector6"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector6"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector6"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector7" type="pad" name="+5V">
+            <description>+5V</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector7"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector7"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector7"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector0" type="pad" name="GND">
+            <description>Ground</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector0"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector0"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector0"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="pad" name="DI">
+            <description>Data Input</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector1"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector1"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector1"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector2" type="pad" name="CI">
+            <description>Clock Input</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector2"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector2"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper0" svgId="connector2"/>
+                </pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

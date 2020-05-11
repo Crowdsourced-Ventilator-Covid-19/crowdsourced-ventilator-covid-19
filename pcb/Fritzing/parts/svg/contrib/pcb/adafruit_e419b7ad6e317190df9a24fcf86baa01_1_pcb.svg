@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" x="0px" height="0.196847in" viewBox="0 0 62.362 14.173" gorn="0" y="0px" width="0.866139in" id="svg4364" xml:space="preserve"  xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <desc >
+        <referenceFile >DotStar PCB.svg</referenceFile>
+    </desc>
+    <g gorn="0.1" id="pcb" >
+        <g gorn="0.1.0" id="copper0" >
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.0" id="connector1pin" stroke-width="1.8" fill="none" cx="5.981"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.1" id="connector7pin" stroke-width="1.8" fill="none" cx="13.181"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.2" id="connector2pin" stroke-width="1.8" fill="none" cx="20.381"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.3" id="connector3pin" stroke-width="1.8" fill="none" cx="27.581"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.4" id="connector4pin" stroke-width="1.8" fill="none" cx="34.781"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.5" id="connector8pin" stroke-width="1.8" fill="none" cx="41.981"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.6" id="connector5pin" stroke-width="1.8" fill="none" cx="49.181"  cy="4.936"/>
+            <circle stroke-linejoin="round" stroke-linecap="round" r="2.239" stroke="#F6CA34" gorn="0.1.0.7" id="connector6pin" stroke-width="1.8" fill="none" cx="56.381"  cy="4.936"/>
+        </g>
+        <g gorn="0.1.1" id="silkscreen" >
+            <g transform="translate(0,-11.8004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.0.0.0.0.0.0.0" id="text8757" >
+                                        <g gorn="0.1.1.0.0.0.0.0.0.0.0" id="tspan8759" >
+                                            <g transform="matrix(1 0 0 1 2.1857 23.3856)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan12480" fill="#FFFFFF" >+5V</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(0,-23.0004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.1.0.0.0.0.0.0" id="text8761" >
+                                        <g gorn="0.1.1.1.0.0.0.0.0.0.0" id="tspan8763" >
+                                            <g transform="matrix(1 0 0 1 10.651 34.6356)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.1.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan12478" fill="#FFFFFF" >CI</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(0,-23.0004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.2.0.0.0.0.0.0" id="text8761_1_" >
+                                        <g gorn="0.1.1.2.0.0.0.0.0.0.0" id="tspan8763_1_" >
+                                            <g transform="matrix(1 0 0 1 17.1426 34.6356)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.2.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan12478_1_" fill="#FFFFFF" >DI</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(0,-11.8002)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.3.0.0.0.0.0.0" id="text8765" >
+                                        <g gorn="0.1.1.3.0.0.0.0.0.0.0" id="tspan8767" >
+                                            <g transform="matrix(1 0 0 1 23.0769 23.3856)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.3.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan12476" fill="#FFFFFF" >GND</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(27,-11.8004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.4.0.0.0.0.0.0" id="g6732" >
+                                        <g gorn="0.1.1.4.0.0.0.0.0.0.0" id="text6734" >
+                                            <g transform="matrix(1 0 0 1 4.6941 23.3856)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan12474" fill="#FFFFFF" >GND</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(27.015635,-23.0004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.5.0.0.0.0.0.0" id="g4611" >
+                                        <g gorn="0.1.1.5.0.0.0.0.0.0.0" id="text4613" >
+                                            <g transform="matrix(1 0 0 1 19.6359 34.6356)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.5.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan4615" fill="#FFFFFF" >DO</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(27.015635,-23.0004)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.6.0.0.0.0.0.0" id="g4611_1_" >
+                                        <g gorn="0.1.1.6.0.0.0.0.0.0.0" id="text4613_1_" >
+                                            <g transform="matrix(1 0 0 1 13.1438 34.6356)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.6.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan4615_1_" fill="#FFFFFF" >CO</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(27.015635,-11.8002)" >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g gorn="0.1.1.7.0.0.0.0.0.0" id="g4617" >
+                                        <g gorn="0.1.1.7.0.0.0.0.0.0.0" id="text4619" >
+                                            <g transform="matrix(1 0 0 1 25.5697 23.3856)" >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <text font-family="OCRA" font-size="2.8" gorn="0.1.1.7.0.0.0.0.0.0.0.0.0.0.0.0.0" id="tspan4621" fill="#FFFFFF" >+5V</text>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="212.59842"
+   height="159.44882"
+   id="svg5926">
+  <defs
+     id="defs5928">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10479" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10475" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10471" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10467" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10463" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10459" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10455" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10451" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10447" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10443" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10439" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10435" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10431" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10427" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10423" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10419" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10415" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect10411" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3881" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3877" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3871" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3867" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3857" />
+  </defs>
+  <metadata
+     id="metadata5931">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     width="0"
+     height="0"
+     x="0"
+     y="-159.44884"
+     id="rect10582"
+     style="fill:none;stroke:none" />
+  <g
+     transform="translate(4.5036986e-6,-3.2352243e-5)"
+     id="text10512"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" />  <g
+     id="schematic">
+    <rect
+       width="106.29925"
+       height="132.87402"
+       x="-132.87402"
+       y="53.149605"
+       transform="matrix(0,-1,1,0,0,0)"
+       id="rect10403"
+       style="fill:none;stroke:#000000;stroke-width:1.79284322;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 26.574801,106.29917 26.57481,0"
+       id="path10449"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 26.574801,79.724372 26.57481,0"
+       id="path10453"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 53.149611,53.149568 -26.574803,0"
+       id="path10461"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(-1.7716519,-4.1751411e-6)"
+       id="text10504"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+   <text
+   x="58.464565"
+   y="56.692921"
+   id="tspan10506">VDD</text>
+
+  </g>    <g
+       transform="translate(-1.7716519,-0.03543433)"
+       id="text10508"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+   <text
+   x="58.464565"
+   y="83.303154"
+   id="tspan10510">SIG</text>
+
+  </g>    <text
+       x="56.692913"
+       y="109.84252"
+       id="tspan10514"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">GND</text>
+    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031502"
+       y="49.606247"
+       id="connector1pin"
+       style="fill:none;stroke:none" />
+    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031502"
+       y="76.181068"
+       id="connector2pin"
+       style="fill:none;stroke:none" />
+    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031502"
+       y="102.75591"
+       id="connector3pin"
+       style="fill:none;stroke:none" />
+    <g
+       transform="translate(0,-8.1482227)"
+       id="text4619"
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCR A Std;-inkscape-font-specification:OCR A Std">
+   <text
+   x="134.13882"
+   y="86.144615"
+   id="tspan4621"
+   style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">PIR</text>
+
+  <text
+   x="134.13882"
+   y="102.08977"
+   id="text4046"
+   style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">SENSOR</text>
+</g>  </g>
+</svg>

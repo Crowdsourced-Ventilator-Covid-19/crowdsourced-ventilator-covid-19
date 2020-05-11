@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="27"
+   height="18"
+   id="svg4364">
+  <defs
+     id="defs4366" />
+  <metadata
+     id="metadata4369">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-1034.362)"
+     id="layer1"
+     style="display:inline" />
+  <g
+     transform="translate(0,-18)"
+     id="text8765"
+     xml:space="preserve"
+     style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA">
+    
+   </g>  <g
+     id="pcb">
+    <g
+       id="copper0">
+      <path
+         d="m 11.25,9.000001 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z"
+         id="connector1pin"
+         style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+      <path
+         d="m 20.25,9.000001 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z"
+         id="connector2pin"
+         style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+    </g>
+    <g
+       id="silkscreen">
+      <g
+         transform="translate(-0.67322826,-18.028348)"
+         id="text8757"
+         xml:space="preserve"
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA">
+    <text
+   x="14.173228"
+   y="34.228348"
+   id="tspan8759"
+   style="font-size:4px;fill:#ffffff;fill-opacity:1">3xAAA</text>
+
+
+
+   </g>      <rect
+         width="26.107962"
+         height="17.1"
+         x="0.44999999"
+         y="0.45001221"
+         id="rect8769"
+         style="fill:none;stroke:#ffffff;stroke-width:0.38810161;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 9,1.575 0,3.15"
+         id="path87292"
+         style="color:#000000;fill:#eaeaea;fill-opacity:0.76630435;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.46698704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.28800001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 10.575,3.15 -3.15,0"
+         id="path87802"
+         style="color:#000000;fill:#eaeaea;fill-opacity:0.76630435;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.46698704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.28800001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 19.583494,3.15 -3.15,0"
+         id="path87804"
+         style="color:#000000;fill:#eaeaea;fill-opacity:0.76630435;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.46698704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.28800001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+  </g>
+</svg>

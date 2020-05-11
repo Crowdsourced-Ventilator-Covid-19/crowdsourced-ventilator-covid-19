@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="adafruit_30c65096f5673c2e7ac74707287fb2ce_1" referenceFile="Adafruit_Flora.fzp" fritzingVersion="0.5.2b.02.18.4756">
+ <version>4</version>
+ <date>Tue Jul 5 2016</date>
+ <author>ladyada</author>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">FLORA is Adafruit's fully-featured wearable electronics platform. It's a round, sewable, Arduino-compatible microcontroller designed to empower amazing wearables projects.&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The FLORA is small (1.75&amp;quot; diameter, weighing 4.4 grams). The FLORA has built-in USB support. Built in USB means you plug it in to program it, it just shows up - all you need is a Micro-B USB cable, no additional purchases are needed! We have a modified version of the Arduino IDE so Mac &amp;amp; Windows users can get started fast - &lt;a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">&lt;span style=" text-decoration: underline; color:#0000ff;">or with the new 1.6.4+ Arduino IDE, it takes only a few seconds to add Flora-support&lt;/span>&lt;/a>. The FLORA has USB HID support, so it can act like a mouse or keyboard to attach directly to computers.&lt;br />&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This version is Flora v3! The Flora v2 now comes with a micro-USB port instead of a mini-USB port and a programmable NeoPixel installed (it's connected to Digital 8, ready for your blinky commands) as well as large Alligator-clip friendly pads.&lt;/p>&lt;/body>&lt;/html></description>
+ <title>Adafruit Flora</title>
+ <tags/>
+ <properties>
+  <property name="variant">Version 3</property>
+  <property name="family">Adafruit Flora</property>
+  <property name="part number">Adafruit #659</property>
+  <property name="layer"></property>
+ </properties>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/adafruit_30c65096f5673c2e7ac74707287fb2ce_5_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_30c65096f5673c2e7ac74707287fb2ce_5_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_30c65096f5673c2e7ac74707287fb2ce_5_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/adafruit_30c65096f5673c2e7ac74707287fb2ce_5_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector name="+3V3" id="connector0" type="female">
+   <description>+3V3</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector0pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector0terminal" svgId="connector0pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector0pad" layer="copper0"/>
+     <p svgId="connector0pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="+3V3" id="connector1" type="female">
+   <description>+3V3</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector1terminal" svgId="connector1pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector1pad" layer="copper0"/>
+     <p svgId="connector1pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO6" id="connector37" type="female">
+   <description>IO6</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector37pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector37terminal" svgId="connector37pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector37pad" layer="copper0"/>
+     <p svgId="connector37pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector38" type="female">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector38pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector38terminal" svgId="connector38pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector38pad" layer="copper0"/>
+     <p svgId="connector38pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector39" type="female">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector39pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector39terminal" svgId="connector39pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector39pad" layer="copper0"/>
+     <p svgId="connector39pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector40" type="female">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector40pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector40terminal" svgId="connector40pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector40pad" layer="copper0"/>
+     <p svgId="connector40pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO9" id="connector85" type="female">
+   <description>IO9</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector85pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector85terminal" svgId="connector85pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector85pad" layer="copper0"/>
+     <p svgId="connector85pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO10" id="connector86" type="female">
+   <description>IO10</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector86pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector86terminal" svgId="connector86pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector86pad" layer="copper0"/>
+     <p svgId="connector86pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO12" id="connector87" type="female">
+   <description>IO12</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector87pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector87terminal" svgId="connector87pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector87pad" layer="copper0"/>
+     <p svgId="connector87pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="MISO" id="connector88" type="male">
+   <description>MISO</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector88pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector88terminal" svgId="connector88pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector88pad" layer="copper0"/>
+     <p svgId="connector88pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="SCK" id="connector90" type="male">
+   <description>SCK</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector90pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector90terminal" svgId="connector90pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector90pad" layer="copper0"/>
+     <p svgId="connector90pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="MOSI" id="connector91" type="male">
+   <description>MOSI</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector91pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector91terminal" svgId="connector91pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector91pad" layer="copper0"/>
+     <p svgId="connector91pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="RST" id="connector92" type="male">
+   <description>RST</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector92pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector92terminal" svgId="connector92pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector92pad" layer="copper0"/>
+     <p svgId="connector92pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector93" type="male">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector93pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector93terminal" svgId="connector93pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector93pad" layer="copper0"/>
+     <p svgId="connector93pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO0/RX" id="connector130" type="female">
+   <description>IO0/RX</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector130pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector130terminal" svgId="connector130pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector130pad" layer="copper0"/>
+     <p svgId="connector130pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO2/SDA" id="connector133" type="female">
+   <description>IO2/SDA</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector133pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector133terminal" svgId="connector133pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector133pad" layer="copper0"/>
+     <p svgId="connector133pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO3/SCL" id="connector134" type="female">
+   <description>IO3/SCL</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector134pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector134terminal" svgId="connector134pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector134pad" layer="copper0"/>
+     <p svgId="connector134pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="IO1/TX" id="connector138" type="female">
+   <description>IO1/TX</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector138pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector138terminal" svgId="connector138pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector138pad" layer="copper0"/>
+     <p svgId="connector138pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="VBAT" id="connector149" type="female">
+   <description>VBAT</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector149pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p terminalId="connector149terminal" svgId="connector149pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector149pad" layer="copper0"/>
+     <p svgId="connector149pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses>
+  <bus id="+3v3">
+   <nodeMember connectorId="connector0"/>
+   <nodeMember connectorId="connector1"/>
+  </bus>
+  <bus id="gnd">
+   <nodeMember connectorId="connector38"/>
+   <nodeMember connectorId="connector39"/>
+   <nodeMember connectorId="connector40"/>
+   <nodeMember connectorId="connector93"/>
+  </bus>
+ </buses>
+ <url>https://www.adafruit.com/products/659</url>
+</module>

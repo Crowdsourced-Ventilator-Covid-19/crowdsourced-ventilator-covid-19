@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.7.5b.07.02.6130" moduleId="94042fba23ae8662860e0368a4500ad6">
+    <author>John De Cristofaro</author>
+    <title>STP16NF06 N-Channel Power MOSFET</title>
+    <label>FET</label>
+    <date>2012-09-05</date>
+    <tags>
+        <tag>fet</tag>
+        <tag>mosfet</tag>
+        <tag>power</tag>
+        <tag>n-channel</tag>
+    </tags>
+    <properties>
+        <property name="family"></property>
+        <property name="part number"></property>
+    </properties>
+    <description>STP16NF06 N-channel Power MOSFET</description>
+    <views>
+        <schematicView>
+            <layers image="schematic/STP16NF06_N_Channel_Power_MOSFET__341848__schematic__b7811dbbe926dcdf4f1f7b094d1bc264.svg">
+                <layer layerId="schematic"/>
+            </layers>
+        </schematicView>
+        <breadboardView>
+            <layers image="breadboard/STP16NF06_N_Channel_Power_MOSFET__341848__breadboard__2bf0660c6c3a051863a01859a54098da.svg">
+                <layer layerId="breadboard"/>
+            </layers>
+        </breadboardView>
+        <pcbView>
+            <layers image="pcb/STP16NF06_N_Channel_Power_MOSFET__341848__pcb__aa8a7218b2e191bacd22871280f70311.svg">
+                <layer layerId="copper0"/>
+                <layer layerId="copper1"/>
+                <layer layerId="silkscreen"/>
+            </layers>
+        </pcbView>
+        <iconView>
+            <layers image="icon/STP16NF06_N_Channel_Power_MOSFET__341848__icon__103d9b3342c2c1df9ddb7ca76e02c203.svg">
+                <layer layerId="icon"/>
+            </layers>
+        </iconView>
+    </views>
+    <connectors>
+        <connector id="connector3" type="male" name="source">
+            <description>no description yet</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector3pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector3pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector3pad"/>
+                    <p layer="copper0" svgId="connector3pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="gate">
+            <description>no description yet</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector1pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector1pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector1pad"/>
+                    <p layer="copper0" svgId="connector1pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector2" type="male" name="drain">
+            <description>no description yet</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector2pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector2pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector2pad"/>
+                    <p layer="copper0" svgId="connector2pad"/>
+                </pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

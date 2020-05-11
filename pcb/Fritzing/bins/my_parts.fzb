@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4.2019-12-01.CD-498-0-a1ffcea" icon="Mine.png">
+    <title>My Parts</title>
+    <instances>
+        <instance moduleIdRef="adafruit_26fe1041619fdd4ade9a8eb19c3595ad_3" modelIndex="6107" path="C:/Users/chuck/Documents/Fritzing/parts/user/adafruit_26fe1041619fdd4ade9a8eb19c3595ad_3.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>

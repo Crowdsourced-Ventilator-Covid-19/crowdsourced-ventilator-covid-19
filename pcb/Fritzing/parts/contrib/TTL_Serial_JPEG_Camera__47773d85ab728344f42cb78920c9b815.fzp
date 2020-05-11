@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.7.5b.07.02.6130" moduleId="04e0b302dc3be42bdf6bed4d99941489">
+    <author>John De Cristofaro</author>
+    <title>TTL Serial JPEG Camera</title>
+    <label>CAMERA</label>
+    <date>2012-08-13</date>
+    <url>https://www.adafruit.com/products/397</url>
+    <tags>
+        <tag>camera</tag>
+        <tag>sensor</tag>
+        <tag>adafruit</tag>
+        <tag>ttl</tag>
+        <tag>jpeg</tag>
+        <tag>ntsc</tag>
+    </tags>
+    <properties>
+        <property name="family"></property>
+        <property name="part number"></property>
+    </properties>
+    <description>TTL Serial JPEG Camera with NTSC Out</description>
+    <views>
+        <iconView>
+            <layers image="icon/TTL_Serial_JPEG_Camera__47773d85ab728344__icon__81e4f56fea151c680232e800678045a7.svg">
+                <layer layerId="icon"/>
+            </layers>
+        </iconView>
+        <breadboardView>
+            <layers image="breadboard/TTL_Serial_JPEG_Camera__47773d85ab728344__breadboard__22be12af5957f8ca564ee46092e4b694.svg">
+                <layer layerId="breadboard"/>
+            </layers>
+        </breadboardView>
+        <schematicView>
+            <layers image="schematic/TTL_Serial_JPEG_Camera__47773d85ab728344__schematic__19d02df8411d56d9c9c36431e7abac08.svg">
+                <layer layerId="schematic"/>
+            </layers>
+        </schematicView>
+        <pcbView>
+            <layers image="pcb/TTL_Serial_JPEG_Camera__47773d85ab728344__pcb__eceaacd7f3162857c3a86b1a7104b636.svg">
+                <layer layerId="copper0"/>
+                <layer layerId="copper1"/>
+                <layer layerId="silkscreen"/>
+            </layers>
+        </pcbView>
+    </views>
+    <connectors>
+        <connector id="connector3" type="male" name="TX">
+            <description>Serial TX</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector3pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector3pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector3pad"/>
+                    <p layer="copper0" svgId="connector3pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector4" type="male" name="RX">
+            <description>Serial RX</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector4pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector4pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector4pad"/>
+                    <p layer="copper0" svgId="connector4pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector5" type="male" name="GND">
+            <description>Serial GND</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector5pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector5pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector5pad"/>
+                    <p layer="copper0" svgId="connector5pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector6" type="male" name="5V">
+            <description>5V supply voltage</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector6pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector6pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector6pad"/>
+                    <p layer="copper0" svgId="connector6pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="CVBS">
+            <description>NTSC out</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector1pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector1pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector1pad"/>
+                    <p layer="copper0" svgId="connector1pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector2" type="male" name="GND">
+            <description>NTSC ground</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector2pin"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector2pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector2pad"/>
+                    <p layer="copper0" svgId="connector2pad"/>
+                </pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

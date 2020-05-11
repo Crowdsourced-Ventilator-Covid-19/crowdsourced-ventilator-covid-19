@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4.2019-12-01.CD-498-0-a1ffcea" icon="Search.png" search="ethernet">
+    <title>Search</title>
+    <instances>
+        <instance moduleIdRef="adafruit_99effaf6c5a083b207e5769f54372183_1" modelIndex="6395" path="C:/Users/chuck/Documents/Fritzing/parts/contrib/adafruit_99effaf6c5a083b207e5769f54372183_1.fzp">
+            <property name="part number" value="Adafruit #2078"/>
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="adafruit_bdce6b9859a491f4087c67261710c532_1" modelIndex="6397" path="C:/Users/chuck/Documents/Fritzing/parts/contrib/adafruit_bdce6b9859a491f4087c67261710c532_1.fzp">
+            <property name="part number" value="Adafruit #572"/>
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="intel-arduino_galileo-(simple)" modelIndex="5795" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/intel-arduino_galileo-simple.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun-Connectors-RJ45-8-PTH_fix_bottom" modelIndex="6391" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/sparkfun-connectors-rj45-8-pth-fix2.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun-DigitalIC-ENC28J60-" modelIndex="6401" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/sparkfun-digitalic-enc28j60-.fzp" flippedSMD="true">
+            <views>
+                <iconView layer="icon">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="arduino_Yun(rev1)_v1" modelIndex="5714" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/arduino_Yun(rev1)_v1.fzp">
+            <views>
+                <iconView layer="icon">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun-DigitalIC-W5100-" modelIndex="6404" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/sparkfun-digitalic-w5100-.fzp" flippedSMD="true">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="udoo_dual" modelIndex="5718" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/udoo_dual.fzp">
+            <views>
+                <iconView layer="icon">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun-Connectors-RJ45-8-PTH_fix" modelIndex="6393" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/sparkfun-connectors-rj45-8-pth-fix.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun-DigitalIC-STM811-" modelIndex="6408" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/sparkfun-digitalic-stm811-.fzp" flippedSMD="true">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="Shield_Eth06-PoE" modelIndex="5737" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/Shield_Eth06-PoE.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="Arduino_Ethernet" modelIndex="5802" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/Arduino_Ethernet.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="RGB_matrix_v25" modelIndex="6073" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/RGB_matrix_v25.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="intel-arduino_galileo" modelIndex="6413" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/intel-arduino_galileo.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="linino_dogrj45" modelIndex="5852" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/linino_dogrj45(01).fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="intel-arduino_galileo_gen2-(simple)" modelIndex="5715" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/intel-arduino_galileo_gen2-simple.fzp">
+            <views>
+                <iconView layer="icon">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="intel-arduino_galileo_gen2" modelIndex="6417" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/intel-arduino_galileo_gen2.fzp">
+            <views>
+                <iconView layer="icon">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="Arduino-Ethernet-v11" modelIndex="6020" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/Arduino-Ethernet-v11.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="SparkFun Load Sensor Combinator" modelIndex="6420" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/SparkFun Load Sensor Combinator.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+        <instance moduleIdRef="arch_pro_v1" modelIndex="6422" path="C:/Users/chuck/Downloads/fritzing.0.9.4.64.pc_and_dll/fritzing.0.9.4.64.pc/fritzing-parts/core/seeed_arch_pro_v1.fzp">
+            <views>
+                <iconView layer="">
+                    <geometry z="0" x="-1" y="-1"/>
+                </iconView>
+            </views>
+        </instance>
+    </instances>
+</module>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="252" version="1.1" height="405" id="svg2">
+ <defs  id="defs4">
+  <linearGradient  id="linearGradient8541">
+   <stop  offset="0" style="stop-color:#737373;stop-opacity:1" id="stop8543"/>
+   <stop  offset="1" style="stop-color:#a3a3a3;stop-opacity:1" id="stop8545"/>
+  </linearGradient>
+  <linearGradient  id="linearGradient8535">
+   <stop  offset="0" style="stop-color:#b3b3b3;stop-opacity:1" id="stop8537"/>
+   <stop  offset="1" style="stop-color:#b3b3b3;stop-opacity:0" id="stop8539"/>
+  </linearGradient>
+  <linearGradient  id="linearGradient8515">
+   <stop  offset="0" style="stop-color:#b3b3b3;stop-opacity:1" id="stop8517"/>
+   <stop  offset="1" style="stop-color:#b3b3b3;stop-opacity:0" id="stop8519"/>
+  </linearGradient>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8521" y1="340.875" x1="151.64999" y2="340.875" x2="154.34999" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8523" y1="340.875" x1="142.64999" y2="340.875" x2="145.34999" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8525" y1="340.875" x1="133.64999" y2="340.875" x2="136.34999" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8527" y1="340.875" x1="124.65" y2="340.875" x2="127.35" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8529" y1="340.875" x1="115.65" y2="340.875" x2="118.35" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8531" y1="340.875" x1="106.65" y2="340.875" x2="109.35" gradientUnits="userSpaceOnUse"/>
+  <linearGradient  gradientTransform="matrix(1,0,0,1.6363624,0,-218.49504)" xlink:href="#linearGradient8541" xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient8533" y1="340.875" x1="97.650002" y2="340.875" x2="100.35" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <metadata  id="metadata7">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work xmlns:cc="http://creativecommons.org/ns#" rdf:about="" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+    <dc:type xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g  id="layer1" transform="translate(0,-647.35973)"/>
+ <g  style="display:inline" id="layer7" transform="translate(0,45)"/>
+ <g  style="display:inline" id="layer8" transform="translate(0,45)"/>
+ <g  style="display:inline" id="layer9" transform="translate(0,45)"/>
+ <g  style="display:inline" id="layer10" transform="translate(0,45)">
+  <g  id="breadboard">
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5010" d="m 126,279 0,121.5" transform="translate(0,-45)"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5012" d="m 98.985,234.015 0,121.5"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5014" d="m 107.985,234.015 0,121.5"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5016" d="m 116.985,234.015 0,121.5"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5018" d="m 134.985,234.015 0,121.5"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5020" d="m 143.985,234.015 0,121.5"/>
+   <path  style="color:#000000;fill:none;stroke:#ecc98a;stroke-width:3.5999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path5022" d="m 152.985,234.015 0,121.5"/>
+   <rect  width="3.5999999" x="97.199997" y="398.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector1pin" transform="translate(0,-45)"/>
+   <rect  width="3.5999999" x="106.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector2pin"/>
+   <rect  width="3.5999999" x="115.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector3pin"/>
+   <rect  width="3.5999999" x="124.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector4pin"/>
+   <rect  width="3.5999999" x="133.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector5pin"/>
+   <rect  width="3.5999999" x="142.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector6pin"/>
+   <rect  width="3.5999999" x="151.2" y="353.70001" height="3.5999999" style="fill:none;stroke:none;display:inline" id="connector7pin"/>
+   <rect  width="243" x="4.5" y="-36" rx="27" height="270" style="fill:#333333;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" id="rect4356"/>
+   <rect  width="225" x="13.5" y="-27" rx="18" height="252" style="fill:none;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4868"/>
+   <rect  width="216" x="18" y="-22.5" rx="14.4" height="243" style="fill:none;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4870"/>
+   <rect  width="63" x="94.5" y="234" height="76.5" style="fill:#cadee4;fill-opacity:0.54901961;fill-rule:evenodd;stroke:none;display:inline" id="rect5004"/>
+   <rect  width="72" x="90" y="310.5" height="36" style="fill:#333333;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" id="rect7990"/>
+   <rect  width="2.7" x="97.650002" y="335.25" height="8.0999937" style="fill:url(#linearGradient8533);fill-opacity:1;stroke:none;display:inline" id="rect7992"/>
+   <rect  width="2.7" x="106.65" y="335.25" height="8.0999937" style="fill:url(#linearGradient8531);fill-opacity:1;stroke:none;display:inline" id="rect8502"/>
+   <rect  width="2.7" x="115.65" y="335.25" height="8.0999937" style="fill:url(#linearGradient8529);fill-opacity:1;stroke:none;display:inline" id="rect8504"/>
+   <rect  width="2.7" x="124.65" y="335.25" height="8.0999937" style="fill:url(#linearGradient8527);fill-opacity:1;stroke:none;display:inline" id="rect8506"/>
+   <rect  width="2.7" x="133.64999" y="335.25" height="8.0999937" style="fill:url(#linearGradient8525);fill-opacity:1;stroke:none;display:inline" id="rect8508"/>
+   <rect  width="2.7" x="142.64999" y="335.25" height="8.0999937" style="fill:url(#linearGradient8523);fill-opacity:1;stroke:none;display:inline" id="rect8510"/>
+   <rect  width="2.7" x="151.64999" y="335.25" height="8.0999937" style="fill:url(#linearGradient8521);fill-opacity:1;stroke:none;display:inline" id="rect8512"/>
+   <rect  width="45" x="103.505" y="-4.0550075" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4919"/>
+   <rect  width="45" x="49.5" y="-4.0550075" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4921"/>
+   <rect  width="45" x="157.5" y="-4.0550075" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4923"/>
+   <rect  width="45" x="103.505" y="49.949997" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4925"/>
+   <rect  width="45" x="49.5" y="49.949997" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4927"/>
+   <rect  width="45" x="157.5" y="49.949997" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4929"/>
+   <rect  width="45" x="103.505" y="103.94494" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4931"/>
+   <rect  width="45" x="49.5" y="103.94494" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4933"/>
+   <rect  width="45" x="157.5" y="103.94494" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4935"/>
+   <rect  width="45" x="103.505" y="157.95001" rx="9" height="45" style="fill:#37abc8;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4937"/>
+   <rect  width="45" x="49.5" y="157.95001" rx="9" height="45" style="fill:#c83737;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4939"/>
+   <rect  width="45" x="157.5" y="157.95001" rx="9" height="45" style="fill:#c83737;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" id="rect4941"/>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4945" xml:space="preserve">
+    <text x="126" y="29.699997" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4947">2</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4949" xml:space="preserve">
+    <text x="72.033752" y="29.699997" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4951">1</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4953" xml:space="preserve">
+    <text x="180.03375" y="29.699997" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4955">3</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4957" xml:space="preserve">
+    <text x="126" y="83.657501" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4959">5</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4961" xml:space="preserve">
+    <text x="72.033752" y="83.657501" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4963">4</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4965" xml:space="preserve">
+    <text x="180.03375" y="83.657501" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4967">6</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4969" xml:space="preserve">
+    <text x="126" y="137.6575" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4971">8</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4973" xml:space="preserve">
+    <text x="72.033752" y="137.6575" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4975">7</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4977" xml:space="preserve">
+    <text x="180.03375" y="137.6575" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4979">9</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4981" xml:space="preserve">
+    <text x="126" y="191.6575" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4983">0</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4985" xml:space="preserve">
+    <text x="72.306732" y="192.44592" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:OCRA;-inkscape-font-specification:OCRA Bold" id="tspan4987">*</text>
+   </g>
+   <g style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" id="text4989" xml:space="preserve">
+    <text x="180.03375" y="191.6575" style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#dbe3e2;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold" id="tspan4991">#</text>
+   </g>
+  </g>
+ </g>
+</svg>

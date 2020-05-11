@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="212.59842"
+   height="159.44882"
+   id="svg5926">
+  <defs
+     id="defs5928" />
+  <metadata
+     id="metadata5931">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="schematic">
+    <rect
+       width="132.87401"
+       height="106.12312"
+       x="53.325634"
+       y="26.749685"
+       id="rect6478"
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 53.149606,79.72323 -26.574803,0"
+       id="path6484"
+       style="color:#000000;fill:#c2c2c2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(0,-892.91334)"
+       id="text6518"
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+    <text
+   x="58.464565"
+   y="976.17981"
+   id="tspan6520"
+   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">DQ</text>
+
+   </g>    <g
+       transform="translate(0,-892.91334)"
+       id="text6578"
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+    <text
+   x="130.39313"
+   y="979.01587"
+   id="tspan6580">DS18B20</text>
+
+   </g>    <path
+       d="m 53.149606,53.149609 -26.574803,0"
+       id="path6480"
+       style="color:#000000;fill:#c2c2c2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(0,-892.91334)"
+       id="text6514"
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+    <text
+   x="67.677231"
+   y="1002.7562"
+   id="tspan6516"
+   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">GND</text>
+
+   </g>    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031496"
+       y="49.606308"
+       id="connector1pin"
+       style="fill:none;stroke:none" />
+    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031496"
+       y="76.179924"
+       id="connector2pin"
+       style="fill:none;stroke:none" />
+    <path
+       d="m 53.149606,106.30042 -26.574803,0"
+       id="path6486"
+       style="color:#000000;fill:#c2c2c2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(0,-892.91334)"
+       id="text6522"
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">
+    <text
+   x="67.677231"
+   y="949.60504"
+   id="tspan6524"
+   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Droid Sans;-inkscape-font-specification:Droid Sans">VDD</text>
+
+   </g>    <rect
+       width="7.0866141"
+       height="7.0866141"
+       x="23.031496"
+       y="102.75591"
+       id="connector3pin"
+       style="fill:none;stroke:none" />
+  </g>
+</svg>

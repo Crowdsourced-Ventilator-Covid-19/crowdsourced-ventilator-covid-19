@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="81"
+   height="45"
+   id="svg4364">
+  <defs
+     id="defs4366" />
+  <metadata
+     id="metadata4369">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="breadboard">
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="7.1999998"
+       y="34.200012"
+       id="connector1pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="16.200001"
+       y="34.200012"
+       id="connector2pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="25.200001"
+       y="34.200012"
+       id="connector3pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="34.200001"
+       y="34.200012"
+       id="connector4pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="43.200001"
+       y="34.200012"
+       id="connector5pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="52.200001"
+       y="34.200012"
+       id="connector6pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="61.200001"
+       y="34.200012"
+       id="connector7pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <rect
+       width="3.5999999"
+       height="3.5999999"
+       x="70.199997"
+       y="34.200012"
+       id="connector8pin"
+       style="fill:#999999;fill-opacity:1;stroke:none" />
+    <path
+       d="m 16.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5756"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 7.2,34.2 0,-2.7 4.95,0 0,1.8 -1.35,0.9"
+       id="path5758"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 25.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5760"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 34.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5762"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 43.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5764"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 52.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5766"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 61.2,34.2 -1.35,-0.9 0,-1.8 6.3,0 0,1.8 -1.35,0.9"
+       id="path5768"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 73.8,34.2 0,-2.7 -4.95,0 0,1.8 1.35,0.9"
+       id="path5770"
+       style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <g
+       transform="translate(0,-446)"
+       id="g5808">
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="7.1999998"
+         y="453.20001"
+         id="connector16pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="16.200001"
+         y="453.20001"
+         id="connector15pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="25.200001"
+         y="453.20001"
+         id="connector14pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="34.200001"
+         y="453.20001"
+         id="connector13pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="43.200001"
+         y="453.20001"
+         id="connector12pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="52.200001"
+         y="453.20001"
+         id="connector11pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="61.200001"
+         y="453.20001"
+         id="connector10pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <rect
+         width="3.5999999"
+         height="3.5999999"
+         x="70.199997"
+         y="453.20001"
+         id="connector9pin"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <path
+         d="m 16.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5772"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 7.2,456.8 0,2.7 4.95,0 0,-1.8 -1.35,-0.9"
+         id="path5774"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 25.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5776"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 34.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5778"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 43.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5780"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 52.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5782"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 61.2,456.8 -1.35,0.9 0,1.8 6.3,0 0,-1.8 -1.35,-0.9"
+         id="path5784"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 73.8,456.8 0,2.7 -4.95,0 0,-1.8 1.35,-0.9"
+         id="path5786"
+         style="color:#000000;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       transform="matrix(1,0,0,0.66697358,0,4.4876)"
+       id="g7119">
+      <rect
+         width="72"
+         height="27"
+         x="4.5"
+         y="13.5"
+         id="rect5716"
+         style="fill:#333333;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" />
+      <path
+         d="m 6.3,38.7 -1.8,1.8 0,-27 72,0 -1.8,1.8 -68.4,0"
+         id="path5788"
+         style="opacity:0.70588235;color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 4.5000001,22.5 a 4.5,4.5 0 0 1 10e-8,9"
+         id="path5792"
+         style="fill:#323232;fill-opacity:1;stroke:#404040;stroke-width:1.79999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+      <path
+         d="m 74.7,15.3 1.8,-1.8 0,27 -72,0 1.8,-1.8 68.4,0"
+         id="path5794"
+         style="opacity:0.70588235;color:#000000;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       transform="translate(0.00323898,-450.5996)"
+       id="text5796"
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:OCRA;-inkscape-font-specification:OCRA">
+  <g
+   id="tspan5798"
+   style="fill:#e2e2e2;fill-opacity:1">
+   <text
+   x="41.777699"
+   y="476.14801"
+   id="tspan7125"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:OCR A Std;-inkscape-font-specification:OCR A Std">'4050</text>
+
+  </g>
+ </g>  </g>
+</svg>

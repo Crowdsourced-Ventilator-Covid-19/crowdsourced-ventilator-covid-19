@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"  id="svg4364" height="13.5" width="45" gorn="0">
+    <desc >
+        <referenceFile >USB_TTL_Serial_Cable__48f59aac877dd787a2__pcb__ba953850f75f505c02c651221cadb7e0.svg</referenceFile>
+    </desc>
+    <defs  id="defs4366"/>
+    <metadata  id="metadata4369">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <cc:Work xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" rdf:about="">
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+                <dc:type xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g  transform="translate(0,-1038.862)">
+        <g >
+            <g  style="display:inline" id="layer1" gorn="0.3.0.0"/>
+        </g>
+    </g>
+    <g  id="copper0" gorn="0.4">
+        <path  style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" d="m 11.25,4.5 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z" id="connector1pin" gorn="0.4.0"/>
+        <path  style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" d="m 20.25,4.5 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z" id="connector2pin" gorn="0.4.1"/>
+        <path  style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" d="m 29.25,4.5 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z" id="connector3pin" gorn="0.4.2"/>
+        <path  style="fill:none;stroke:#f6ca34;stroke-width:1.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" d="m 38.25,4.5 a 2.25,2.25 0 0 1 -4.5,0 2.25,2.25 0 1 1 4.5,0 z" id="connector4pin" gorn="0.4.3"/>
+    </g>
+    <g  id="silkscreen" gorn="0.5">
+        <g  transform="translate(0,-11.8004)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" xml:space="preserve" id="text8757" gorn="0.5.0.0.0">
+                    <g  style="font-size:4px;fill:#ffffff;fill-opacity:1" id="tspan8759" gorn="0.5.0.0.0.0">
+                        <text  style="font-size:3.5px" id="tspan12480" y="22.950001" x="9" gorn="0.5.0.0.0.0.0">RX</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g  transform="translate(0,-23.0004)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" xml:space="preserve" id="text8761" gorn="0.5.1.0.0">
+                    <g  style="font-size:4px;fill:#ffffff;fill-opacity:1" id="tspan8763" gorn="0.5.1.0.0.0">
+                        <text  style="font-size:3.5px" id="tspan12478" y="34.200001" x="18" gorn="0.5.1.0.0.0.0">TX</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g  transform="translate(0,-11.8002)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" xml:space="preserve" id="text8765" gorn="0.5.2.0.0">
+                    <g  style="font-size:4px;fill:#ffffff;fill-opacity:1" id="tspan8767" gorn="0.5.2.0.0.0">
+                        <text  style="font-size:3.5px" id="tspan12476" y="22.950001" x="27" gorn="0.5.2.0.0.0.0">5V</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect  style="fill:none;stroke:#ffffff;stroke-width:0.21274439;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" id="rect8769" y="0.44995117" height="12.599952" x="0.44999999" width="44.099998" gorn="0.5.3"/>
+        <g  transform="translate(27,-11.8004)">
+            <g >
+                <g  xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA" xml:space="preserve" id="g6732" gorn="0.5.4.0.0">
+                    <g  style="font-size:4px;fill:#ffffff;fill-opacity:1" id="text6734" gorn="0.5.4.0.0.0">
+                        <text  style="font-size:3.5px" id="tspan12474" y="22.950001" x="9" gorn="0.5.4.0.0.0.0">GND</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

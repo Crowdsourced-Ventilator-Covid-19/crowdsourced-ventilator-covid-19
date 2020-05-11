@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module referenceFile="Adafruit_FLORA_RGB_Smart_Pixel__da0746254b9e2eb2825e4434f823be27.fzp" fritzingVersion="0.7.5b.07.02.6130" moduleId="prefix0000_42d143f124ea8a17d858c0ae142c92d3_1">
+ <author>John De Cristofaro</author>
+ <title>Adafruit FLORA NeoPixel</title>
+ <label>LED</label>
+ <date>Mon Jul 4 2016</date>
+ <url>https://www.adafruit.com/products/1260</url>
+ <tags>
+  <tag>adafruit</tag>
+  <tag>flora</tag>
+  <tag>led</tag>
+  <tag>rgb</tag>
+  <tag>pixel</tag>
+  <tag>wearable</tag>
+  <tag>conductive</tag>
+  <tag>thread</tag>
+ </tags>
+ <properties>
+  <property name="part number"></property>
+  <property name="variant">variant 1</property>
+  <property name="family">Adafruit FLORA NeoPixel</property>
+ </properties>
+ <description>Adafruit FLORA RGB Smart Pixel</description>
+ <views>
+  <iconView>
+   <layers image="icon/prefix0000_42d143f124ea8a17d858c0ae142c92d3_1_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/prefix0000_42d143f124ea8a17d858c0ae142c92d3_1_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/prefix0000_42d143f124ea8a17d858c0ae142c92d3_1_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/prefix0000_42d143f124ea8a17d858c0ae142c92d3_1_pcb.svg">
+    <layer layerId="unknown"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector type="male" name="GND" id="connector3">
+   <description>ground</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector3pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector3pin" layer="schematic"/>
+    </schematicView>
+   </views>
+  </connector>
+  <connector type="male" name="OUT" id="connector4">
+   <description>out</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector4pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector4pin" layer="schematic"/>
+    </schematicView>
+   </views>
+  </connector>
+  <connector type="male" name="V+" id="connector1">
+   <description>supply voltage</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector1pin" layer="schematic"/>
+    </schematicView>
+   </views>
+  </connector>
+  <connector type="male" name="IN" id="connector2">
+   <description>DATA IN</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector2pin" layer="schematic"/>
+    </schematicView>
+   </views>
+  </connector>
+ </connectors>
+</module>

@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="FONA_UFL" fritzingVersion="0.5.2b.02.18.4756">
+ <version>1</version>
+ <date>Wed Aug 6 2014</date>
+ <author>Dean Cording</author>
+ <description>An all-in-one cellular phone module that lets you add voice, text, SMS and GPRS data to your project. Quad-band 850/900/1800/1900MHz - connect onto any global GSM network with any 2G SIM. Includes an onboard LiPoly battery charging circuitry so you can take your project on the go. Also works as an FM radio receiver.</description>
+ <title>Adafruit FONA - Mini Cellular GSM Breakout</title>
+ <url>http://www.adafruit.com/products/1946</url>
+ <tags>
+  <tag>adafruit</tag>
+  <tag>GSM</tag>
+  <tag>SMS</tag>
+  <tag>GPRS</tag>
+ </tags>
+ <properties>
+  <property name="family">FONA</property>
+  <property name="variant">UFL</property>
+  <property name="part number"></property>
+  <property name="layer"></property>
+ </properties>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/FONA_UFL_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/FONA_UFL_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/FONA_UFL_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/FONA_UFL_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector id="connector0" type="female" name="ADC">
+   <description>Analog to Digital Convertor input 0-2.8VDC</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector0pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector0pin" terminalId="connector0terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector0pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector55" type="pad" name="GND">
+   <description>Battery -ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector55pin" terminalId="connector55terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector55pin" terminalId="connector55terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector55pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector56" type="pad" name="VBAT">
+   <description>Battery +ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector56pin" terminalId="connector56terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector56pin" terminalId="connector56terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector56pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector96" type="male" name="VCCIO">
+   <description>Sets I/O voltage 3V-5V</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector96pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector96pin" terminalId="connector96terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector96pad" layer="copper0"/>
+     <p svgId="connector96pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector97" type="male" name="NETSTAT_5V">
+   <description>Network Status</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector97pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector97pin" terminalId="connector97terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector97pad" layer="copper0"/>
+     <p svgId="connector97pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector98" type="male" name="RXD_5V">
+   <description>UART RXD</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector98pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector98pin" terminalId="connector98terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector98pad" layer="copper0"/>
+     <p svgId="connector98pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector99" type="male" name="TXD_5V">
+   <description>UART TXD</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector99pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector99pin" terminalId="connector99terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector99pad" layer="copper0"/>
+     <p svgId="connector99pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector100" type="male" name="RI_5V">
+   <description>Ring Indicator</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector100pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector100pin" terminalId="connector100terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector100pad" layer="copper0"/>
+     <p svgId="connector100pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector101" type="male" name="PWRKEY_5V">
+   <description>Power on/off control</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector101pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector101pin" terminalId="connector101terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector101pad" layer="copper0"/>
+     <p svgId="connector101pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector102" type="male" name="PWRSTAT_5V">
+   <description>Power Status</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector102pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector102pin" terminalId="connector102terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector102pad" layer="copper0"/>
+     <p svgId="connector102pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector103" type="male" name="RESET_5V">
+   <description>Hard reset</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector103pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector103pin" terminalId="connector103terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector103pad" layer="copper0"/>
+     <p svgId="connector103pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector104" type="male" name="SPEAKER2-">
+   <description>External speaker -ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector104pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector104pin" terminalId="connector104terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector104pad" layer="copper0"/>
+     <p svgId="connector104pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector105" type="male" name="SPEAKER2+">
+   <description>External speaker +ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector105pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector105pin" terminalId="connector105terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector105pad" layer="copper0"/>
+     <p svgId="connector105pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector106" type="male" name="GND">
+   <description>Battery and logic GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector106pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector106pin" terminalId="connector106terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector106pad" layer="copper0"/>
+     <p svgId="connector106pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector107" type="male" name="VBAT">
+   <description>Battery +ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector107pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector107pin" terminalId="connector107terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector107pad" layer="copper0"/>
+     <p svgId="connector107pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector108" type="female" name="MIC2+">
+   <description>External microphone +ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector108pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector108pin" terminalId="connector108terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector108pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector109" type="female" name="MIC2-">
+   <description>External microphone -ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector109pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector109pin" terminalId="connector109terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector109pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector110" type="female" name="Bz-">
+   <description>Buzzer -ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector110pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector110pin" terminalId="connector110terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector110pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector111" type="female" name="Bz+">
+   <description>Buzzer +ve</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector111pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector111pin" terminalId="connector111terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector111pad" layer="copper0"/>
+     <p svgId="connector111pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector114" type="female" name="PWM">
+   <description>Pulse Width Modulation output 0-2.8Vpp</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector114pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector114pin" terminalId="connector114terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector114pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector230" type="female" name="+5V">
+   <description>USB +5V</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector230pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector230pin" terminalId="connector230terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector230pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector235" type="pad" name="GSM_ANT">
+   <description>GSM Antenna</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector235pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector235pin" terminalId="connector235terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector235pad" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses>
+ </buses>
+</module>

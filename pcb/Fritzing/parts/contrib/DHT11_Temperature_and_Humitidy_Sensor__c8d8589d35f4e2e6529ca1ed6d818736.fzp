@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.7.5b.07.02.6130" moduleId="41f4209de2050129a62e62f6e2389ac4">
+    <author>John De Cristofaro for Adafruit Industries</author>
+    <title>DHT11 Humitidy and Temperature Sensor</title>
+    <label>DHT</label>
+    <date>2012-08-10</date>
+    <url>https://www.adafruit.com/products/386</url>
+    <tags>
+        <tag>DHT</tag>
+        <tag>temperature</tag>
+        <tag>relative</tag>
+        <tag>humidity</tag>
+    </tags>
+    <properties>
+        <property name="family">sensors</property>
+        <property name="part number"></property>
+    </properties>
+    <description>DHT11 Humidity and Temperature Sensor</description>
+    <views>
+        <iconView>
+            <layers image="icon/DHT11_Temperature_and_Humitidy_Sensor__c__icon__e66f0db0ae431cd50fc5d4ec5f7fb41b.svg">
+                <layer layerId="icon"/>
+            </layers>
+        </iconView>
+        <breadboardView>
+            <layers image="breadboard/DHT11_Temperature_and_Humitidy_Sensor__c__breadboard__aa0543f85f3cbc9c92ffe8aebe4d3753.svg">
+                <layer layerId="breadboard"/>
+            </layers>
+        </breadboardView>
+        <schematicView>
+            <layers image="schematic/DHT11_Temperature_and_Humitidy_Sensor__c__schematic__882b789e09a65a55dd670b473c2ce448.svg">
+                <layer layerId="schematic"/>
+            </layers>
+        </schematicView>
+        <pcbView>
+            <layers image="pcb/DHT11_Temperature_and_Humitidy_Sensor__c__pcb__f523ee05176bed5401ff098922f8f966.svg">
+                <layer layerId="copper0"/>
+                <layer layerId="copper1"/>
+                <layer layerId="silkscreen"/>
+            </layers>
+        </pcbView>
+    </views>
+    <connectors>
+        <connector id="connector3" type="male" name="NULL">
+            <description>no connection</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector3"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector3pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector3pad"/>
+                    <p layer="copper0" svgId="connector3pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector4" type="male" name="GND">
+            <description>Ground</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector4"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector4pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector4pad"/>
+                    <p layer="copper0" svgId="connector4pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="VDD">
+            <description>Supply voltage</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector1"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector1pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector1pad"/>
+                    <p layer="copper0" svgId="connector1pad"/>
+                </pcbView>
+            </views>
+        </connector>
+        <connector id="connector2" type="male" name="DATA">
+            <description>Data signal</description>
+            <views>
+                <breadboardView>
+                    <p layer="breadboard" svgId="connector2"/>
+                </breadboardView>
+                <schematicView>
+                    <p layer="schematic" svgId="connector2pin"/>
+                </schematicView>
+                <pcbView>
+                    <p layer="copper1" svgId="connector2pad"/>
+                    <p layer="copper0" svgId="connector2pad"/>
+                </pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

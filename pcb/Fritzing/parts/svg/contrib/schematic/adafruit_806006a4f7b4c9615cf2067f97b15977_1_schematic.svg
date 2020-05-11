@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="265.74802" height="159.44882" gorn="0"  version="1.1" id="svg5926">
+    <desc >
+        <referenceFile >Neopixel_Strip_Black_30_m.svg</referenceFile>
+    </desc>
+    <defs  id="defs5928"/>
+    <metadata  id="metadata5931">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <cc:Work xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" rdf:about="">
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+                <dc:type xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g gorn="0.3"  id="schematic">
+        <g  transform="matrix(0,-1,1,0,0,0)">
+            <g >
+                <g >
+                    <rect style="fill:none;stroke:#000000;stroke-width:1.96396101;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" width="106.29921" height="159.44882" gorn="0.3.0.0.0.0"  x="-132.87402" y="53.149605" id="rect10403"/>
+                </g>
+            </g>
+        </g>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.1" d="m 26.574809,106.29919 26.57481,0"  id="path10449"/>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.2" d="m 26.574809,79.724366 26.57481,0"  id="path10453"/>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.3" d="m 53.149619,53.149556 -26.574803,0"  id="path10461"/>
+        <g  transform="translate(-1.4479651,53.084858)">
+            <g >
+                <g >
+                    <g xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.4.0.0.0" xml:space="preserve"  id="text10504">
+                        <text gorn="0.3.4.0.0.0.0"  x="58.464565" y="56.692921" id="tspan10506">+5V</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <text style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.5"  x="56.692913" y="83.267723" id="tspan10510">Din</text>
+        <text style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.6"  x="209.05511" y="83.267723" id="text11088">Dout</text>
+        <text style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.7"  x="56.692913" y="57.728722" id="tspan10514">GND</text>
+        <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.8"  x="23.031509" y="49.606232" id="connector1pin"/>
+        <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.9"  x="23.031509" y="76.181068" id="connector2pin"/>
+        <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.10"  x="23.031509" y="102.75591" id="connector3pin"/>
+        <g style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.11"  id="tspan4621">
+            <text style="font-size:18px;font-weight:bold;-inkscape-font-specification:Sans Bold" gorn="0.3.11.0"  x="132.87401" y="85.334297" id="tspan11098">NEOPIXELS</text>
+        </g>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.12" d="m 239.17323,53.14961 -26.57481,0"  id="path12324"/>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.13" d="m 239.17323,79.72442 -26.57481,0"  id="path12326"/>
+        <path style="color:#000000;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" gorn="0.3.14" d="m 212.59842,106.29923 26.57481,0"  id="path12328"/>
+        <g  transform="scale(-1,-1)">
+            <g >
+                <g >
+                    <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.15.0.0.0"  x="-242.71654" y="-109.84253" id="connector4pin"/>
+                </g>
+            </g>
+        </g>
+        <g  transform="scale(-1,-1)">
+            <g >
+                <g >
+                    <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.16.0.0.0"  x="-242.71654" y="-83.2677" id="connector5pin"/>
+                </g>
+            </g>
+        </g>
+        <g  transform="scale(-1,-1)">
+            <g >
+                <g >
+                    <rect style="fill:none;stroke:none" width="7.0866141" height="7.0866141" gorn="0.3.17.0.0.0"  x="-242.71654" y="-56.692852" id="connector6pin"/>
+                </g>
+            </g>
+        </g>
+        <text style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.18"  x="209.3788" y="57.081345" id="text11086">GND</text>
+        <g  transform="translate(132.55033,52.113798)">
+            <g >
+                <g >
+                    <g xmlns:xml="http://www.w3.org/XML/1998/namespace" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans;-inkscape-font-specification:Droid Sans" gorn="0.3.19.0.0.0" xml:space="preserve"  id="g11090">
+                        <text style="text-align:end;text-anchor:end" gorn="0.3.19.0.0.0.0"  x="76.181099" y="56.692921" id="text11092">+5V</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

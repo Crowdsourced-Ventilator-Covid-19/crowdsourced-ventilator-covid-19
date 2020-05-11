@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="79.724411"
+   height="159.44882"
+   id="svg5926">
+  <defs
+     id="defs5928" />
+  <metadata
+     id="metadata5931">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-892.91326)"
+     id="layer1">
+    <g
+       id="schematic">
+      <path
+         d="m 26.574803,1025.7873 0,-26.57485"
+         id="path215160"
+         style="color:#000000;fill:none;stroke:#262626;stroke-width:2.18149328;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 26.574803,919.48805 0,26.5748"
+         id="path215162"
+         style="color:#000000;fill:none;stroke:#262626;stroke-width:2.18149328;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="M 26.574803,132.87401 35.433071,127.55905 17.716535,116.92913 35.433071,106.29921 17.716535,95.66929 35.433071,85.039369 26.574803,79.724408"
+         transform="translate(0,866.33844)"
+         id="path215184"
+         style="color:#000000;fill:none;stroke:#262626;stroke-width:2.18267727;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 53.149606,106.29921 -15.944882,0"
+         transform="translate(0,866.33844)"
+         id="path215698"
+         style="color:#000000;fill:none;stroke:#262626;stroke-width:2.18149328;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         d="m 40.748031,109.84252 -3.543307,-3.54331 3.543307,-3.54331"
+         transform="translate(0,866.33844)"
+         id="path215704"
+         style="color:#000000;fill:none;stroke:#262626;stroke-width:2.18149328;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         width="7.0866141"
+         height="7.0866141"
+         x="23.031496"
+         y="155.90552"
+         transform="translate(0,866.33844)"
+         id="connector1pin"
+         style="fill:none;stroke:none" />
+      <rect
+         width="7.0866141"
+         height="7.0866141"
+         x="49.6063"
+         y="102.75591"
+         transform="translate(0,866.33844)"
+         id="connector2pin"
+         style="fill:none;stroke:none" />
+      <rect
+         width="7.0866141"
+         height="7.0866141"
+         x="23.031496"
+         y="49.606297"
+         transform="translate(0,866.33844)"
+         id="connector3pin"
+         style="fill:none;stroke:none" />
+    </g>
+  </g>
+</svg>

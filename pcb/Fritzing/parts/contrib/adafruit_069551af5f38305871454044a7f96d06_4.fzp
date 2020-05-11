@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="adafruit_069551af5f38305871454044a7f96d06_4" fritzingVersion="0.5.2b.02.18.4756" referenceFile="Adafruit GA1A1S202WP.fzp">
+ <version>4</version>
+ <date>Fri Aug 19 2016</date>
+ <author>ladyada</author>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Upgrade a project that uses a photocell with the GA1A12S202 analog light sensor. Like a CdS photo-cell, the sensor does not require a microcontroller, the analog voltage output increases with the amount of light shining on the sensor face. This sensor has a lot of improvements that make it better for nearly any project.&lt;br />&lt;br />The biggest improvement over plain photocells is a true log-lin relationship with light levels. Most light sensors have a linear relationship with light levels, which means that they're not very sensitive to changes in darkened areas and 'max' out very easily when there's a lot of light. Sometimes you can tweak a resistor to make them better in dark or bright light but its hard to get good performance at both ends. This sensor is logarithmic over a large dynamic range of 3 to 55,000 Lux, so it has a lot of sensitivity at low light levels but is also nearly impossible to &amp;quot;max out&amp;quot; so you can use it indoors or outdoors without changing code or calibration. Since the sensor is fabricated on a chip, there are also fewer manufacturing variations, so you won't have to calibrate the sensor from one board to another.&lt;/p>&lt;/body>&lt;/html></description>
+ <title>Adafruit GA1A1S202WP</title>
+ <tags/>
+ <properties>
+  <property name="layer"></property>
+  <property name="variant">variant 1</property>
+  <property name="part number">Adafruit #1384</property>
+  <property name="family">Adafruit GA1A1S202WP</property>
+ </properties>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/adafruit_069551af5f38305871454044a7f96d06_5_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_069551af5f38305871454044a7f96d06_5_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_069551af5f38305871454044a7f96d06_5_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/adafruit_069551af5f38305871454044a7f96d06_5_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector id="connector4" type="male" name="VCC">
+   <description>VCC</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector4pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector4pin" terminalId="connector4terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector4pad" layer="copper0"/>
+     <p svgId="connector4pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector5" type="male" name="OUT">
+   <description>OUT</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector5pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector5pin" terminalId="connector5terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector5pad" layer="copper0"/>
+     <p svgId="connector5pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector6" type="male" name="GND">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector6pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector6pin" terminalId="connector6terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector6pad" layer="copper0"/>
+     <p svgId="connector6pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses/>
+ <url>https://www.adafruit.com/products/1384</url>
+</module>

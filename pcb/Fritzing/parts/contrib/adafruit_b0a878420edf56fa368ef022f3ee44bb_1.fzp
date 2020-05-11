@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module fritzingVersion="0.5.2b.02.18.4756" moduleId="adafruit_b0a878420edf56fa368ef022f3ee44bb_1" referenceFile="circuitplay rev G.fzp">
+ <version>4</version>
+ <date>Mon Aug 21 2017</date>
+ <author>ladyada</author>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Circuit Playground Express&lt;/span> is the next step towards a perfect introduction to electronics and programming. We've taken the original Circuit Playground Classic and made it even better! Not only did we pack even more sensors in, we also made it even easier to program. You can now start your journey with &lt;a href="https://learn.adafruit.com/makecode">&lt;span style=" font-weight:600; text-decoration: underline; color:#0000ff;">Microsoft MakeCode&lt;/span>&lt;/a>&lt;a href="https://learn.adafruit.com/makecode">&lt;span style=" text-decoration: underline; color:#0000ff;"> block-based or Javascript programming&lt;/span>&lt;/a>. Then, you can use the same board to try &lt;span style=" font-weight:600;">CircuitPython&lt;/span>, with the Python interpreter running right on the Express. As you progress, you can advance to using &lt;span style=" font-weight:600;">Arduino IDE&lt;/span>, which has full support of all the hardware down to the low level, so you can make powerful projects.&lt;/p>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The board is round and has alligator-clip pads around it so you don't have to solder or sew to make it work. You can power it from USB, &lt;a href="https://www.adafruit.com/products/727">&lt;span style=" text-decoration: underline; color:#0000ff;">a AAA battery pack&lt;/span>&lt;/a>, or with a Lipoly battery (for advanced users). Circuit Playground Express has built-in USB support. Built in USB means you plug it in to program it and it just shows up, no special cable or adapter required. Just program your code into the board then take it on the go!&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Here's some of the great goodies baked in to each Circuit Playground Express:&lt;/p>
+&lt;ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10 x mini NeoPixels, each one can display any color&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Motion sensor (LIS3DH triple-axis accelerometer with tap detection, free-fall detection)&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Temperature sensor (thermistor)&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Light sensor (phototransistor). Can also act as a color sensor and pulse sensor.&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Sound sensor (MEMS microphone)&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Mini speaker with class D amplifier (7.5mm magnetic speaker/buzzer)&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2 x Push buttons, labeled A and B&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1 x Slide switch&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Infrared receiver and transmitter - can receive and transmit any remote control codes, as well as send messages between Circuit Playground Expresses. Can also act as a proximity sensor.&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8 x alligator-clip friendly input/output pins&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Includes I2C, UART, 8 pins that can do analog inputs, multiple PWM output&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7 pads can act as capacitive touch inputs and the 1 remaining is a true analog output&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Green &amp;quot;ON&amp;quot; LED so you know its powered&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Red &amp;quot;#13&amp;quot; LED for basic blinking&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Reset button&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ATSAMD21 ARM Cortex M0 Processor, running at 3.3V and 48MHz&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2 MB of SPI Flash storage, used primarily with CircuitPython to store code and libraries.&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">MicroUSB port for programming and debugging&lt;/li>
+&lt;li style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">USB port can act like serial port, keyboard, mouse, joystick or MIDI!&lt;/li>&lt;/ul>&lt;/body>&lt;/html></description>
+ <title>Adafruit Circuit Playground Express</title>
+ <tags/>
+ <properties>
+  <property name="family">Adafruit Circuit Playground Express</property>
+  <property name="layer"></property>
+  <property name="part number">Adafruit #3333</property>
+  <property name="variant">variant 1</property>
+ </properties>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/adafruit_b0a878420edf56fa368ef022f3ee44bb_3_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_b0a878420edf56fa368ef022f3ee44bb_3_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_b0a878420edf56fa368ef022f3ee44bb_3_pcb.svg">
+    <layer layerId="copper1"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/adafruit_b0a878420edf56fa368ef022f3ee44bb_3_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector id="connector0" type="female" name="3.3V">
+   <description>3.3V</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector0pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector0pin" terminalId="connector0terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector0pad"/>
+     <p layer="copper1" svgId="connector0pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector1" type="female" name="3.3V">
+   <description>3.3V</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector1pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector1pin" terminalId="connector1terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector1pad"/>
+     <p layer="copper1" svgId="connector1pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector43" type="female" name="D6_A1">
+   <description>D6_A1</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector43pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector43pin" terminalId="connector43terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector43pad"/>
+     <p layer="copper1" svgId="connector43pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector46" type="female" name="GND">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector46pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector46pin" terminalId="connector46terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector46pad"/>
+     <p layer="copper1" svgId="connector46pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector47" type="female" name="GND">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector47pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector47pin" terminalId="connector47terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector47pad"/>
+     <p layer="copper1" svgId="connector47pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector48" type="female" name="GND">
+   <description>GND</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector48pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector48pin" terminalId="connector48terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector48pad"/>
+     <p layer="copper1" svgId="connector48pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector79" type="female" name="D9_A2">
+   <description>D9_A2</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector79pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector79pin" terminalId="connector79terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector79pad"/>
+     <p layer="copper1" svgId="connector79pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector80" type="female" name="D10_A3">
+   <description>D10_A3</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector80pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector80pin" terminalId="connector80terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector80pad"/>
+     <p layer="copper1" svgId="connector80pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector81" type="female" name="D12_A0_SPEAKER">
+   <description>D12_A0_SPEAKER</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector81pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector81pin" terminalId="connector81terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector81pad"/>
+     <p layer="copper1" svgId="connector81pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector153" type="female" name="D0_A6_RX">
+   <description>D0_A6_RX</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector153pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector153pin" terminalId="connector153terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector153pad"/>
+     <p layer="copper1" svgId="connector153pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector154" type="female" name="D3_A4_SCL">
+   <description>D3_A4_SCL</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector154pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector154pin" terminalId="connector154terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector154pad"/>
+     <p layer="copper1" svgId="connector154pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector155" type="female" name="D2_A5_SDA">
+   <description>D2_A5_SDA</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector155pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector155pin" terminalId="connector155terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector155pad"/>
+     <p layer="copper1" svgId="connector155pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector176" type="female" name="D1_A7_TX">
+   <description>D1_A7_TX</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector176pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector176pin" terminalId="connector176terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector176pad"/>
+     <p layer="copper1" svgId="connector176pad"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector253" type="female" name="VOUT">
+   <description>VOUT</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector253pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector253pin" terminalId="connector253terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector253pad"/>
+     <p layer="copper1" svgId="connector253pad"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses>
+  <bus id="3.3v">
+   <nodeMember connectorId="connector0"/>
+   <nodeMember connectorId="connector1"/>
+  </bus>
+  <bus id="gnd">
+   <nodeMember connectorId="connector46"/>
+   <nodeMember connectorId="connector47"/>
+   <nodeMember connectorId="connector48"/>
+  </bus>
+ </buses>
+ <url>https://www.adafruit.com/product/3333</url>
+</module>

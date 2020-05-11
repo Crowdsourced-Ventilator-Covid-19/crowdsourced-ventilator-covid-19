@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0.9in" viewBox="0 0 22.86 25.4" baseProfile="tiny" y="0in" height="1in" x="0in"  version="1.2">
+    <desc>
+        <referenceFile>HMC5883L_Breakout-v11_schematic.svg</referenceFile>
+    </desc>
+    <g id="schematic" gorn="0.0" >
+        <rect stroke="#000000" width="17.4625" stroke-width="0.3175" y="5.23875" stroke-linecap="round" class="interior rect" height="14.9225" x="0.15875" fill="#FFFFFF" />
+        <line stroke="#787878" x1="17.6565" stroke-width="0.246944" x2="22.7365" y1="10.16" stroke-linecap="round" class="pin" y2="10.16" id="connector9pin" fill="none" gorn="0.0.1" />
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="end" stroke-width="0" y="10.4069" class="text" fill="#8c8c8c" x="17.1626"  font-size="1.23472">SCL</text>
+        <rect stroke="none" width="0.246944" stroke-width="0" y="10.0365" class="terminal" id="connector9terminal" height="0.246944" x="22.7365" fill="none" gorn="0.0.3" />
+        <line stroke="#787878" x1="17.6565" stroke-width="0.246944" x2="22.7365" y1="12.7" stroke-linecap="round" class="pin" y2="12.7" id="connector8pin" fill="none" gorn="0.0.4" />
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="end" stroke-width="0" y="12.9469" class="text" fill="#8c8c8c" x="17.1626"  font-size="1.23472">SDA</text>
+        <rect stroke="none" width="0.246944" stroke-width="0" y="12.5765" class="terminal" id="connector8terminal" height="0.246944" x="22.7365" fill="none" gorn="0.0.6" />
+        <line stroke="#787878" x1="7.62" stroke-width="0.246944" x2="7.62" y1="20.1965" stroke-linecap="round" class="pin" y2="25.2765" id="connector6pin" fill="none" gorn="0.0.7" />
+        <g transform="translate(7.86694,19.7026)" >
+            <g >
+                <g transform="rotate(270)" >
+                    <g >
+                        <text font-family="'Droid Sans'" stroke="none" text-anchor="start" stroke-width="0" y="0" class="text" fill="#8c8c8c" x="0"  font-size="1.23472">GND</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect stroke="none" width="0.246944" stroke-width="0" y="25.2765" class="terminal" id="connector6terminal" height="0.246944" x="7.49653" fill="none" gorn="0.0.9" />
+        <line stroke="#787878" x1="7.62" stroke-width="0.246944" x2="7.62" y1="0.123472" stroke-linecap="round" class="pin" y2="5.20347" id="connector7pin" fill="none" gorn="0.0.10" />
+        <g transform="translate(7.86694,5.69736)" >
+            <g >
+                <g transform="rotate(270)" >
+                    <g >
+                        <text font-family="'Droid Sans'" stroke="none" text-anchor="end" stroke-width="0" y="0" class="text" fill="#8c8c8c" x="0"  font-size="1.23472">VCC</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect stroke="none" width="0.246944" stroke-width="0" y="-0.123472" class="terminal" id="connector7terminal" height="0.246944" x="7.49653" fill="none" gorn="0.0.12" />
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="middle" stroke-width="0" y="9.87194" class="text" id="label" fill="#000000" x="9.04875" gorn="0.0.13"  font-size="1.49931">Triple Axis</text>
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="middle" stroke-width="0" y="11.4712" class="text" id="label" fill="#000000" x="9.04875" gorn="0.0.14"  font-size="1.49931">Magnetometer</text>
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="middle" stroke-width="0" y="13.0706" class="text" id="label" fill="#000000" x="9.04875" gorn="0.0.15"  font-size="1.49931">HMC5883</text>
+        <text font-family="'Droid Sans'" stroke="none" text-anchor="middle" stroke-width="0" y="14.6699" class="text" id="label" fill="#000000" x="9.04875" gorn="0.0.16"  font-size="1.49931">Breakout</text>
+    </g>
+</svg>

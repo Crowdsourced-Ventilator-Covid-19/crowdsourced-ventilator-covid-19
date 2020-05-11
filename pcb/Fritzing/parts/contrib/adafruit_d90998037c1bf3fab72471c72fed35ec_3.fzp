@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module fritzingVersion="0.7.5b.07.02.6130" referenceFile="Neopixel_Strip_White_30_m.fzp" moduleId="adafruit_d90998037c1bf3fab72471c72fed35ec_3">
+ <author>Dean Cording and John De Cristofaro</author>
+ <title>Neopixel Strip -- White (30/m)</title>
+ <label>NEOPIXEL</label>
+ <date>Tue Oct 3 2017</date>
+ <tags>
+  <tag>adafruit</tag>
+  <tag>neopixel</tag>
+  <tag>led</tag>
+  <tag>rgb</tag>
+  <tag>pwm</tag>
+ </tags>
+ <properties>
+  <property name="family">neopixel</property>
+  <property name="variant">variant 2</property>
+  <property name="layer"></property>
+  <property name="color">white</property>
+  <property name="part number">1376</property>
+ </properties>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">These NeoPixel strips have 30 digitally-addressable pixel LEDs per meter and are very affordable and are only 12.5 mm wide, 10 mm if you remove the strip from the casing.&lt;/p>&lt;/body>&lt;/html></description>
+ <url>https://www.adafruit.com/products/1376</url>
+ <views>
+  <breadboardView>
+   <layers image="breadboard/adafruit_b5633e2baffe02c0dd3ffb565b647456_1_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_b5633e2baffe02c0dd3ffb565b647456_1_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_b5633e2baffe02c0dd3ffb565b647456_1_pcb.svg">
+    <layer layerId="copper0"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper1"/>
+   </layers>
+  </pcbView>
+  <iconView>
+   <layers image="icon/adafruit_b5633e2baffe02c0dd3ffb565b647456_1_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+ </views>
+ <connectors>
+  <connector type="male" id="connector1" name="GND">
+   <description>Gnd</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector1pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector1pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector1pin"/>
+     <p layer="copper1" svgId="connector1pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector2" name="Din">
+   <description>Data In</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector2pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector2pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector2pin"/>
+     <p layer="copper1" svgId="connector2pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector3" name="+5V">
+   <description>+5V</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector3pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector3pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector3pin"/>
+     <p layer="copper1" svgId="connector3pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector4" name="+5V">
+   <description>+5V</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector4pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector4pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="breadboard" svgId="connector4pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector5" name="Dout">
+   <description>Data Out</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector5pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector5pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="breadboard" svgId="connector5pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector6" name="GND">
+   <description>Gnd</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector6pin"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector6pin"/>
+    </schematicView>
+    <pcbView>
+     <p layer="breadboard" svgId="connector6pin"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>

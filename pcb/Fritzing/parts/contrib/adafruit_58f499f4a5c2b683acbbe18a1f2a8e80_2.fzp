@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module fritzingVersion="0.7.5b.07.02.6130" moduleId="adafruit_58f499f4a5c2b683acbbe18a1f2a8e80_2" referenceFile="USB_TTL_Serial_Cable__48f59aac877dd787a20a0d85cc2b2cb2.fzp">
+ <author>John De Cristofaro</author>
+ <title>USB TTL Serial Cable</title>
+ <label>USBTTL</label>
+ <date>Mon Sep 12 2016</date>
+ <url>http://www.adafruit.com/products/954</url>
+ <tags>
+  <tag>usb</tag>
+  <tag>serial</tag>
+  <tag>ttl</tag>
+  <tag>rs232</tag>
+ </tags>
+ <properties>
+  <property name="variant">variant 1</property>
+  <property name="family">USB TTL Serial Cable</property>
+  <property name="layer"></property>
+  <property name="part number"></property>
+ </properties>
+ <description>USB TTL Serial Cable</description>
+ <views>
+  <iconView>
+   <layers image="icon/adafruit_ee089de2ca2a8f6cea73a5c2bc11ada2_1_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/adafruit_ee089de2ca2a8f6cea73a5c2bc11ada2_1_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/adafruit_ee089de2ca2a8f6cea73a5c2bc11ada2_1_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/adafruit_ee089de2ca2a8f6cea73a5c2bc11ada2_1_pcb.svg">
+    <layer layerId="copper0"/>
+    <layer layerId="silkscreen"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector name="5V" id="connector3" type="male">
+   <description>no description yet</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector3pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector3pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector3pin" layer="copper0"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="GND" id="connector4" type="male">
+   <description>no description yet</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector4pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector4pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector4pin" layer="copper0"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="RX" id="connector1" type="male">
+   <description>no description yet</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector1pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector1pin" layer="copper0"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector name="TX" id="connector2" type="male">
+   <description>no description yet</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector2pin" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector2pin" layer="copper0"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>
