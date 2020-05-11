@@ -100,7 +100,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
 | [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
 | [2x 1N4004 diode](https://www.sparkfun.com/products/14884)| $1 |
-| 2x Venturi flow meter tube |  |
+| [2x Venturi flow meter tube](https://www.thingiverse.com/thing:4354501) |  |
 | [2x PEEP valve](https://www.amazon.com/gp/product/B00Q0SBGR2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $24 |
 | Total |  |
 
