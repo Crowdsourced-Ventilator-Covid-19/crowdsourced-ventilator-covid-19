@@ -37,7 +37,7 @@ void setup(void) {
     delay(1000);
     tft.begin();
     tft.setRotation(3);
-    tft.fillScreen(HX8357_BLACK);
+    tft.fillScreen(BLACK);
 
     // touchscreen library expects 10-bit voltage measurements
     analogReadResolution(10);
@@ -94,7 +94,6 @@ void displayResults( void * parameter)
     double last_t = 999;           // track wraparound
     double t;
 
-    // Graph(tft, 0, 0, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display, &ox1, &oy1);
     Sample_t sample;
     for(;;) {
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
