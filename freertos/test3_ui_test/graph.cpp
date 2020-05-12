@@ -51,7 +51,6 @@ unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcol
     for (i = xlo; i <= xhi; i += xinc) {
 
       // compute the transform
-
       temp =  (i - xlo) * ( w) / (xhi - xlo) + gx;
       if (i == 0) {
         d.drawLine(temp, gy, temp, gy - h, acolor);

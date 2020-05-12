@@ -25,9 +25,6 @@ Adafruit_HX8357 tft = Adafruit_HX8357(TFT_CS, TFT_DC, TFT_RST);
 // For the one we're using, its 300 ohms across the X plate
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 
-
-
-
 QueueHandle_t sampleQ = NULL;
 QueueHandle_t settingQ = NULL;
 QueueHandle_t stateQ = NULL;
