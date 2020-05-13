@@ -36,7 +36,6 @@ void setup(void) {
     delay(1000);
     tft.begin();
     tft.setRotation(3);
-    // tft.fillScreen(BLACK);
 
     // touchscreen library expects 10-bit voltage measurements
     analogReadResolution(10);
@@ -95,8 +94,9 @@ void displayResults( void * parameter)
     MainScreen mainScreen = MainScreen(tft);
 
     for(;;) {
+        // get current state to identify the current screen
         if(xQueuePeek(stateQ, &state, 10) == pdTRUE) {
-            Serial.println(state.screen);
+            // if there was a screen transition, draw the new screen
             if (oldScreen != state.screen) {
                 switch(state.screen) {
                     case SETSCREEN:
@@ -109,7 +109,9 @@ void displayResults( void * parameter)
                 oldScreen = state.screen;
             }
         };
+        // pull samples off the sample queue
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
+            // if we're on the main screen plot the sample, otherwise ignore it
             if (state.screen == MAINSCREEN) {
                 mainScreen.update(sample);
             }
