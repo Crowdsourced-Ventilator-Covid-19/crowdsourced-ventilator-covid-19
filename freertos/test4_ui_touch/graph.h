@@ -13,7 +13,7 @@ class Graph
         void plot(uint32_t t_ms, double y);
         void draw();
     private:
-        void _update(double x, double y, int redraw);
+        void _update(double x, double y, bool redraw);
         Adafruit_HX8357 *d;
         double gx;
         double gy;

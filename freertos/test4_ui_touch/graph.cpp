@@ -34,32 +34,29 @@ Graph::Graph(Adafruit_HX8357 &d, double gx, double gy, double w, double h, doubl
     ot = 999;
   }
 
+
+// draw the graph axes
 void Graph::draw() {
-  _update(-1,0,2);
+  _update(-1,0,true);
   ox = -999;
   oy = -999;
 }
 
+// plot data point on graph
+// if x-axis overflow, clear the graph and start from time 0
 void Graph::plot(uint32_t t_ms, double y) {
   double x = float(t_ms % 15000) / 1000.0;
-  int redraw = 0;
-  if (x < ot) { redraw = 1; }
-  _update(x, y, redraw);
+  _update(x, y, (x < ot));
   ot = x;
 }
 
-void Graph::_update(double x, double y, int redraw) {
+void Graph::_update(double x, double y, bool redraw) {
   double ydiv, xdiv;
-  // initialize old x and old y in order to draw the first point of the graph
-  // but save the transformed value
-  // note my transform funcition is the same as the map function, except the map uses long and we need doubles
-  //static double ox = (x - xlo) * ( w) / (xhi - xlo) + gx;
-  //static double oy = (y - ylo) * (gy - h - gy) / (yhi - ylo) + gy;
   double i;
   double temp;
   int rot, newrot;
 
-  if (redraw > 0) {
+  if (redraw) {
     d->fillRect(gx, gy - h, w, h+5, bcolor);
 
     ox = (x - xlo) * ( w) / (xhi - xlo) + gx;
@@ -78,10 +75,8 @@ void Graph::_update(double x, double y, int redraw) {
       else {
          d->drawLine(gx, temp, gx + w, temp, gcolor);
       }
-      if (redraw > 1) {
-        d->setCursor(gx - 30, temp);
-        d->println((int)i);
-      }
+      d->setCursor(gx - 30, temp);
+      d->println((int)i);
     }
     // draw x scale
     d->setTextSize(1);
@@ -97,11 +92,8 @@ void Graph::_update(double x, double y, int redraw) {
       else {
         d->drawLine(temp, gy, temp, gy - h, gcolor);
       }
-
-      if (redraw > 1) {
-        d->setCursor(temp, gy + 10);
-        d->println((int)i);
-      }
+      d->setCursor(temp, gy + 10);
+      d->println((int)i);
     }
 
     //now draw the labels
@@ -111,7 +103,7 @@ void Graph::_update(double x, double y, int redraw) {
     d->setCursor(gx , gy - h + 20);
     d->println(title);
 
-    if (redraw > 1) {
+    if (redraw) {
       d->setFont();
       d->setTextSize(1);
       d->setTextColor(acolor, bcolor);

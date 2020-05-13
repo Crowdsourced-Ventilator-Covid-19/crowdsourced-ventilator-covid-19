@@ -85,7 +85,6 @@ void readSensor( void * parameter )
 // print sensor results
 void displayResults( void * parameter)
 {
-    double t;
     Sample_t sample;
     Settings_t settings;
     State_t state;
@@ -115,15 +114,11 @@ void displayResults( void * parameter)
             }
         };
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
-            //Serial.println(String(sample.t) + " " + String(sample.v));
             if (state.screen == MAINSCREEN) {
-                t = float(sample.t % 15000) / 1000.0;
+                double t = float(sample.t % 15000) / 1000.0;
                 pGraph.plot(sample.t, cos(t) * 10 + 20);
                 fGraph.plot(sample.t, sin(t) * 200 + 300);
                 vGraph.plot(sample.t, cos(t) * 40);
-                //Graph(tft, t, cos(t) * 10 + 20, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display, &ox1, &oy1);
-                //Graph(tft, t, sin(t) * 200 + 300, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "cc", DKBLUE, RED, GREEN, WHITE, BLACK, display, &ox2, &oy2);
-                //Graph(tft, t, cos(t) * 40, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, display, &ox3, &oy3);
             }
         }
     }
