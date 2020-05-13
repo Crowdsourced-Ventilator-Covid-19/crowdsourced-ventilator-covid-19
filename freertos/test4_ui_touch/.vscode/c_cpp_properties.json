@@ -1,0 +1,59 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
+                "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.1\\**",
+                "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\**",
+                "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\**",
+                "${workspaceFolder}/**",
+                "C:/Users/chuck/Documents/Arduino/libraries/**",
+                "I:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino/",
+                "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/",
+                "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/",
+                "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/",
+                "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/",
+                "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/",
+                "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/",
+                "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/compat/",
+                "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/util/",
+                "I:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/7.3.0/include/"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "",
+                "path": [
+                    "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
+                    "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.1\\**",
+                    "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\**",
+                    "C:\\Users\\chuck\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\**",
+                    "${workspaceFolder}/**",
+                    "C:/Users/chuck/Documents/Arduino/libraries/**",
+                    "I:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino/",
+                    "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/EEPROM/",
+                    "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/",
+                    "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/",
+                    "I:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/",
+                    "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/",
+                    "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/",
+                    "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/compat/",
+                    "I:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/util/",
+                    "I:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/7.3.0/include/"
+                ]
+            },
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USBCON"
+            ],
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "forcedInclude": []
+        }
+    ],
+    "version": 4
+}
