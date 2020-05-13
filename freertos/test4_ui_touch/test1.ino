@@ -15,6 +15,7 @@
 #endif
 #include "graph.h"
 #include "set_screen.h"
+#include "main_screen.h"
 
 #define RESET_PIN -1
 #define EOC_PIN -1
@@ -91,9 +92,7 @@ void displayResults( void * parameter)
     Screen oldScreen = NOSCREEN;
 
     SetScreen setScreen = SetScreen(tft, stateQ, settingQ);
-    Graph pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK);
-    Graph fGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK);
-    Graph vGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK);
+    MainScreen mainScreen = MainScreen(tft);
 
     for(;;) {
         if(xQueuePeek(stateQ, &state, 10) == pdTRUE) {
@@ -101,13 +100,10 @@ void displayResults( void * parameter)
             if (oldScreen != state.screen) {
                 switch(state.screen) {
                     case SETSCREEN:
-                        setScreen.drawSetScreen();
+                        setScreen.draw();
                         break;
                     case MAINSCREEN:
-                        tft.fillScreen(BLACK);
-                        pGraph.draw();
-                        fGraph.draw();
-                        vGraph.draw();
+                        mainScreen.draw();
                         break;
                 }
                 oldScreen = state.screen;
@@ -115,10 +111,7 @@ void displayResults( void * parameter)
         };
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
             if (state.screen == MAINSCREEN) {
-                double t = float(sample.t % 15000) / 1000.0;
-                pGraph.plot(sample.t, cos(t) * 10 + 20);
-                fGraph.plot(sample.t, sin(t) * 200 + 300);
-                vGraph.plot(sample.t, cos(t) * 40);
+                mainScreen.update(sample);
             }
         }
     }

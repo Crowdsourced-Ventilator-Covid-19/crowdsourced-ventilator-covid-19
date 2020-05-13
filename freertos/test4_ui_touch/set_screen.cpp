@@ -15,11 +15,7 @@ SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t stateQ, QueueHandle_t s
     this->settingQ = settingQ;
 };
 
-void SetScreen::clear() {
-    tft->fillScreen(BLACK);
-}
-
-void SetScreen::drawSetScreen() {
+void SetScreen::draw() {
     xQueuePeek(stateQ, &state, 0);
     xQueuePeek(settingQ, &settings, 0);
 

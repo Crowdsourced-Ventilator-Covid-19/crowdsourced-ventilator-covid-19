@@ -18,8 +18,7 @@ class SetScreen
 {
     public:
         SetScreen(Adafruit_HX8357 &tft, QueueHandle_t stateQ, QueueHandle_t settingQ);
-        void clear();
-        void drawSetScreen();
+        void draw();
     protected:
     private:
         void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, int x, int y);
