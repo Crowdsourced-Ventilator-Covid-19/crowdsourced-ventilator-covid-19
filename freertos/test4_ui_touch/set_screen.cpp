@@ -21,9 +21,6 @@ void SetScreen::clear() {
 
 void SetScreen::drawSetScreen() {
     xQueuePeek(stateQ, &state, 0);
-    state.screen = "set";
-    xQueueOverwrite(stateQ, &state);
-
     xQueuePeek(settingQ, &settings, 0);
 
     tft->fillScreen(BLACK);
@@ -48,7 +45,6 @@ void SetScreen::drawSetButton(String label, String label2, String value, unsigne
     tft->setTextSize(1);
     tft->setFont(&FreeSans12pt7b);
     tft->setTextColor(fcolor, bcolor);
-    //tft->setTextColor(bcolor, fcolor);
     tft->setCursor(x + 20, y + 30);
     tft->println(label);
     tft->setCursor(x + 20, y + 60);

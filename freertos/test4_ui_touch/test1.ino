@@ -85,39 +85,46 @@ void readSensor( void * parameter )
 // print sensor results
 void displayResults( void * parameter)
 {
-    int display = 2;               // redraw level 2 means draw axes and chart
-    double ox1 = -999, oy1 = -999;  // Force them to be off screen
-    double ox2 = -999, oy2 = -999; 
-    double ox3 = -999, oy3 = -999; 
-    double last_t = 999;           // track wraparound
     double t;
-
     Sample_t sample;
     Settings_t settings;
     State_t state;
-    String oldScreen = "";
+    Screen oldScreen = NOSCREEN;
 
     SetScreen setScreen = SetScreen(tft, stateQ, settingQ);
+    Graph pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK);
+    Graph fGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK);
+    Graph vGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK);
 
     for(;;) {
         if(xQueuePeek(stateQ, &state, 10) == pdTRUE) {
+            Serial.println(state.screen);
             if (oldScreen != state.screen) {
-                if (state.screen == "set") { 
-                    setScreen.drawSetScreen();
+                switch(state.screen) {
+                    case SETSCREEN:
+                        setScreen.drawSetScreen();
+                        break;
+                    case MAINSCREEN:
+                        tft.fillScreen(BLACK);
+                        pGraph.draw();
+                        fGraph.draw();
+                        vGraph.draw();
+                        break;
                 }
                 oldScreen = state.screen;
             }
         };
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
             //Serial.println(String(sample.t) + " " + String(sample.v));
-            if (state.screen == "graph") {
-               t = float(sample.t % 15000) / 1000.0;  // convert millis time to seconds mod 15
-                if(t < last_t) { display = 2; } else { display = 0; }
-                Graph(tft, t, cos(t) * 10 + 20, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display, &ox1, &oy1);
-                Graph(tft, t, sin(t) * 200 + 300, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "cc", DKBLUE, RED, GREEN, WHITE, BLACK, display, &ox2, &oy2);
-                Graph(tft, t, cos(t) * 40, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, display, &ox3, &oy3);
+            if (state.screen == MAINSCREEN) {
+                t = float(sample.t % 15000) / 1000.0;
+                pGraph.plot(sample.t, cos(t) * 10 + 20);
+                fGraph.plot(sample.t, sin(t) * 200 + 300);
+                vGraph.plot(sample.t, cos(t) * 40);
+                //Graph(tft, t, cos(t) * 10 + 20, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, display, &ox1, &oy1);
+                //Graph(tft, t, sin(t) * 200 + 300, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "cc", DKBLUE, RED, GREEN, WHITE, BLACK, display, &ox2, &oy2);
+                //Graph(tft, t, cos(t) * 40, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, display, &ox3, &oy3);
             }
-            last_t = t;
         }
     }
 }
@@ -148,7 +155,7 @@ void initQ() {
     xQueueOverwrite(settingQ, &init);
 
     State_t state = {
-        0, 0, 0, 0, 0, 0, "set", false
+        0, 0, 0, 0, 0, 0, MAINSCREEN, false
     };
     xQueueOverwrite(stateQ, &state);
 }

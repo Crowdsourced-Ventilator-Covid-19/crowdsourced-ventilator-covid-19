@@ -18,6 +18,14 @@ typedef struct {
     int trig;
 } Settings_t;
 
+enum Screen {
+    NOSCREEN,
+    SETSCREEN, 
+    MAINSCREEN, 
+    MODSCREEN, 
+    ALARMSCREEN 
+};
+
 typedef struct {
     float peep;
     float peak;
@@ -25,8 +33,9 @@ typedef struct {
     float tv;
     float poff;
     float foff;
-    String screen;
+    Screen screen;
     bool power;
 } State_t;
+
 
 #endif
