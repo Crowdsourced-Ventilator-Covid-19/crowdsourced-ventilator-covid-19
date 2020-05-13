@@ -1,5 +1,4 @@
 #include "main_screen.h"
-#include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_HX8357.h>
 #include "graph.h"
 

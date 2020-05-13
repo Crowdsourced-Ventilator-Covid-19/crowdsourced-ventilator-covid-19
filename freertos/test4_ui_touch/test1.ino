@@ -7,13 +7,6 @@
 #include <SPI.h>
 #include "config.h"
 #include "types.h"
-#ifndef FONTS_h
-#define FONTS_h
-#include <Fonts/FreeSansBold24pt7b.h>
-#include <Fonts/FreeSansBold12pt7b.h>
-#include <Fonts/FreeSans12pt7b.h>
-#endif
-#include "graph.h"
 #include "set_screen.h"
 #include "main_screen.h"
 

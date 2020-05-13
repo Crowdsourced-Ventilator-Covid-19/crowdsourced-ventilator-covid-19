@@ -1,5 +1,4 @@
 #include "set_screen.h"
-#include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_HX8357.h>
 
 #define BLACK     0x0000

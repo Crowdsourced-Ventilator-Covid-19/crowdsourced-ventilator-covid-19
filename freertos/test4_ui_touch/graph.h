@@ -1,7 +1,6 @@
 #ifndef Graph_h
 #define Graph_h
 
-#include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_HX8357.h>
 
 class Graph
