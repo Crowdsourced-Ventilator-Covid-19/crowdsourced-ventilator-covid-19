@@ -41,7 +41,6 @@ typedef struct {
     float poff;
     float foff;
     float minvol;
-    Screen screen;
     bool power;
     Phase phase;
 } State_t;

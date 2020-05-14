@@ -1,5 +1,6 @@
 #include "set_screen.h"
 #include <Adafruit_HX8357.h>
+#include "config.h"
 
 #define BLACK     0x0000
 #define GREY      0xC618
@@ -8,10 +9,11 @@
 #define YELLOW    0xFFE0
 #define GREEN     0x07E0
 
-SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t stateQ, QueueHandle_t settingQ) {
+SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t stateQ, QueueHandle_t settingQ) {
     this->tft = &tft;
     this->stateQ = stateQ;
     this->settingQ = settingQ;
+    this->screenQ = screenQ;
 };
 
 void SetScreen::draw() {
@@ -60,7 +62,28 @@ void SetScreen::drawBackButton() {
 };
 
 void SetScreen::handleTouch(TSPoint p) {
-    xQueuePeek(stateQ, &state, 10);
-    state.screen = MAINSCREEN;
-    xQueueOverwrite(stateQ, &state);
+    if (p.x > 330 && p.y < 66) { // back button
+        screen = MAINSCREEN;
+        xQueueOverwrite(screenQ, &screen);
+    } else if (p.x < 120 && p.y > 194) { // trig
+        //drawModScreen("AC Trig", "modify", TRIG_MIN, TRIG_MAX, modVal);
+    } else if (p.x < 240 && p.y > 194) { // power
+       // power = !power;
+        //String powertxt = (power)? "STP" : "RUN ";
+        //tft.fillRect(123,220,120,100,BLACK);
+       // drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
+    } else if (p.x < 360 && p.y > 194) {
+
+    } else if (p.y > 194) {
+        
+       // drawAlarmScreen();
+    } else if (p.x < 120 && p.y > 70) {
+       // drawModScreen("RR", "modify", RR_MIN, RR_MAX, modVal);
+    } else if (p.x < 240 && p.y > 70) {
+        //drawModScreen("TV", "modify", TV_MIN, TV_MAX, modVal);
+    } else if (p.x < 360 && p.y > 70) {
+       //drawModScreen("I/E Ratio", "modify", IE_MIN, IE_MAX, modVal);
+    } else if (p.y > 70) {
+        //drawModScreen("Pmax", "modify", PIP_MIN, PIP_MAX, modVal);
+    } 
 }

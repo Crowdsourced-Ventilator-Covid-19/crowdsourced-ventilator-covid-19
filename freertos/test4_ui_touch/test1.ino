@@ -23,6 +23,7 @@ TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 QueueHandle_t sampleQ = NULL;
 QueueHandle_t settingQ = NULL;
 QueueHandle_t stateQ = NULL;
+QueueHandle_t screenQ = NULL;
 
 void setup(void) {
     Serial.begin(115200);
@@ -36,6 +37,7 @@ void setup(void) {
     sampleQ = xQueueCreate(1000, sizeof(Sample_t));
     settingQ = xQueueCreate(1, sizeof(Settings_t));
     stateQ = xQueueCreate(1, sizeof(State_t));
+    screenQ = xQueueCreate(1, sizeof(Screen));
 
     initQ();
 
@@ -81,18 +83,18 @@ void displayResults( void * parameter)
     Sample_t sample;
     Settings_t settings;
     State_t state;
+    Screen screen;
     Screen oldScreen = NOSCREEN;
     Phase oldPhase = INSPIRATORY;
 
-    SetScreen setScreen = SetScreen(tft, stateQ, settingQ);
-    MainScreen mainScreen = MainScreen(tft, stateQ);
+    SetScreen setScreen = SetScreen(tft, screenQ, stateQ, settingQ);
+    MainScreen mainScreen = MainScreen(tft, screenQ, stateQ);
 
     for(;;) {
-        // get current state to identify the current screen
-        if(xQueuePeek(stateQ, &state, 10) == pdTRUE) {
+        if(xQueuePeek(screenQ, &screen, 10) == pdTRUE) {
             // if there was a screen transition, draw the new screen
-            if (oldScreen != state.screen) {
-                switch(state.screen) {
+            if (oldScreen != screen) {
+                switch(screen) {
                     case SETSCREEN:
                         setScreen.draw();
                         break;
@@ -100,10 +102,14 @@ void displayResults( void * parameter)
                         mainScreen.draw();
                         break;
                 }
-                oldScreen = state.screen;
+                oldScreen = screen;
             }
+        };
+
+        if (xQueuePeek(stateQ, &state, 10) == pdTRUE) {
+            // if there was a phase transition to expiratory, update measurements
             if (oldPhase == INSPIRATORY && state.phase == EXPIRATORY) {
-                if (state.screen == MAINSCREEN) {
+                if (screen == MAINSCREEN) {
                     mainScreen.updateMeas(state);
                 }
                 oldPhase = state.phase;
@@ -112,21 +118,20 @@ void displayResults( void * parameter)
         // pull samples off the sample queue
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
             // if we're on the main screen plot the sample, otherwise ignore it
-            if (state.screen == MAINSCREEN) {
+            if (screen == MAINSCREEN) {
                 mainScreen.update(sample);
             }
         }
 
-        Serial.println(state.screen);
-
         TSPoint p = ts.getPoint();
         if (p.z > MINPRESSURE && p.z < MAXPRESSURE) {
-            switch(state.screen) {
+            switch(screen) {
                 case MAINSCREEN:
                     mainScreen.handleTouch(p);
                     break;
                 case SETSCREEN:
                     setScreen.handleTouch(p);
+                    Serial.println(p.x);
                     break;
             }
         }
@@ -159,9 +164,12 @@ void initQ() {
     xQueueOverwrite(settingQ, &init);
 
     State_t state = {
-        0, 0, 0, 0, 0, 0, 0, 0, MAINSCREEN, false, EXPIRATORY
+        0, 0, 0, 0, 0, 0, 0, 0, false, EXPIRATORY
     };
     xQueueOverwrite(stateQ, &state);
+
+    Screen screen = MAINSCREEN;
+    xQueueOverwrite(screenQ, &screen);
 }
 
 

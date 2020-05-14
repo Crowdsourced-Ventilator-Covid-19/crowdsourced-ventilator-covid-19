@@ -10,9 +10,10 @@
 #define GREEN     0x07E0
 #define DKBLUE    0x000D
 
-MainScreen::MainScreen(Adafruit_HX8357 &tft, QueueHandle_t stateQ) {
+MainScreen::MainScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t stateQ) {
     this->tft = &tft;
     this->stateQ = stateQ;
+    this->screenQ = screenQ;
     pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, false);
     fGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK, false);
     vGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
@@ -67,7 +68,6 @@ void MainScreen::updateVal(int x, int y, String value, unsigned int vcolor) {
 }
 
 void MainScreen::handleTouch(TSPoint p) {
-    xQueuePeek(stateQ, &state, 10);
-    state.screen = SETSCREEN;
-    xQueueOverwrite(stateQ, &state);
+    screen = SETSCREEN;
+    xQueueOverwrite(screenQ, &screen);
 }

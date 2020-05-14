@@ -16,7 +16,7 @@
 class MainScreen
 {
     public:
-        MainScreen(Adafruit_HX8357 &tft, QueueHandle_t);
+        MainScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t stateQ);
         void draw();
         void update(Sample_t sample);
         void updateMeas(State_t state);
@@ -25,10 +25,12 @@ class MainScreen
         void drawMeas(String label, int labelx, int valuex, int y, String value, unsigned int vcolor);
         void updateVal(int x, int y, String value, unsigned int vcolor);
         QueueHandle_t stateQ;
+        QueueHandle_t screenQ;
         Adafruit_HX8357 *tft;
         State_t state;
         Settings_t settings;
         Sample_t sample;
+        Screen screen;
         Graph pGraph;
         Graph fGraph;
         Graph vGraph;
