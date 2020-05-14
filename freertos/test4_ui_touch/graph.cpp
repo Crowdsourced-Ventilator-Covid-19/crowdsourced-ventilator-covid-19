@@ -11,7 +11,7 @@ Graph::Graph() {};
 
 Graph::Graph(Adafruit_HX8357 &d, double gx, double gy, double w, double h, double xlo, double xhi,
   double xinc, double ylo, double yhi, double yinc, String title, String xlabel, String ylabel, unsigned int gcolor,
-  unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor) {
+  unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor, bool xticks) {
     this->d = &d;
     this->gx = gx;
     this->gy = gy;
@@ -31,6 +31,7 @@ Graph::Graph(Adafruit_HX8357 &d, double gx, double gy, double w, double h, doubl
     this->pcolor = pcolor;
     this->tcolor = tcolor;
     this->bcolor = bcolor;
+    this->xticks = xticks;
     ox = -999;
     oy = -999;
     ot = 999;
@@ -94,8 +95,10 @@ void Graph::_update(double x, double y, bool redraw) {
       else {
         d->drawLine(temp, gy, temp, gy - h, gcolor);
       }
-      d->setCursor(temp, gy + 10);
-      d->println((int)i);
+      if (xticks) {
+        d->setCursor(temp, gy + 10);
+        d->println((int)i);
+      }
     }
 
     //now draw the labels

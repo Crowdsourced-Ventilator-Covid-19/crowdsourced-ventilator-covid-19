@@ -58,3 +58,9 @@ void SetScreen::drawBackButton() {
     tft->setCursor(380, 45);
     tft->println("BACK");
 };
+
+void SetScreen::handleTouch(TSPoint p) {
+    xQueuePeek(stateQ, &state, 10);
+    state.screen = MAINSCREEN;
+    xQueueOverwrite(stateQ, &state);
+}

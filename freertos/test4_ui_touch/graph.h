@@ -9,7 +9,7 @@ class Graph
         Graph();
         Graph(Adafruit_HX8357 &d, double gx, double gy, double w, double h, double xlo, double xhi,
             double xinc, double ylo, double yhi, double yinc, String title, String xlabel, String ylabel, unsigned int gcolor,
-            unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor);
+            unsigned int acolor, unsigned int pcolor, unsigned int tcolor, unsigned int bcolor, bool xticks);
         void plot(uint32_t t_ms, double y);
         void draw();
     private:
@@ -36,6 +36,7 @@ class Graph
         double ox;
         double oy;
         double ot;
+        bool xticks;
 };
 
 #endif

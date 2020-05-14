@@ -10,6 +10,7 @@
 #include <Fonts/FreeSans12pt7b.h>
 #endif
 #include "types.h"
+#include <TouchScreen.h>
 
 
 class SetScreen
@@ -17,6 +18,7 @@ class SetScreen
     public:
         SetScreen(Adafruit_HX8357 &tft, QueueHandle_t stateQ, QueueHandle_t settingQ);
         void draw();
+        void handleTouch(TSPoint p);
     protected:
     private:
         void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, int x, int y);

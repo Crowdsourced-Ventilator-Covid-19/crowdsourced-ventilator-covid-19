@@ -26,15 +26,24 @@ enum Screen {
     ALARMSCREEN 
 };
 
+enum Phase {
+    NOPHASE,
+    INSPIRATORY,
+    EXPIRATORY
+};
+
 typedef struct {
+    float rr;
     float peep;
     float peak;
     float plat;
     float tv;
     float poff;
     float foff;
+    float minvol;
     Screen screen;
     bool power;
+    Phase phase;
 } State_t;
 
 

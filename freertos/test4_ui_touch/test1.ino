@@ -82,9 +82,10 @@ void displayResults( void * parameter)
     Settings_t settings;
     State_t state;
     Screen oldScreen = NOSCREEN;
+    Phase oldPhase = INSPIRATORY;
 
     SetScreen setScreen = SetScreen(tft, stateQ, settingQ);
-    MainScreen mainScreen = MainScreen(tft);
+    MainScreen mainScreen = MainScreen(tft, stateQ);
 
     for(;;) {
         // get current state to identify the current screen
@@ -101,12 +102,32 @@ void displayResults( void * parameter)
                 }
                 oldScreen = state.screen;
             }
+            if (oldPhase == INSPIRATORY && state.phase == EXPIRATORY) {
+                if (state.screen == MAINSCREEN) {
+                    mainScreen.updateMeas(state);
+                }
+                oldPhase = state.phase;
+            }
         };
         // pull samples off the sample queue
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
             // if we're on the main screen plot the sample, otherwise ignore it
             if (state.screen == MAINSCREEN) {
                 mainScreen.update(sample);
+            }
+        }
+
+        Serial.println(state.screen);
+
+        TSPoint p = ts.getPoint();
+        if (p.z > MINPRESSURE && p.z < MAXPRESSURE) {
+            switch(state.screen) {
+                case MAINSCREEN:
+                    mainScreen.handleTouch(p);
+                    break;
+                case SETSCREEN:
+                    setScreen.handleTouch(p);
+                    break;
             }
         }
     }
@@ -138,7 +159,7 @@ void initQ() {
     xQueueOverwrite(settingQ, &init);
 
     State_t state = {
-        0, 0, 0, 0, 0, 0, MAINSCREEN, false
+        0, 0, 0, 0, 0, 0, 0, 0, MAINSCREEN, false, EXPIRATORY
     };
     xQueueOverwrite(stateQ, &state);
 }
