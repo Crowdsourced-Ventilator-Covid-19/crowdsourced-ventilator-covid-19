@@ -9,15 +9,13 @@
 #define YELLOW    0xFFE0
 #define GREEN     0x07E0
 
-SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t stateQ, QueueHandle_t settingQ) {
+SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ) {
     this->tft = &tft;
-    this->stateQ = stateQ;
     this->settingQ = settingQ;
     this->screenQ = screenQ;
 };
 
 void SetScreen::draw() {
-    xQueuePeek(stateQ, &state, 0);
     xQueuePeek(settingQ, &settings, 0);
 
     tft->fillScreen(BLACK);
@@ -26,7 +24,7 @@ void SetScreen::draw() {
     tft->setTextColor(WHITE, BLACK);
     tft->setCursor(100, 50);
     tft->println("Settings");
-    String powertxt = (state.power)? "STOP" : "RUN ";
+    String powertxt = (settings.power)? "STOP" : "RUN ";
     drawSetButton("RR", "", String(settings.rr),  BLACK, WHITE, 4, 70);
     drawSetButton("TV", "", String(settings.tv), BLACK, GREEN, 123, 70);
     drawSetButton("I/E", "", "1:" + String(settings.ier), BLACK, WHITE, 242, 70);

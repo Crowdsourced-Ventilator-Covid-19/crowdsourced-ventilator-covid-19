@@ -17,7 +17,7 @@
 class SetScreen
 {
     public:
-        SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t stateQ, QueueHandle_t settingQ);
+        SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ);
         void draw();
         void handleTouch(TSPoint p);
     protected:
@@ -25,11 +25,9 @@ class SetScreen
         void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, int x, int y);
         void drawBackButton();
         Adafruit_HX8357 *tft;
-        QueueHandle_t stateQ;
         QueueHandle_t settingQ;
         QueueHandle_t screenQ;
         Screen screen;
-        State_t state;
         Settings_t settings;
 };
 

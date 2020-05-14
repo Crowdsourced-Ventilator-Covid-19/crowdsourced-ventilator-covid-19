@@ -87,7 +87,7 @@ void displayResults( void * parameter)
     Screen oldScreen = NOSCREEN;
     Phase oldPhase = INSPIRATORY;
 
-    SetScreen setScreen = SetScreen(tft, screenQ, stateQ, settingQ);
+    SetScreen setScreen = SetScreen(tft, screenQ, settingQ);
     MainScreen mainScreen = MainScreen(tft, screenQ, stateQ);
 
     for(;;) {
@@ -159,12 +159,13 @@ void initQ() {
         1,      // mvloAlarm
         3,      // dcAlarm
         300,    // tv
-        50      // trigger
+        50,     // trigger
+        false   // power
     };
     xQueueOverwrite(settingQ, &init);
 
     State_t state = {
-        0, 0, 0, 0, 0, 0, 0, 0, false, EXPIRATORY
+        0, 0, 0, 0, 0, 0, 0, 0, EXPIRATORY
     };
     xQueueOverwrite(stateQ, &state);
 

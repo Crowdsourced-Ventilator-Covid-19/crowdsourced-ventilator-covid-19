@@ -16,6 +16,7 @@ typedef struct {
     int dcAlarm;
     int tv;
     int trig;
+    bool power;
 } Settings_t;
 
 enum Screen {
@@ -41,7 +42,6 @@ typedef struct {
     float poff;
     float foff;
     float minvol;
-    bool power;
     Phase phase;
 } State_t;
 
