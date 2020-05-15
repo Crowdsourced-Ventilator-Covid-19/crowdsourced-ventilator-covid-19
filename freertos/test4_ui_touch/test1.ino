@@ -9,6 +9,7 @@
 #include "types.h"
 #include "set_screen.h"
 #include "main_screen.h"
+#include "mod_screen.h"
 
 #define RESET_PIN -1
 #define EOC_PIN -1
@@ -23,7 +24,8 @@ TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 QueueHandle_t sampleQ = NULL;
 QueueHandle_t settingQ = NULL;
 QueueHandle_t stateQ = NULL;
-QueueHandle_t screenQ = NULL;
+Screen screen = SETSCREEN;
+ModVal_t modvals;
 
 void setup(void) {
     Serial.begin(115200);
@@ -37,7 +39,6 @@ void setup(void) {
     sampleQ = xQueueCreate(1000, sizeof(Sample_t));
     settingQ = xQueueCreate(1, sizeof(Settings_t));
     stateQ = xQueueCreate(1, sizeof(State_t));
-    screenQ = xQueueCreate(1, sizeof(Screen));
 
     initQ();
 
@@ -77,34 +78,37 @@ void readSensor( void * parameter )
     }
 }
 
+
 // print sensor results
 void displayResults( void * parameter)
 {
     Sample_t sample;
     Settings_t settings;
     State_t state;
-    Screen screen;
     Screen oldScreen = NOSCREEN;
     Phase oldPhase = INSPIRATORY;
 
-    SetScreen setScreen = SetScreen(tft, screenQ, settingQ);
-    MainScreen mainScreen = MainScreen(tft, screenQ, stateQ);
+    SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals);
+    MainScreen mainScreen = MainScreen(tft, screen, stateQ);
+    ModScreen modScreen = ModScreen(tft, screen, modvals);
 
     for(;;) {
-        if(xQueuePeek(screenQ, &screen, 10) == pdTRUE) {
-            // if there was a screen transition, draw the new screen
-            if (oldScreen != screen) {
-                switch(screen) {
-                    case SETSCREEN:
-                        setScreen.draw();
-                        break;
-                    case MAINSCREEN:
-                        mainScreen.draw();
-                        break;
-                }
-                oldScreen = screen;
+        // if there was a screen transition, draw the new screen
+        if (oldScreen != screen) {
+            switch(screen) {
+                case SETSCREEN:
+                    setScreen.draw();
+                    break;
+                case MAINSCREEN:
+                    mainScreen.draw();
+                    break;
+                case MODSCREEN:
+                    modScreen.draw();
+                    break;
             }
+            oldScreen = screen;
         };
+
 
         if (xQueuePeek(stateQ, &state, 10) == pdTRUE) {
             // if there was a phase transition to expiratory, update measurements
@@ -124,19 +128,29 @@ void displayResults( void * parameter)
         }
 
         TSPoint p = ts.getPoint();
+        // Scale from ~0->1000 to tft.width using the calibration #'s
+        int y = map(p.x, TS_MINX, TS_MAXX, 0, tft.height());
+        int x = map(p.y, TS_MINY, TS_MAXY, tft.width(), 0);
+        p.x = x;
+        p.y = y;
+
         if (p.z > MINPRESSURE && p.z < MAXPRESSURE) {
+            Serial.println(String(p.x) + " " + String(p.y));
             switch(screen) {
                 case MAINSCREEN:
                     mainScreen.handleTouch(p);
                     break;
                 case SETSCREEN:
                     setScreen.handleTouch(p);
-                    Serial.println(p.x);
+                    break;
+                case MODSCREEN:
+                    modScreen.handleTouch(p);
                     break;
             }
         }
     }
 }
+
 
 void initSensor() {
     Serial.println("MPRLS Simple Test");
@@ -152,7 +166,7 @@ void initSensor() {
 void initQ() {
     Settings_t init = {
         15,     // rr
-        1.0,    // ier
+        10,    // ier
         40,     // pmax
         30,     // peakAlarm
         20,     // mvhiAlarm
@@ -169,8 +183,9 @@ void initQ() {
     };
     xQueueOverwrite(stateQ, &state);
 
-    Screen screen = MAINSCREEN;
-    xQueueOverwrite(screenQ, &screen);
+    screen = MAINSCREEN;
+
+    modvals = {"", 0, 0, 0, 0};
 }
 
 

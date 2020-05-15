@@ -15,21 +15,18 @@
 class ModScreen
 {
     public:
-        ModScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ);
-        void draw(String label, int minv, int maxv, int val, int scale);
+        ModScreen(Adafruit_HX8357 &tft, Screen &screen, ModVal_t &modvals);
+        void draw();
         void handleTouch(TSPoint p);
     private:
         void drawBackButton();
-        void drawSlider(int minv, int maxv, int val);
+        void drawSlider();
+        void drawValue();
         Adafruit_HX8357 *tft;
         QueueHandle_t settingQ;
-        QueueHandle_t screenQ;
-        Settings_t settings;
-        Screen screen;
+        ModVal_t *modvals;
+        Screen *screen;
         int val;
-        int maxv;
-        int minv;
-        int scale;
         int oval;
 
 };

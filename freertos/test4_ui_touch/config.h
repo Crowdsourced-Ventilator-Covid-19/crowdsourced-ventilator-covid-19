@@ -1,24 +1,7 @@
 #ifndef config_h
 #define config_h
 
-#define TV_MIN     100
-#define TV_MAX     800
-#define RR_MIN     10
-#define RR_MAX     40
-#define IE_MAX     3
-#define IE_MIN     1
-#define PIP_MAX    60
-#define PIP_MIN    10
-#define TRIG_MAX   100
-#define TRIG_MIN   0
-#define PIP_ALRM_MAX 700
-#define PIP_ALRM_MIN 100
-#define MVHI_ALRM_MAX 30
-#define MVHI_ALRM_MIN 0
-#define MVLO_ALRM_MAX 30
-#define MVLO_ALRM_MIN 0
-#define DC_ALRM_MAX 20
-#define DC_ALRM_MIN 0
+
 
 
 // These are the four touchscreen analog pins

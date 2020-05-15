@@ -17,18 +17,21 @@
 class SetScreen
 {
     public:
-        SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ);
+        SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals);
         void draw();
         void handleTouch(TSPoint p);
     protected:
     private:
         void drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, int x, int y);
         void drawBackButton();
+        void updateSettings();
+        ModVal_t *modvals;
         Adafruit_HX8357 *tft;
         QueueHandle_t settingQ;
-        QueueHandle_t screenQ;
-        Screen screen;
+        Screen *screen;
         Settings_t settings;
+        unsigned long lastDebounceTime;
+        unsigned long debounceDelay;
 };
 
 #endif

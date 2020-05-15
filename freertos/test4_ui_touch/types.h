@@ -8,7 +8,7 @@ typedef struct {
 
 typedef struct {
     int rr;
-    float ier;
+    int ier;
     int pmax;
     int peakAlarm;
     int mvhiAlarm;
@@ -44,6 +44,14 @@ typedef struct {
     float minvol;
     Phase phase;
 } State_t;
+
+typedef struct {
+    String label;
+    int minv;
+    int maxv;
+    int val;
+    int newval;
+} ModVal_t;
 
 
 #endif

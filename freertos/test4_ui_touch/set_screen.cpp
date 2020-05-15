@@ -9,25 +9,49 @@
 #define YELLOW    0xFFE0
 #define GREEN     0x07E0
 
-SetScreen::SetScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ) {
+#define TV_MIN     100
+#define TV_MAX     800
+#define RR_MIN     10
+#define RR_MAX     40
+#define IE_MAX     30
+#define IE_MIN     10
+#define PIP_MAX    60
+#define PIP_MIN    10
+#define TRIG_MAX   100
+#define TRIG_MIN   0
+#define PIP_ALRM_MAX 700
+#define PIP_ALRM_MIN 100
+#define MVHI_ALRM_MAX 30
+#define MVHI_ALRM_MIN 0
+#define MVLO_ALRM_MAX 30
+#define MVLO_ALRM_MIN 0
+#define DC_ALRM_MAX 20
+#define DC_ALRM_MIN 0
+
+SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals) {
     this->tft = &tft;
     this->settingQ = settingQ;
-    this->screenQ = screenQ;
+    this->screen = &screen;
+    this->modvals = &modvals;
+    xQueuePeek(settingQ, &settings, 0);
+    this->lastDebounceTime = 0;
+    this->debounceDelay = 500;
 };
 
 void SetScreen::draw() {
-    xQueuePeek(settingQ, &settings, 0);
-
+    updateSettings();
     tft->fillScreen(BLACK);
     drawBackButton();
     tft->setFont(&FreeSansBold24pt7b);
     tft->setTextColor(WHITE, BLACK);
     tft->setCursor(100, 50);
     tft->println("Settings");
-    String powertxt = (settings.power)? "STOP" : "RUN ";
+    String powertxt = (settings.power)? " STP" : " RUN";
+    char buffer[5];
+    sprintf(buffer, "1:%2.1f", float(settings.ier) / 10.0);
     drawSetButton("RR", "", String(settings.rr),  BLACK, WHITE, 4, 70);
     drawSetButton("TV", "", String(settings.tv), BLACK, GREEN, 123, 70);
-    drawSetButton("I/E", "", "1:" + String(settings.ier), BLACK, WHITE, 242, 70);
+    drawSetButton("I/E", "", buffer, BLACK, WHITE, 242, 70);
     drawSetButton("Pmax", "", String(settings.pmax), BLACK, YELLOW, 361, 70);
     drawSetButton("AC", "Trig", String(settings.trig), BLACK, YELLOW, 4, 194);
     drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
@@ -35,7 +59,6 @@ void SetScreen::draw() {
 };
 
 void SetScreen::drawSetButton(String label, String label2, String value, unsigned int fcolor, unsigned int bcolor, int x, int y) {
-    tft->drawRoundRect(x, y, 115, 120, 7, bcolor);
     tft->fillRoundRect(x, y, 115, 120, 7, bcolor);
     tft->setTextSize(1);
     tft->setFont(&FreeSans12pt7b);
@@ -60,28 +83,54 @@ void SetScreen::drawBackButton() {
 };
 
 void SetScreen::handleTouch(TSPoint p) {
+    // xQueuePeek(settingQ, &settings, 10);
     if (p.x > 330 && p.y < 66) { // back button
-        screen = MAINSCREEN;
-        xQueueOverwrite(screenQ, &screen);
+        xQueueOverwrite(settingQ, &settings);
+        *screen = MAINSCREEN;
     } else if (p.x < 120 && p.y > 194) { // trig
-        //drawModScreen("AC Trig", "modify", TRIG_MIN, TRIG_MAX, modVal);
+        *modvals = {"AC Trig", TRIG_MIN, TRIG_MAX, settings.trig, settings.trig};
+        *screen = MODSCREEN;
     } else if (p.x < 240 && p.y > 194) { // power
-       // power = !power;
-        //String powertxt = (power)? "STP" : "RUN ";
-        //tft.fillRect(123,220,120,100,BLACK);
-       // drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
+        if ((millis() - lastDebounceTime) > debounceDelay) {
+            settings.power = !settings.power;
+            String powertxt = (settings.power)? "STP" : "RUN ";
+            //tft->fillRect(123,220,120,100,BLACK);
+            drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
+            xQueueOverwrite(settingQ, &settings);
+            lastDebounceTime = millis();
+        }
     } else if (p.x < 360 && p.y > 194) {
 
     } else if (p.y > 194) {
-        
+
        // drawAlarmScreen();
     } else if (p.x < 120 && p.y > 70) {
-       // drawModScreen("RR", "modify", RR_MIN, RR_MAX, modVal);
+        *modvals = {"RR", RR_MIN, RR_MAX, settings.rr, settings.rr};
+        *screen = MODSCREEN;
     } else if (p.x < 240 && p.y > 70) {
-        //drawModScreen("TV", "modify", TV_MIN, TV_MAX, modVal);
+        *modvals = {"TV", TV_MIN, TV_MAX, settings.tv, settings.tv};
+        *screen = MODSCREEN;
     } else if (p.x < 360 && p.y > 70) {
-       //drawModScreen("I/E Ratio", "modify", IE_MIN, IE_MAX, modVal);
+        *modvals = {"I/E Ratio", IE_MIN, IE_MAX, settings.ier, settings.ier};
+        *screen = MODSCREEN;
     } else if (p.y > 70) {
-        //drawModScreen("Pmax", "modify", PIP_MIN, PIP_MAX, modVal);
+        *modvals = {"Pmax", PIP_MAX, PIP_MIN, settings.pmax, settings.pmax};
+        *screen = MODSCREEN;
     } 
+}
+
+void SetScreen::updateSettings() {
+    if (modvals->newval != modvals->val) {
+        if (modvals->label == "AC Trig") {
+            settings.trig = modvals->newval;
+        } else if (modvals->label == "RR") {
+            settings.rr = modvals->newval;
+        } else if (modvals->label == "TV") {
+            settings.tv = modvals->newval;
+        } else if (modvals-> label = "I/E Ratio") {
+            settings.ier = modvals->newval;
+        } else if (modvals->label = "Pmax") {
+            settings.pmax = modvals->newval;
+        }
+    }
 }

@@ -9,48 +9,61 @@
 #define YELLOW    0xFFE0
 #define GREEN     0x07E0
 
-ModScreen::ModScreen(Adafruit_HX8357 &tft, QueueHandle_t screenQ, QueueHandle_t settingQ) {
+ModScreen::ModScreen(Adafruit_HX8357 &tft, Screen &screen, ModVal_t &modvals) {
     this->tft = &tft;
     this->settingQ = settingQ;
-    this->screenQ = screenQ;
+    this->screen = &screen;
+    this->modvals = &modvals;
 };
 
-void ModScreen::draw(String label, int minv, int maxv, int val, int scale) {
+void ModScreen::draw() {
+    oval = modvals->val;
+    val = modvals->val;
     tft->fillScreen(BLACK);
     drawBackButton();
     tft->setTextSize(1);
     tft->setTextColor(WHITE, BLACK);
     tft->setFont(&FreeSansBold24pt7b);
     tft->setCursor(10, 50);
-    tft->println(label);
+    tft->println(modvals->label);
+    drawValue();
+    drawSlider();
 };
 
 void ModScreen::handleTouch(TSPoint p) {
     if (p.x > 330 && p.y < 66) { // back button
-        screen = SETSCREEN;
-        xQueueOverwrite(screenQ, &screen);
+        modvals->newval = val;
+        *screen = SETSCREEN;
+    } else {
+        if (p.x < 40) { p.x = 40; }
+        if (p.x > 440) { p.x = 440; }
+        val = map(p.x, 40, 440, modvals->minv, modvals->maxv);
+        if (oval != val) {
+            drawValue();
+            drawSlider();
+            oval = val;
+        }
     }
-
-    if (p.x < 40) { p.x = 40; }
-    if (p.x > 440) { p.x = 440; }
-    val = round(float(p.x-40) / 400.0 * float(maxv - minv)) + minv;
-    if (oval != val) {
-        tft->setTextColor(WHITE, BLACK);
-        tft->setFont();
-        tft->setTextSize(5);
-        tft->setCursor(170, 170);
-        tft->println("     ");
-        tft->setCursor(170, 170);
-        tft->println(String(val));
-        drawSlider(minv, maxv, val);
-        oval = val;
-    }
-
 }
 
-void ModScreen::drawSlider(int minv, int maxv, int val) {
+void ModScreen::drawValue() {
+    tft->setTextColor(WHITE, BLACK);
+    tft->setFont(&FreeSansBold24pt7b);
+    tft->setTextSize(1);
+    tft->fillRect(170,120,120,60,BLACK);
+    tft->setCursor(170, 170);
+    if (modvals->label == "I/E Ratio") {
+        char buffer[5];
+        sprintf(buffer, "1:%2.1f", float(val) / 10.0);
+        tft->println(buffer);
+    } else {
+        tft->println(String(val));
+    }
+}
+
+void ModScreen::drawSlider() {
   tft->fillRect(20, 250, 460, 290, BLACK); 
-  int xpos = round( (double) (val - minv) / (double) (maxv - minv) * 400 + 20);
+  int xpos = map(val, modvals->minv, modvals->maxv, 20, 420);
   tft->drawLine(40, 270, 440, 270, WHITE);
   tft->fillRoundRect(xpos, 250, 40, 40, 5, GREEN);
 }
