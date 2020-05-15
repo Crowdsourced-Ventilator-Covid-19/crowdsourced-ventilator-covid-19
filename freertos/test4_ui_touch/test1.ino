@@ -135,7 +135,7 @@ void displayResults( void * parameter)
         p.y = y;
 
         if (p.z > MINPRESSURE && p.z < MAXPRESSURE) {
-            Serial.println(String(p.x) + " " + String(p.y));
+            //Serial.println(String(p.x) + " " + String(p.y));
             switch(screen) {
                 case MAINSCREEN:
                     mainScreen.handleTouch(p);

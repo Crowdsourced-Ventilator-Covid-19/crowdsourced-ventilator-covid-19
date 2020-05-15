@@ -46,7 +46,7 @@ void SetScreen::draw() {
     tft->setTextColor(WHITE, BLACK);
     tft->setCursor(100, 50);
     tft->println("Settings");
-    String powertxt = (settings.power)? " STP" : " RUN";
+    String powertxt = (settings.power)? " STP" : " RUN";  // I have no idea why there are spaces here
     char buffer[5];
     sprintf(buffer, "1:%2.1f", float(settings.ier) / 10.0);
     drawSetButton("RR", "", String(settings.rr),  BLACK, WHITE, 4, 70);
@@ -114,7 +114,7 @@ void SetScreen::handleTouch(TSPoint p) {
         *modvals = {"I/E Ratio", IE_MIN, IE_MAX, settings.ier, settings.ier};
         *screen = MODSCREEN;
     } else if (p.y > 70) {
-        *modvals = {"Pmax", PIP_MAX, PIP_MIN, settings.pmax, settings.pmax};
+        *modvals = {"Pmax", PIP_MIN, PIP_MAX, settings.pmax, settings.pmax};
         *screen = MODSCREEN;
     } 
 }
@@ -127,9 +127,9 @@ void SetScreen::updateSettings() {
             settings.rr = modvals->newval;
         } else if (modvals->label == "TV") {
             settings.tv = modvals->newval;
-        } else if (modvals-> label = "I/E Ratio") {
+        } else if (modvals->label == "I/E Ratio") {
             settings.ier = modvals->newval;
-        } else if (modvals->label = "Pmax") {
+        } else if (modvals->label == "Pmax") {
             settings.pmax = modvals->newval;
         }
     }
