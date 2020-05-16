@@ -10,6 +10,7 @@
 #include "set_screen.h"
 #include "main_screen.h"
 #include "mod_screen.h"
+#include "alarm_screen.h"
 
 #define RESET_PIN -1
 #define EOC_PIN -1
@@ -91,6 +92,7 @@ void displayResults( void * parameter)
     SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals);
     MainScreen mainScreen = MainScreen(tft, screen, stateQ);
     ModScreen modScreen = ModScreen(tft, screen, modvals);
+    AlarmScreen alarmScreen = AlarmScreen(tft, screen, settingQ, modvals);
 
     for(;;) {
         // if there was a screen transition, draw the new screen
@@ -104,6 +106,9 @@ void displayResults( void * parameter)
                     break;
                 case MODSCREEN:
                     modScreen.draw();
+                    break;
+                case ALARMSCREEN:
+                    alarmScreen.draw();
                     break;
             }
             oldScreen = screen;
@@ -145,6 +150,9 @@ void displayResults( void * parameter)
                     break;
                 case MODSCREEN:
                     modScreen.handleTouch(p);
+                    break;
+                case ALARMSCREEN:
+                    alarmScreen.handleTouch(p);
                     break;
             }
         }

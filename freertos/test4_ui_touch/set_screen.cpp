@@ -19,14 +19,7 @@
 #define PIP_MIN    10
 #define TRIG_MAX   100
 #define TRIG_MIN   0
-#define PIP_ALRM_MAX 700
-#define PIP_ALRM_MIN 100
-#define MVHI_ALRM_MAX 30
-#define MVHI_ALRM_MIN 0
-#define MVLO_ALRM_MAX 30
-#define MVLO_ALRM_MIN 0
-#define DC_ALRM_MAX 20
-#define DC_ALRM_MIN 0
+
 
 SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals) {
     this->tft = &tft;
@@ -102,7 +95,7 @@ void SetScreen::handleTouch(TSPoint p) {
     } else if (p.x < 360 && p.y > 194) {
 
     } else if (p.y > 194) {
-
+        *screen = ALARMSCREEN;
        // drawAlarmScreen();
     } else if (p.x < 120 && p.y > 70) {
         *modvals = {"RR", RR_MIN, RR_MAX, settings.rr, settings.rr};
