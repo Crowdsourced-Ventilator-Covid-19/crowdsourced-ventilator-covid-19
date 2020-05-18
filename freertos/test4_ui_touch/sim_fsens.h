@@ -13,6 +13,7 @@ class SimFsens
         uint32_t t;
         float v;
         float mv;
+        int rr;
     private:
         QueueHandle_t lungQ;
         Lung_t lung;

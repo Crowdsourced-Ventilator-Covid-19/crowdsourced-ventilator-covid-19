@@ -10,13 +10,12 @@
 #define GREEN     0x07E0
 #define DKBLUE    0x000D
 
-MainScreen::MainScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t stateQ) {
+MainScreen::MainScreen(Adafruit_HX8357 &tft, Screen &screen) {
     this->tft = &tft;
-    this->stateQ = stateQ;
     this->screen = &screen;
     pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, false);
     vGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK, false);
-    fGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
+    fGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -100, 100, 25, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
 };
 
 void MainScreen::draw() {
@@ -24,41 +23,41 @@ void MainScreen::draw() {
     pGraph.draw();
     fGraph.draw();
     vGraph.draw();
-    drawMeas("Ppeak cmh2o", 380, 380, 10, "", YELLOW);
-    drawMeas("Pplat cmh2o", 380, 380, 60, "", YELLOW);
-    drawMeas("PEEP cmh2o", 380, 380, 110, "", YELLOW);
-    drawMeas("RR bpm", 380, 380, 160, "", WHITE);
-    drawMeas("TV ml", 380, 380, 210, "", GREEN);
-    drawMeas("MV lpm", 380, 380, 260, "", GREEN);
+    drawMeas("Ppeak cmh2o", 380, 10);
+    drawMeas("Pplat cmh2o", 380, 60);
+    drawMeas("PEEP cmh2o", 380, 110);
+    drawMeas("RR bpm", 380, 160);
+    drawMeas("TV ml", 380, 210);
+    drawMeas("MV lpm", 380, 260);
 }
 
 void MainScreen::update(Sample_t sample) {
-    //Serial.println(String(sample.f_ts) + " " + String(sample.f));
     pGraph.plot(sample.p_ts, sample.p);
     fGraph.plot(sample.f_ts, sample.f);
     vGraph.plot(sample.v_ts, sample.v);
 }
 
 void MainScreen::updateMeas(State_t state) {
-    updateVal(380, 10, String(round(state.peak)), YELLOW);
-    updateVal(380, 60, String(round(state.plat)), YELLOW);
-    updateVal(380, 110, String(round(state.peep)), YELLOW);
-    updateVal(380, 160, String(state.rr), WHITE);
-    updateVal(380, 210, String(round(state.tv)), GREEN);
+    updateVal(380, 10, String(int(round(state.peak))), YELLOW);
+    updateVal(380, 60, String(int(round(state.plat))), YELLOW);
+    updateVal(380, 110, String(int(round(state.peep))), YELLOW);
+    updateVal(380, 160, String(int(round(state.rr))), WHITE);
+    updateVal(380, 210, String(int(round(state.tv))), GREEN);
     updateVal(380, 260, String(state.minvol / 1000.0), GREEN);
 }
 
 // draw measurement info
-void MainScreen::drawMeas(String label, int labelx, int valuex, int y, String value, unsigned int vcolor) {
+void MainScreen::drawMeas(String label, int labelx, int y) {
     tft->setFont();
     tft->setTextSize(1);
     tft->setTextColor(WHITE, BLACK);
     tft->setCursor(labelx, y);
     tft->println(label);
-    updateVal(valuex, y, value, vcolor);
 }
+
 // update the measurement number
 void MainScreen::updateVal(int x, int y, String value, unsigned int vcolor) {
+    // Serial.println(String(value));
     tft->setTextSize(1);
     tft->setFont(&FreeSans18pt7b);
     tft->setTextColor(vcolor, BLACK);

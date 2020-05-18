@@ -16,15 +16,14 @@
 class MainScreen
 {
     public:
-        MainScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t stateQ);
+        MainScreen(Adafruit_HX8357 &tft, Screen &screen);
         void draw();
         void update(Sample_t sample);
         void updateMeas(State_t state);
         void handleTouch(TSPoint p);
     private:
-        void drawMeas(String label, int labelx, int valuex, int y, String value, unsigned int vcolor);
+        void drawMeas(String label, int labelx, int y);
         void updateVal(int x, int y, String value, unsigned int vcolor);
-        QueueHandle_t stateQ;
         Adafruit_HX8357 *tft;
         State_t state;
         Settings_t settings;

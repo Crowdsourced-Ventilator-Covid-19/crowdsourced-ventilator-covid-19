@@ -37,18 +37,21 @@ void Lung::update() {
         lung.p = p_i + p_pi + p_pe;
         if (state.phase == INSPIRATORY) {
             if (t - t0 < 333) {
-                lung.fin = 0.8 * 3.0 * float(t-t0)/1000 * 60;
+                lung.fin = 1.4 * 3.0 * float(t-t0)/1000 * 60;
             } else {
-                lung.fin = 0.8 * exp(-0.005*float(t-t0-333)) * 60;
+                lung.fin = 1.4 * exp(-0.005*float(t-t0-333)) * 60;
             }
             lung.fout = 0;
         } else if (state.phase == EXPIRATORY) {
             if (te < 333) {
-                lung.fout = 0.8 * 3.0 *  float(te)/1000 * 60;
+                lung.fout = 1.4 * 3.0 *  float(te)/1000 * 60;
             } else {
-                lung.fout = 0.8 * exp(-0.005*float(te)) * 60;
+                lung.fout = 1.4 * exp(-0.005*float(te)) * 60;
             }
             lung.fin = 0;
+        } else {
+            lung.fin = 0;
+            lung.fout = 0;
         }
 
         //char buffer [100];

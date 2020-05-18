@@ -108,8 +108,8 @@ void readSensor( void * parameter )
     xQueuePeek(settingQ, &settings, 10);
 
     //resetTimers(settings, breathTimer, ieTimer);
-    breathTimer = round(60.0 / settings.rr * 1000.0) + millis();
-    ieTimer = round((60.0 / settings.rr * 1000.0) * (1.0 - (float(settings.ier)/10.0 / (float(settings.ier)/10.0+1.0)))) + millis();
+    breathTimer = 0;
+    ieTimer = 0;
 
     for(;;) {
         xQueuePeek(stateQ, &state, 10);
@@ -128,34 +128,6 @@ void readSensor( void * parameter )
         }
 
         switch(state.phase) {
-            case INSPIRATORY:
-                simFin.read();
-                sample.f = simFin.f;
-                sample.f_ts = simFin.t;
-                sample.v = simFin.v;
-                sample.v_ts = simFin.t;
-
-                // check if we've hit desired TV
-                if (simFin.v >= settings.tv) {
-                    // retract piston
-                    state.phase = POSTINSPIRATORY;
-                    xQueueOverwrite(stateQ, &state);
-                }
-                // continue into POSTINSPIRATORY
-            case POSTINSPIRATORY:
-                if (millis() > ieTimer) {
-                    // retract piston, open expiratory valve
-                    simFin.updateMv();
-                    state.phase = EXPIRATORY;
-                    state.peak = simPsens.peak;
-                    state.plat = simPsens.avg;
-                    state.tv = simFin.v;
-                    state.minvol = simFin.mv;
-                    v = simFin.v;
-                    simFin.v = 0;  // reset insp flow meter to look for patient trigger
-                    xQueueOverwrite(stateQ, &state);
-                }
-                break;
             case EXPIRATORY:
                 simFout.read();
                 simFin.read();
@@ -175,17 +147,46 @@ void readSensor( void * parameter )
                         // compress bag
                     }
                     // close expiratory path
+
+                    // reset timer
                     breathTimer = round(60.0 / settings.rr * 1000.0) + millis();
                     ieTimer = round((60.0 / settings.rr * 1000.0) * (1.0 - (float(settings.ier)/10.0 / (float(settings.ier)/10.0+1.0)))) + millis();
 
                 }
+                break;
+            default: // INSPIRATORY or POSTINSPIRATORY
+                simFin.read();
+                sample.f = simFin.f;
+                sample.f_ts = simFin.t;
+                sample.v = simFin.v;
+                sample.v_ts = simFin.t;
 
+                // check if we've hit desired TV
+                if (state.phase == INSPIRATORY && simFin.v >= settings.tv) {
+                    // retract piston
+                    state.phase = POSTINSPIRATORY;
+                    xQueueOverwrite(stateQ, &state);
+                }
+
+                if (millis() > ieTimer) {
+                    // retract piston, open expiratory valve
+                    simFin.updateMv();   // update minute volume tracker
+                    state.phase = EXPIRATORY;
+                    state.peak = simPsens.peak;
+                    state.plat = simPsens.avg;
+                    state.tv = simFin.v;
+                    state.minvol = simFin.mv;
+                    state.rr = simFin.rr;
+                    v = simFin.v;
+                    simFin.v = 0;  // reset insp flow meter to look for patient trigger
+                    xQueueOverwrite(stateQ, &state);
+                }
                 break;
         }
         if(xQueueSend(sampleQ, &sample, 0) != pdTRUE) {
             Serial.println("queue error\n\r");
         }
-        delay(50);
+        delay(10);
     }
 }
 
@@ -201,7 +202,7 @@ void displayResults( void * parameter)
     Phase oldPhase = INSPIRATORY;
 
     SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals);
-    MainScreen mainScreen = MainScreen(tft, screen, stateQ);
+    MainScreen mainScreen = MainScreen(tft, screen);
     ModScreen modScreen = ModScreen(tft, screen, modvals);
     AlarmScreen alarmScreen = AlarmScreen(tft, screen, settingQ, modvals);
 
@@ -228,12 +229,12 @@ void displayResults( void * parameter)
 
         if (xQueuePeek(stateQ, &state, 10) == pdTRUE) {
             // if there was a phase transition to expiratory, update measurements
-            if (oldPhase == INSPIRATORY && state.phase == EXPIRATORY) {
+            if (oldPhase != EXPIRATORY && state.phase == EXPIRATORY) {
                 if (screen == MAINSCREEN) {
                     mainScreen.updateMeas(state);
                 }
-                oldPhase = state.phase;
             }
+            oldPhase = state.phase;
         };
         // pull samples off the sample queue
         
@@ -269,7 +270,7 @@ void displayResults( void * parameter)
                     break;
             }
         }
-        delay(50);
+        delay(1);
     }
 }
 
@@ -277,7 +278,7 @@ void simLung(void * parameter) {
     Lung lung = Lung(stateQ, lungQ);
     for(;;) {
         lung.update();
-        delay(10);
+        delay(1);
     }
 }
 
