@@ -15,8 +15,8 @@ MainScreen::MainScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t state
     this->stateQ = stateQ;
     this->screen = &screen;
     pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, false);
-    fGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK, false);
-    vGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
+    vGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK, false);
+    fGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -60, 60, 20, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
 };
 
 void MainScreen::draw() {
@@ -33,10 +33,10 @@ void MainScreen::draw() {
 }
 
 void MainScreen::update(Sample_t sample) {
-    double t = float(sample.t % 15000) / 1000.0;
-    pGraph.plot(sample.t, cos(t) * 10 + 20);
-    fGraph.plot(sample.t, sin(t) * 200 + 300);
-    vGraph.plot(sample.t, cos(t) * 40);
+    //Serial.println(String(sample.f_ts) + " " + String(sample.f));
+    pGraph.plot(sample.p_ts, sample.p);
+    fGraph.plot(sample.f_ts, sample.f);
+    vGraph.plot(sample.v_ts, sample.v);
 }
 
 void MainScreen::updateMeas(State_t state) {

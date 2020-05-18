@@ -1,9 +1,13 @@
-#ifndef types_h
-#define types_h
+#ifndef TYPES_H
+#define TYPES_H
 
 typedef struct {
-    uint32_t t;
+    float p;
+    uint32_t p_ts;
     float v;
+    uint32_t v_ts;
+    float f;
+    uint32_t f_ts;
 } Sample_t;
 
 typedef struct {
@@ -30,6 +34,7 @@ enum Screen {
 enum Phase {
     NOPHASE,
     INSPIRATORY,
+    POSTINSPIRATORY,
     EXPIRATORY
 };
 
@@ -53,5 +58,10 @@ typedef struct {
     int newval;
 } ModVal_t;
 
+typedef struct {
+    float p;
+    float fin;
+    float fout;
+} Lung_t;
 
 #endif
