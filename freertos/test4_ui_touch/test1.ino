@@ -101,6 +101,7 @@ void resetTimers(Settings_t settings, uint32_t &breathTimer, uint32_t &ieTimer) 
 }
 */
 
+// monitor for alarms and flash the alarm if needed
 void alarmTask( void * parameter) 
 {   
     Alarm_t alarms;
@@ -154,11 +155,15 @@ void readSensor( void * parameter )
         sample.p = simPsens.p;
         sample.p_ts = simPsens.t;
 
-
-        // overpressure, retract piston and fire alarm
+        // hit pmax during INSPIRATORY stroke, retract piston, fire alarm
         if (simPsens.p > settings.pmax) {
-            Serial.println("P > Pmax : " + String(simPsens.p));
+            //Serial.println("P > Pmax : " + String(simPsens.p));
             digitalWrite(PISTON, LOW);
+            alarms.pmax = true;
+            xQueueOverwrite(alarmQ, &alarms);
+        }
+
+        if (simPsens.p > settings.peakAlarm) {
             alarms.pmax = true;
             xQueueOverwrite(alarmQ, &alarms);
         }
