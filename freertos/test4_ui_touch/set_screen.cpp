@@ -21,7 +21,7 @@
 #define TRIG_MIN   0
 
 
-SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals) {
+SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals, unsigned long &alarmMuteTimer) {
     this->tft = &tft;
     this->settingQ = settingQ;
     this->screen = &screen;
@@ -29,6 +29,7 @@ SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t setting
     xQueuePeek(settingQ, &settings, 0);
     this->lastDebounceTime = 0;
     this->debounceDelay = 500;
+    this->alarmMuteTimer = &alarmMuteTimer;
 };
 
 void SetScreen::draw() {
@@ -48,6 +49,7 @@ void SetScreen::draw() {
     drawSetButton("Pmax", "", String(settings.pmax), BLACK, YELLOW, 361, 70);
     drawSetButton("AC", "Trig", String(settings.trig), BLACK, YELLOW, 4, 194);
     drawSetButton("Power", "", powertxt, BLACK, WHITE, 123, 194);
+    drawSetButton("Mute", "Alarms", String(""), BLACK, RED, 242, 194);
     drawSetButton("Alarms", "", String(""), BLACK, RED, 361, 194);
 };
 
@@ -93,7 +95,7 @@ void SetScreen::handleTouch(TSPoint p) {
             lastDebounceTime = millis();
         }
     } else if (p.x < 360 && p.y > 194) {
-
+        *alarmMuteTimer = millis() + 60000; // mute for 1 min
     } else if (p.y > 194) {
         *screen = ALARMSCREEN;
        // drawAlarmScreen();

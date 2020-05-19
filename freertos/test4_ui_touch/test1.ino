@@ -29,8 +29,10 @@ QueueHandle_t sampleQ = NULL;
 QueueHandle_t settingQ = NULL;
 QueueHandle_t stateQ = NULL;
 QueueHandle_t lungQ = NULL; // sim lung
+QueueHandle_t alarmQ = NULL;
 Screen screen = SETSCREEN;
 ModVal_t modvals;
+unsigned long alarmMuteTimer = 0;
 
 void setup(void) {
     Serial.begin(115200);
@@ -45,6 +47,7 @@ void setup(void) {
     settingQ = xQueueCreate(1, sizeof(Settings_t));
     stateQ = xQueueCreate(1, sizeof(State_t));
     lungQ = xQueueCreate(1, sizeof(Lung_t));  // sim lung
+    alarmQ = xQueueCreate(1, sizeof(Alarm_t));
 
     initQ();
 
@@ -74,6 +77,15 @@ void setup(void) {
                     1,                /* Priority of the task. */
                     NULL,             /* Task handle. */
                     1);               /* pin to core 1 */
+
+    xTaskCreatePinnedToCore(
+                    alarmTask,          /* Task function. */
+                    "alarmTask",        /* String with name of task. */
+                    10000,            /* Stack size in bytes. */
+                    NULL,             /* Parameter passed as input of the task */
+                    1,                /* Priority of the task. */
+                    NULL,             /* Task handle. */
+                    1);               /* pin to core 1 */
 }
 
 void loop() {
@@ -89,6 +101,26 @@ void resetTimers(Settings_t settings, uint32_t &breathTimer, uint32_t &ieTimer) 
 }
 */
 
+void alarmTask( void * parameter) 
+{   
+    Alarm_t alarms;
+    alarmMuteTimer = 0;
+    unsigned long pulseTimer = 0;
+    int alarmState = LOW;
+
+    for (;;) {
+        xQueuePeek(alarmQ, &alarms, 10);
+        if ((millis() > alarmMuteTimer) && (alarms.pmax || alarms.mvhi || alarms.mvlo || alarms.dc) && (millis() > pulseTimer)) {
+            alarmState = !alarmState;
+            digitalWrite(ALARM, alarmState);
+            pulseTimer = millis() + 1000;
+        } else {
+            digitalWrite(ALARM, LOW);
+        }
+        delay(100);
+    }
+}
+
 // read sensor
 void readSensor( void * parameter )
 {
@@ -98,6 +130,7 @@ void readSensor( void * parameter )
     uint32_t breathTimer = 0;
     State_t state;
     Settings_t settings;
+    Alarm_t alarms;
     SimPsens simPsens = SimPsens(lungQ);
     SimFsens simFin = SimFsens(lungQ, 0);
     SimFsens simFout = SimFsens(lungQ, 2);
@@ -114,17 +147,20 @@ void readSensor( void * parameter )
     for(;;) {
         xQueuePeek(stateQ, &state, 10);
         xQueuePeek(settingQ, &settings, 10);
+        xQueuePeek(alarmQ, &alarms, 10);
 
         // read patient pressure & timestamp
         simPsens.read();
         sample.p = simPsens.p;
         sample.p_ts = simPsens.t;
-        //Serial.println(String(sample.p) + " " + String(sample.p_ts));
 
 
+        // overpressure, retract piston and fire alarm
         if (simPsens.p > settings.pmax) {
             Serial.println("P > Pmax : " + String(simPsens.p));
-            //retract piston, fire alarm
+            digitalWrite(PISTON, LOW);
+            alarms.pmax = true;
+            xQueueOverwrite(alarmQ, &alarms);
         }
 
         switch(state.phase) {
@@ -144,9 +180,9 @@ void readSensor( void * parameter )
 
                     xQueueOverwrite(stateQ, &state);
                     if (settings.power) {
-                        // compress bag
+                        digitalWrite(PISTON, HIGH);  // squeeze bag
+                        digitalWrite(EXPVALVE, LOW);  // close expiratory path
                     }
-                    // close expiratory path
 
                     // reset timer
                     breathTimer = round(60.0 / settings.rr * 1000.0) + millis();
@@ -164,22 +200,30 @@ void readSensor( void * parameter )
                 // check if we've hit desired TV
                 if (state.phase == INSPIRATORY && simFin.v >= settings.tv) {
                     // retract piston
+                    digitalWrite(PISTON, LOW);
                     state.phase = POSTINSPIRATORY;
                     xQueueOverwrite(stateQ, &state);
                 }
 
                 if (millis() > ieTimer) {
                     // retract piston, open expiratory valve
+                    if (settings.power) {
+                        digitalWrite(PISTON, LOW);
+                        digitalWrite(EXPVALVE, HIGH);
+                    }
                     simFin.updateMv();   // update minute volume tracker
                     state.phase = EXPIRATORY;
                     state.peak = simPsens.peak;
                     state.plat = simPsens.avg;
                     state.tv = simFin.v;
                     state.minvol = simFin.mv;
+                    alarms.mvhi = (simFin.mv / 1000.0 > settings.mvhiAlarm);
+                    alarms.mvlo = (simFin.mv / 1000.0 < settings.mvloAlarm);
                     state.rr = simFin.rr;
                     v = simFin.v;
                     simFin.v = 0;  // reset insp flow meter to look for patient trigger
                     xQueueOverwrite(stateQ, &state);
+                    xQueueOverwrite(alarmQ, &alarms);
                 }
                 break;
         }
@@ -200,8 +244,9 @@ void displayResults( void * parameter)
     State_t state;
     Screen oldScreen = NOSCREEN;
     Phase oldPhase = INSPIRATORY;
+    Alarm_t alarms;
 
-    SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals);
+    SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals, alarmMuteTimer);
     MainScreen mainScreen = MainScreen(tft, screen);
     ModScreen modScreen = ModScreen(tft, screen, modvals);
     AlarmScreen alarmScreen = AlarmScreen(tft, screen, settingQ, modvals);
@@ -243,6 +288,12 @@ void displayResults( void * parameter)
             // if we're on the main screen plot the sample, otherwise ignore it
             if (screen == MAINSCREEN) {
                 mainScreen.update(sample);
+            }
+        }
+
+        if(xQueuePeek(alarmQ, &alarms, 10) == pdTRUE) {
+            if (screen == MAINSCREEN) {
+                mainScreen.updateAlarms(alarms);
             }
         }
 
@@ -316,6 +367,11 @@ void initQ() {
     screen = MAINSCREEN;
 
     modvals = {"", 0, 0, 0, 0};
+
+    Alarm_t alarms = {
+        false, false, false, false
+    };
+    xQueueOverwrite(alarmQ, &alarms);
 }
 
 

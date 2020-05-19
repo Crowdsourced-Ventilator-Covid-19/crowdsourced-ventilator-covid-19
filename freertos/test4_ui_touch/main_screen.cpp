@@ -1,6 +1,7 @@
 #include "main_screen.h"
 #include <Adafruit_HX8357.h>
 #include "graph.h"
+#include <Fonts/FreeSans12pt7b.h>
 
 #define BLACK     0x0000
 #define GREY      0xC618
@@ -16,6 +17,7 @@ MainScreen::MainScreen(Adafruit_HX8357 &tft, Screen &screen) {
     pGraph = Graph(tft, 40, 90, 320, 80, 0, 15, 1, -10, 50, 10, "Pressure", "", "cmH2o", DKBLUE, RED, YELLOW, WHITE, BLACK, false);
     vGraph = Graph(tft, 40, 190, 320, 80, 0, 15, 1, 0, 800, 200, "Volume", "", "ml", DKBLUE, RED, GREEN, WHITE, BLACK, false);
     fGraph = Graph(tft, 40, 290, 320, 85, 0, 15, 1, -100, 100, 25, "Flow", "", "lpm", DKBLUE, RED, WHITE, WHITE, BLACK, true);
+    alarmState = 0;
 };
 
 void MainScreen::draw() {
@@ -29,6 +31,34 @@ void MainScreen::draw() {
     drawMeas("RR bpm", 380, 160);
     drawMeas("TV ml", 380, 210);
     drawMeas("MV lpm", 380, 260);
+}
+
+void MainScreen::updateAlarms(Alarm_t alarms) {
+    if ((alarms.pmax || alarms.mvhi || alarms.mvlo || alarms.dc) && (millis() > pulseTimer)) {
+        alarmState = !alarmState;
+        if (alarmState) {
+            fcolor = BLACK;
+        } else {
+            fcolor = RED;
+        }
+        tft->setTextSize(1);
+        tft->setFont(&FreeSans12pt7b);
+        tft->setTextColor(fcolor, BLACK);
+        if (alarms.pmax) {
+            tft->setCursor(220 , 40);
+            tft->println("PMax ALRM");
+        } else if (alarms.mvhi) {
+            tft->setCursor(220, 140);
+            tft->println("MvHi ALRM");
+        } else if (alarms.mvlo) {
+            tft->setCursor(220, 140);
+            tft->println("MvLo ALRM");
+        } else if (alarms.dc) {
+            tft->setCursor(220, 240);
+            tft->println("DC ALRM");
+        }
+        pulseTimer = millis() + 1000;
+    }
 }
 
 void MainScreen::update(Sample_t sample) {

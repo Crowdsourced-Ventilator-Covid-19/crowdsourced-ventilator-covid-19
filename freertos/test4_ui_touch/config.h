@@ -1,7 +1,9 @@
 #ifndef config_h
 #define config_h
 
-
+#define PISTON 14
+#define EXPVALVE 27
+#define ALARM 26
 
 
 // These are the four touchscreen analog pins

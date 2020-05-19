@@ -19,6 +19,7 @@ class MainScreen
         MainScreen(Adafruit_HX8357 &tft, Screen &screen);
         void draw();
         void update(Sample_t sample);
+        void updateAlarms(Alarm_t alarms);
         void updateMeas(State_t state);
         void handleTouch(TSPoint p);
     private:
@@ -32,6 +33,10 @@ class MainScreen
         Graph pGraph;
         Graph fGraph;
         Graph vGraph;
+        unsigned long pulseTimer;
+        int alarmState;
+        unsigned int fcolor;
+
 
 };
 

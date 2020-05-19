@@ -64,4 +64,12 @@ typedef struct {
     float fout;
 } Lung_t;
 
+typedef struct {
+    bool pmax;
+    bool mvhi;
+    bool mvlo;
+    bool dc;
+} Alarm_t;
+
+
 #endif

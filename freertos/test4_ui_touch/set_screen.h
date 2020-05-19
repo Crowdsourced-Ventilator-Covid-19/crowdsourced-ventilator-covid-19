@@ -17,7 +17,7 @@
 class SetScreen
 {
     public:
-        SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals);
+        SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals, unsigned long &alarmMuteTimer);
         void draw();
         void handleTouch(TSPoint p);
     protected:
@@ -32,6 +32,7 @@ class SetScreen
         Settings_t settings;
         unsigned long lastDebounceTime;
         unsigned long debounceDelay;
+        unsigned long *alarmMuteTimer;
 };
 
 #endif
