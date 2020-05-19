@@ -49,6 +49,14 @@ void setup(void) {
     lungQ = xQueueCreate(1, sizeof(Lung_t));  // sim lung
     alarmQ = xQueueCreate(1, sizeof(Alarm_t));
 
+    pinMode(PISTON, OUTPUT);
+    digitalWrite(PISTON, LOW);
+    pinMode(EXPVALVE, OUTPUT);
+    digitalWrite(EXPVALVE, LOW);
+    pinMode(ALARM, OUTPUT);
+    digitalWrite(ALARM, LOW);
+
+
     initQ();
 
     xTaskCreatePinnedToCore(
