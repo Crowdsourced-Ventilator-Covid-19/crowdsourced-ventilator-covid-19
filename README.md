@@ -108,7 +108,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ## Prototype Phase
 - Design
 
-![v0.03](https://i.imgur.com/NC8aWRx.png)
+![v0.03](https://i.imgur.com/oYZlQoJ.png)
 ![PCB](https://i.imgur.com/mL1ztxj.png)
 
 - Demonstration
