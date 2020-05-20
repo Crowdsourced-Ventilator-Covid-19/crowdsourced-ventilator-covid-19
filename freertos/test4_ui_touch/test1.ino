@@ -14,6 +14,8 @@
 #include "sim_lung.h"
 #include "sim_psens.h"
 #include "sim_fsens.h"
+#include "Wire.h"
+#include "psens.h"
 
 #define RESET_PIN -1
 #define EOC_PIN -1
@@ -25,20 +27,30 @@ Adafruit_HX8357 tft = Adafruit_HX8357(TFT_CS, TFT_DC, TFT_RST);
 // For the one we're using, its 300 ohms across the X plate
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 
+QueueHandle_t lungQ = xQueueCreate(1, sizeof(Lung_t));  // sim lung
+SimPsens simPsens = SimPsens(lungQ, 1);
+SimFsens simFin = SimFsens(lungQ, 0);
+SimFsens simFout = SimFsens(lungQ, 2);
+Psens psens = Psens(1);
+
 QueueHandle_t sampleQ = NULL;
 QueueHandle_t settingQ = NULL;
 QueueHandle_t stateQ = NULL;
-QueueHandle_t lungQ = NULL; // sim lung
 QueueHandle_t alarmQ = NULL;
 Screen screen = SETSCREEN;
 ModVal_t modvals;
 unsigned long alarmMuteTimer = 0;
 
 void setup(void) {
+    Wire.begin();
     Serial.begin(115200);
     delay(1000);
     tft.begin();
     tft.setRotation(3);
+
+    tft.fillScreen(BLACK);
+    //psens.calibrate(tft);
+    //delay(10000);
 
     // touchscreen library expects 10-bit voltage measurements
     analogReadResolution(10);
@@ -46,7 +58,6 @@ void setup(void) {
     sampleQ = xQueueCreate(1000, sizeof(Sample_t));
     settingQ = xQueueCreate(1, sizeof(Settings_t));
     stateQ = xQueueCreate(1, sizeof(State_t));
-    lungQ = xQueueCreate(1, sizeof(Lung_t));  // sim lung
     alarmQ = xQueueCreate(1, sizeof(Alarm_t));
 
     pinMode(PISTON, OUTPUT);
@@ -140,9 +151,7 @@ void readSensor( void * parameter )
     State_t state;
     Settings_t settings;
     Alarm_t alarms;
-    SimPsens simPsens = SimPsens(lungQ);
-    SimFsens simFin = SimFsens(lungQ, 0);
-    SimFsens simFout = SimFsens(lungQ, 2);
+
 
     float v;
 
@@ -344,17 +353,6 @@ void simLung(void * parameter) {
         lung.update();
         delay(1);
     }
-}
-
-void initSensor() {
-    Serial.println("MPRLS Simple Test");
-    if (! mpr.begin()) {
-        Serial.println("Failed to communicate with MPRLS sensor, check wiring?");
-        while (1) {
-            delay(10);
-        }
-    }
-    Serial.println("Found MPRLS sensor");
 }
 
 void initQ() {

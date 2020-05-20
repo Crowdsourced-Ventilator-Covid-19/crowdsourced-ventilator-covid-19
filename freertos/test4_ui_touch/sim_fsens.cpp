@@ -3,6 +3,7 @@
 SimFsens::SimFsens(QueueHandle_t lungQ, int tca) {
     this->lungQ = lungQ;
     this->tca = tca;
+    mux = I2cMux();
     v = 0;
     of = 0;
     ot = millis();
@@ -16,6 +17,7 @@ SimFsens::SimFsens(QueueHandle_t lungQ, int tca) {
 }
 
 void SimFsens::read() {
+    mux.select(tca);
     if(xQueuePeek(lungQ, &lung,10) == pdTRUE) {
         if (tca == 0) {
             f = lung.fin;

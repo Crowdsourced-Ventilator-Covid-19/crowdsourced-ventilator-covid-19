@@ -1,7 +1,9 @@
 #include "sim_psens.h"
 
-SimPsens::SimPsens(QueueHandle_t lungQ) {
+SimPsens::SimPsens(QueueHandle_t lungQ, int tca) {
     this->lungQ = lungQ;
+    this->tca = tca;
+    mux = I2cMux();
     for (int i=0; i<10; i++) {
         entries[i] = 0;
     }
@@ -13,6 +15,7 @@ SimPsens::SimPsens(QueueHandle_t lungQ) {
 }
 
 void SimPsens::read() {
+    mux.select(tca);
     if(xQueuePeek(lungQ, &lung,10) == pdTRUE) {
         total = total - entries[idx];
         entries[idx] = lung.p;

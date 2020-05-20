@@ -2,6 +2,7 @@
 #define SIM_FSENS_H
 #include <Arduino.h>
 #include "types.h"
+#include "i2c_mux.h"
 
 class SimFsens
 {
@@ -23,6 +24,7 @@ class SimFsens
         float vals[60];
         uint32_t ts[60];
         int idx;
+        I2cMux mux;
 };
 
 #endif
