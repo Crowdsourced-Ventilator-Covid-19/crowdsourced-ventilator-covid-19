@@ -191,6 +191,7 @@ void readSensor( void * parameter )
                 sample.v = v +iFsens.v - eFsens.v;
                 sample.v_ts = eFsens.t;
 
+                // if time for a new breath or if patient tried to inhale
                 if (millis() > breathTimer || (settings.trig > 0 && iFsens.v > settings.trig))  {
                     state.phase = INSPIRATORY;
                     state.peep = psens.p;       // capture PEEP at end of expiratory phase
@@ -210,8 +211,10 @@ void readSensor( void * parameter )
                 break;
             default: // INSPIRATORY or POSTINSPIRATORY
                 iFsens.read();
+                // read inspiratory flow
                 sample.f = iFsens.f;
                 sample.f_ts = iFsens.t;
+                // read inspiratory volume
                 sample.v = iFsens.v;
                 sample.v_ts = iFsens.t;
 
@@ -259,10 +262,16 @@ void displayResults( void * parameter)
     Sample_t sample;
     Settings_t settings;
     State_t state;
-    Screen oldScreen = NOSCREEN;
-    Phase oldPhase = INSPIRATORY;
-    Screen screen = SETSCREEN;
     Alarm_t alarms;
+
+    // track current screen and screen transitions
+    Screen screen = SETSCREEN;
+    Screen oldScreen = NOSCREEN;
+
+    // track phase transitions
+    Phase oldPhase = INSPIRATORY;
+
+    // struct to pass values between mod screen and set screen
     ModVal_t modvals = {"", 0, 0, 0, 0};
 
     SetScreen setScreen = SetScreen(tft, screen, settingQ, modvals, alarmMuteTimer);
@@ -302,6 +311,7 @@ void displayResults( void * parameter)
         };
 
         // pull samples off the sample queue
+        // need to be sure we do this fast enough to not stall sample queue
         if(xQueueReceive(sampleQ, &sample,100) == pdTRUE) {
             // if we're on the main screen plot the sample, otherwise ignore it
             if (screen == MAINSCREEN) {
@@ -348,6 +358,7 @@ void displayResults( void * parameter)
 }
 
 #ifdef SIM_LUNG
+// task to simulate a lung in simulation mode
 void simLung(void * parameter) {
     Lung lung = Lung(stateQ, lungQ);
     for(;;) {
