@@ -218,6 +218,9 @@ void readSensor( void * parameter )
                 sample.v = iFsens.v;
                 sample.v_ts = iFsens.t;
 
+                // TODO: add DC alarm looking for failure for pressure to increase
+                // TODO: add DC alarm looking for expiratory volumn difference from inspiratory
+
                 // check if we've hit desired TV
                 if (state.phase == INSPIRATORY && iFsens.v >= settings.tv) {
                     digitalWrite(PISTON, LOW);          // retract piston
@@ -242,6 +245,8 @@ void readSensor( void * parameter )
                     state.rr = iFsens.rr;       // log the actual respiratory rate
                     v = iFsens.v;               // save off delivered tidal volume
                     iFsens.v = 0;               // reset insp flow meter to look for patient trigger
+
+                    // TODO: add PEEP alarm
                     xQueueOverwrite(stateQ, &state);
                     xQueueOverwrite(alarmQ, &alarms);
                 }
