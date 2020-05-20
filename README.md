@@ -103,7 +103,7 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [2x 1N4004 diode](https://www.sparkfun.com/products/14884)| $1 |
 | [2x Venturi flow meter tube](https://www.thingiverse.com/thing:4354501) |  |
 | [2x PEEP valve](https://www.amazon.com/gp/product/B00Q0SBGR2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $24 |
-| Total |  |
+| Total | $416 |
 
 ## Prototype Phase
 - Design
