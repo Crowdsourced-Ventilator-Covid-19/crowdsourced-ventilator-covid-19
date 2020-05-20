@@ -2,6 +2,11 @@
 
 #define Addr 0x28
 
+/* flow sensor class
+ * tracks flow, tidal volume, repiratory rate and minute volume
+ */
+
+
 Fsens::Fsens(int tca) {
     this->tca = tca;
     mux = I2cMux();

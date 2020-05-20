@@ -20,6 +20,7 @@
 #define TRIG_MAX   100
 #define TRIG_MIN   0
 
+// screen that shows paramter values, and buttons go to mod screen for changing value
 
 SetScreen::SetScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals, unsigned long &alarmMuteTimer) {
     this->tft = &tft;

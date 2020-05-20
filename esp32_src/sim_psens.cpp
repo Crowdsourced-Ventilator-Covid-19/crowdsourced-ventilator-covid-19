@@ -1,5 +1,9 @@
 #include "sim_psens.h"
 
+/* Pressure sensor class
+ * Tracks pressure, average pressure over last 10 samples, and peak pressure
+ */
+
 SimPsens::SimPsens(QueueHandle_t lungQ, int tca) {
     this->lungQ = lungQ;
     this->tca = tca;

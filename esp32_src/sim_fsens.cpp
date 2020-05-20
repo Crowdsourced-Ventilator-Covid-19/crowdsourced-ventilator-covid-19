@@ -1,5 +1,9 @@
 #include "sim_fsens.h"
 
+/* flow sensor class
+ * tracks flow, tidal volume, repiratory rate and minute volume
+ */
+
 SimFsens::SimFsens(QueueHandle_t lungQ, int tca) {
     this->lungQ = lungQ;
     this->tca = tca;

@@ -18,6 +18,8 @@
 #define DC_ALRM_MAX 20
 #define DC_ALRM_MIN 0
 
+// screen with alarm thresholds
+
 AlarmScreen::AlarmScreen(Adafruit_HX8357 &tft, Screen &screen, QueueHandle_t settingQ, ModVal_t &modvals) {
     this->tft = &tft;
     this->settingQ = settingQ;

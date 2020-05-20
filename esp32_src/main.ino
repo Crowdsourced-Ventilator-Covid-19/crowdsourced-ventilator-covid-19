@@ -82,6 +82,7 @@ void setup(void) {
     digitalWrite(ALARM, LOW);
 
 
+    // place timing critical tasks on core 0, and all other non timing critical tasks on core 1
     xTaskCreatePinnedToCore(
                     readSensor,          /* Task function. */
                     "ReadSensor",        /* String with name of task. */

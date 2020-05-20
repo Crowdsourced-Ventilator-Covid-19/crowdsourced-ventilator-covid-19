@@ -2,6 +2,10 @@
 
 #define Addr 0x28
 
+/* Pressure sensor class
+ * Tracks pressure, average pressure over last 10 samples, and peak pressure
+ */
+
 Psens::Psens(int tca) {
     this->tca = tca;
     mux = I2cMux();

@@ -9,6 +9,8 @@
 #define YELLOW    0xFFE0
 #define GREEN     0x07E0
 
+// Screen with slider to adjust parameter value
+
 ModScreen::ModScreen(Adafruit_HX8357 &tft, Screen &screen, ModVal_t &modvals) {
     this->tft = &tft;
     this->settingQ = settingQ;
