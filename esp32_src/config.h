@@ -4,7 +4,9 @@
 #define PISTON 14
 #define EXPVALVE 27
 #define ALARM 26
-
+#define STEP_DIR 32
+#define STEP_STEP 13
+#define STEP_EN 2
 
 // These are the four touchscreen analog pins
 #define YP A10  // must be an analog pin, use "An" notation!

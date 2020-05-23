@@ -28,6 +28,8 @@
 #include "fsens.h"
 #endif
 
+#include "AccelStepper.h"
+
 // tft screen
 Adafruit_HX8357 tft = Adafruit_HX8357(TFT_CS, TFT_DC, TFT_RST);
 // For better pressure precision, we need to know the resistance
@@ -69,18 +71,10 @@ void setup(void) {
     psens.calibrate(tft);
     iFsens.calibrate(tft);
     eFsens.calibrate(tft);
-    delay(10000);
+    delay(5000);
 
     // initialize the queues
     initQ();
-
-    pinMode(PISTON, OUTPUT);
-    digitalWrite(PISTON, LOW);
-    pinMode(EXPVALVE, OUTPUT);
-    digitalWrite(EXPVALVE, LOW);
-    pinMode(ALARM, OUTPUT);
-    digitalWrite(ALARM, LOW);
-
 
     // place timing critical tasks on core 0, and all other non timing critical tasks on core 1
     xTaskCreatePinnedToCore(
@@ -120,6 +114,24 @@ void setup(void) {
                     1,                /* Priority of the task. */
                     NULL,             /* Task handle. */
                     1);               /* pin to core 1 */
+
+    xTaskCreatePinnedToCore(
+                    exhValveTask,          /* Task function. */
+                    "exhValveTask",        /* String with name of task. */
+                    10000,            /* Stack size in bytes. */
+                    NULL,             /* Parameter passed as input of the task */
+                    1,                /* Priority of the task. */
+                    NULL,             /* Task handle. */
+                    1);               /* pin to core 1 */
+
+    xTaskCreatePinnedToCore(
+                    airDriveTask,          /* Task function. */
+                    "airDriveTask",        /* String with name of task. */
+                    10000,            /* Stack size in bytes. */
+                    NULL,             /* Parameter passed as input of the task */
+                    1,                /* Priority of the task. */
+                    NULL,             /* Task handle. */
+                    1);               /* pin to core 1 */
 }
 
 void loop() {
@@ -134,6 +146,8 @@ void alarmTask( void * parameter)
     alarmMuteTimer = 0;
     unsigned long pulseTimer = 0;
     int alarmState = LOW;
+    pinMode(ALARM, OUTPUT);
+    digitalWrite(ALARM, LOW);
 
     for (;;) {
         xQueuePeek(alarmQ, &alarms, 10);
@@ -173,7 +187,10 @@ void readSensor( void * parameter )
 
         if (psens.p > settings.pmax) {
             // exceeded hard pressure ceiling, retract piston, fire alarm
-            digitalWrite(PISTON, LOW);
+            if(state.phase == INSPIRATORY) {
+                state.phase = POSTINSPIRATORY;
+                xQueueOverwrite(stateQ, &state);
+            }
             alarms.pmax = true;
             alarms.pwarn = false;  // overwrite soft warning
             xQueueOverwrite(alarmQ, &alarms);
@@ -200,11 +217,6 @@ void readSensor( void * parameter )
                     eFsens.v = 0;               // reset expiratory flow meter
                     xQueueOverwrite(stateQ, &state);
 
-                    if (settings.power) {
-                        digitalWrite(PISTON, HIGH);     // squeeze bag
-                        digitalWrite(EXPVALVE, LOW);    // close expiratory path
-                    }
-
                     // reset timer
                     breathTimer = round(60.0 / settings.rr * 1000.0) + millis();
                     ieTimer = round((60.0 / settings.rr * 1000.0) * (1.0 - (float(settings.ier)/10.0 / (float(settings.ier)/10.0+1.0)))) + millis();
@@ -224,17 +236,12 @@ void readSensor( void * parameter )
 
                 // check if we've hit desired TV
                 if (state.phase == INSPIRATORY && iFsens.v >= settings.tv) {
-                    digitalWrite(PISTON, LOW);          // retract piston
                     state.phase = POSTINSPIRATORY;
                     xQueueOverwrite(stateQ, &state);
                 }
 
                 if (millis() > ieTimer) {
                     // retract piston, open expiratory valve
-                    if (settings.power) {
-                        digitalWrite(PISTON, LOW);
-                        digitalWrite(EXPVALVE, HIGH);
-                    }
                     iFsens.updateMv();          // update minute volume tracker
                     state.phase = EXPIRATORY;
                     state.peak = psens.peak;    // report peak pressure during inspiratory phase
@@ -373,6 +380,68 @@ void simLung(void * parameter) {
     }
 }
 #endif
+
+void exhValveTask(void * parameter) {
+    State_t state;
+    Settings_t settings;
+    AccelStepper stepper(AccelStepper::DRIVER, STEP_STEP, STEP_DIR);
+    stepper.setEnablePin(STEP_EN);
+    stepper.setPinsInverted(false, false, true);
+    stepper.setMaxSpeed(3000);
+    stepper.setAcceleration(1000);
+    Phase oldPhase = NOPHASE;
+    stepper.move(400); // move the valve to the open position
+    stepper.setCurrentPosition(0); // reset position as zero
+
+    for(;;) {
+        xQueuePeek(stateQ, &state, 10);
+        if (state.phase != oldPhase) {
+            switch(state.phase) {
+                case INSPIRATORY:
+                    xQueuePeek(settingQ, &settings, 10);
+                    if(settings.power) {
+                        stepper.moveTo(-400);  // close exhValve
+                    }
+                    break;
+                case EXPIRATORY:
+                    stepper.move(0); // open exhValve
+                    break;
+            }
+            oldPhase = state.phase;
+        }
+        stepper.run();
+        delay(1);
+    }
+}
+
+void airDriveTask(void * parameter) {
+    State_t state;
+    Settings_t settings;
+    pinMode(PISTON, OUTPUT);
+    digitalWrite(PISTON, LOW);
+    Phase oldPhase = NOPHASE;
+
+    for(;;) {
+        xQueuePeek(stateQ, &state, 10);
+        if (state.phase != oldPhase) {            
+            switch(state.phase) {
+                case INSPIRATORY:
+                   xQueuePeek(settingQ, &settings, 10);
+                    if(settings.power) {
+                        digitalWrite(PISTON, HIGH); // drive piston
+                    }
+                    break;
+                case POSTINSPIRATORY:
+                case EXPIRATORY:
+                    digitalWrite(PISTON, LOW); // retract piston
+                    break;
+            }
+            oldPhase = state.phase;
+        }
+        delay(1);
+    }
+}
+
 
 // initialize the queues
 void initQ() {
