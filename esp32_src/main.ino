@@ -404,7 +404,7 @@ void exhValveTask(void * parameter) {
                     }
                     break;
                 case EXPIRATORY:
-                    stepper.move(0); // open exhValve
+                    stepper.moveTo(0); // open exhValve
                     break;
             }
             oldPhase = state.phase;
