@@ -387,11 +387,12 @@ void exhValveTask(void * parameter) {
     AccelStepper stepper(AccelStepper::DRIVER, STEP_STEP, STEP_DIR);
     stepper.setEnablePin(STEP_EN);
     stepper.setPinsInverted(false, false, true);
-    stepper.setMaxSpeed(3000);
-    stepper.setAcceleration(1000);
+    stepper.setMaxSpeed(600);
+    stepper.setAcceleration(3000);
     Phase oldPhase = NOPHASE;
-    stepper.move(400); // move the valve to the open position
+    stepper.move(-120); // move the valve to the open position
     stepper.setCurrentPosition(0); // reset position as zero
+    stepper.enableOutputs();
 
     for(;;) {
         xQueuePeek(stateQ, &state, 10);
@@ -400,7 +401,7 @@ void exhValveTask(void * parameter) {
                 case INSPIRATORY:
                     xQueuePeek(settingQ, &settings, 10);
                     if(settings.power) {
-                        stepper.moveTo(-400);  // close exhValve
+                        stepper.moveTo(120);  // close exhValve
                     }
                     break;
                 case EXPIRATORY:
