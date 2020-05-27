@@ -119,7 +119,6 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 - Adjustable pop-off safety
 [![PopOff](https://i.imgur.com/GcSfioq.png)](https://www.youtube.com/watch?v=k4BQMlsufNU)
 - 3d printed Expiratory Valve
-![ev](https://i.imgur.com/clEy51N.png)
+![ev](https://github.com/Crowdsourced-Ventilator-Covid-19/crowdsourced-ventilator-covid-19/blob/master/images/exp_valve.PNG)
 - Software control flowchart
-
 ![flowchart](https://github.com/Crowdsourced-Ventilator-Covid-19/crowdsourced-ventilator-covid-19/blob/master/images/state_machine_v2.png)
