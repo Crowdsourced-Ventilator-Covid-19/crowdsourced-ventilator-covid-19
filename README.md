@@ -122,4 +122,4 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 ![ev](https://i.imgur.com/clEy51N.png)
 - Software control flowchart
 
-![flowchart](https://githubusercontent.com/Crowdsourced-Ventilator-Covid-19/crowdsourced-ventilator-covid-19/master/images/state_machine.png)
+![flowchart](https://github.com/Crowdsourced-Ventilator-Covid-19/crowdsourced-ventilator-covid-19/blob/master/images/state_machine.png)
