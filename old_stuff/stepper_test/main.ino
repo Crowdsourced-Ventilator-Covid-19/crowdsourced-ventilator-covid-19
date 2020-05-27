@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
   digitalWrite(STEP_STEP, HIGH);
-  delayMicroseconds(3000);         
+  delayMicroseconds(2000);         
   digitalWrite(STEP_STEP, LOW);
   // delayMicroseconds(1000);
   Distance = Distance + 1;   // record this step
