@@ -1,0 +1,87 @@
+INITQ,
+OFF,
+INSPIRATORY:
+  entry/ 
+  airDrive on
+  exhValve closed
+  reset timers ,
+POSTINSPIRATORY:
+  entry/
+  airDrive off,
+EXPIRATORY:
+  entry/ 
+  airDrive off
+  exhValve open,
+POSTEXPIRATORY:
+  entry/
+  exhValve closed,
+PMAX_ALARM_OFF,
+PMAX_ALARM_ON,
+PWARN_ALARM_ON,
+PWARN_ALARM_OFF,
+MVHI_ALARM_OFF,
+MVHI_ALARM_ON,
+MVLO_ALARM_OFF,
+MVLO_ALARM_ON,
+TVHI_ALARM_ON,
+TVLO_ALARM_OFF,
+UI_SET,
+UI_MOD,
+UI_MAIN,
+UI_ALARM;
+
+
+initial -> PMAX_ALARM_OFF;
+PMAX_ALARM_OFF -> PMAX_ALARM_ON : "P > set.Pmax";
+
+initial -> PWARN_ALARM_OFF;
+PWARN_ALARM_OFF -> PWARN_ALARM_ON : "set.Pmax > P > set.Pwarn";
+PWARN_ALARM_ON -> PWARN_ALARM_OFF : "P < set.Pwarn";
+PWARN_ALARM_ON -> PWARN_ALARM_OFF : "P > set.Pmax";
+
+initial -> MVHI_ALARM_OFF;
+MVHI_ALARM_OFF -> MVHI_ALARM_ON : "MV > set.MVHi";
+MVHI_ALARM_ON -> MVHI_ALARM_OFF : "MV < set.MVHi";
+
+initial -> MVLO_ALARM_OFF;
+MVLO_ALARM_OFF -> MVLO_ALARM_ON : "MV < set.MVLo";
+MVLO_ALARM_ON -> MVLO_ALARM_OFF : "MV > set.MVLo";
+
+initial -> TVHI_ALARM_OFF;
+TVHI_ALARM_OFF -> TVHI_ALARM_ON : "TV > 1.1*set.TV";
+TVHI_ALARM_ON -> TVHI_ALARM_OFF : "TV < 1.1*set.TV";
+
+initial -> TVLO_ALARM_OFF;
+TVLO_ALARM_OFF -> TVLO_ALARM_ON : "TV > 0.9*set.TV";
+TVLO_ALARM_ON -> TVLO_ALARM_OFF : "TV < 0.9*set.TV";
+
+
+initial -> INITQ;
+INITQ -> OFF;
+OFF -> INSPIRATORY : power-on;
+INSPIRATORY -> INSPIRATORY : "read samples";
+INSPIRATORY -> POSTINSPIRATORY : "P > set.Pmax";
+INSPIRATORY -> POSTINSPIRATORY : "V > set.TV";
+INSPIRATORY -> OFF : power-off;
+POSTINSPIRATORY -> POSTINSPIRATORY : "read samples";
+POSTINSPIRATORY -> EXPIRATORY : "ie timer";
+POSTINSPIRATORY -> OFF : power-off;
+EXPIRATORY -> EXPIRATORY : "read samples";
+EXPIRATORY -> INSPIRATORY : "breath timer";
+EXPIRATORY -> INSPIRATORY : "patient trigger";
+EXPIRATORY -> POSTEXPIRATORY : "P <= set.Peep";
+EXPIRATORY -> OFF : power-off;
+POSTEXPIRATORY -> POSTEXPIRATORY : "read samples";
+POSTEXPIRATORY -> INSPIRATORY : "breath timer";
+POSTEXPIRATORY -> INSPIRATORY : "patient trigger";
+POSTEXPIRATORY -> OFF : power-off;
+
+initial -> UI_SET;
+UI_SET -> UI_MAIN : "back";
+UI_MAIN -> UI_SET : "touch";
+UI_MAIN -> UI_MAIN : "update";
+UI_SET -> UI_ALARM : "select alarm";
+UI_ALARM -> UI_MOD : "select mod";
+UI_SET -> UI_MOD : "select mod";
+UI_MOD -> UI_MOD : "change value";
+UI_MOD -> UI_SET : "back";
