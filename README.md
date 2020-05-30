@@ -1,4 +1,5 @@
 # crowdsourced-ventilator-covid-19
+![beta render](https://github.com/Crowdsourced-Ventilator-Covid-19/crowdsourced-ventilator-covid-19/blob/master/images/beta_v01.PNG)
 ## Problem Statement
 How to create a safe ventilator that can be used as a last resort where a physician has no choice but to use it or lose a life.  Obviously it will not be FDA approved.  In fact, a wonderful outcome would be if somehow US industry could step up to solve the problem of the ventilator shortage.  However, based on the data we are seeing from Johns Hopkins site above it is likely by the time industry succeeds thousand of people may be in respiratory distress,  particularly in New York City and other big hot spots.  So far no deaths in MA but statistically speaking this will not last for long.
 
