@@ -97,14 +97,13 @@ So can we design a ventilator good enough to help and do no harm to the patient?
 | [Teflon tape](https://www.amazon.com/Dixon-Valve-TTB75-Industrial-Temperature/dp/B003D7K8E0/ref=sr_1_8?dchild=1&keywords=teflon+tape&qid=1586097443&sr=8-8) | $2 |
 | [3x Differential Pressure Sensor](https://ncd.io/differential-pressure-sensor-arduino/) | 3x $60 |
 | [Check Valve](https://www.wnlproducts.com/product/replacement-valves-for-cpr-mask/) | $3 |
-| [1" NPT 12VDC Solenoid](https://www.amazon.com/gp/product/B018WRJYSG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) | $26 |
 | [1/8" ID tubing](https://www.amazon.com/gp/product/B0861X9BJT/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) | $9 |
 | [2.5mm ID tubing](https://www.amazon.com/gp/product/B010V5GMEG/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&psc=1) | $6 |
 | [Tower light and alarm](https://www.adafruit.com/product/2994) | $25 |
 | [2x 1N4004 diode](https://www.sparkfun.com/products/14884)| $1 |
 | [2x Venturi flow meter tube](https://www.thingiverse.com/thing:4354501) |  |
 | [2x PEEP valve](https://www.amazon.com/gp/product/B00Q0SBGR2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $24 |
-| Total | $416 |
+| Total | $390 |
 
 ## Prototype Phase
 - Design
